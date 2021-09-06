@@ -1,0 +1,33 @@
+ bbbbb
+a bbbbb
+aa bbbbb
+aaa bbbbb
+aaaa bbbbb
+aaaaa bbbbb
+aaaaaa bbbbb
+aaaaa 
+aaaaa b
+aaaaa bb
+aaaaa bbb
+aaaaa bbbb
+aaaaa bbbbbb
+
+abcd efghi higkl
+abcd
+abcde fghij
+aabcd ffghi
+aabcd abcde
+aaabc abcde
+aaaab abcde
+aabbd ffggh
+aabcc ffghh
+abacl fgfin
+abcde 12345
+ab  c abcde
+ab    abcde
+      abcde
+           
+abcde !@#$%
+!!@#$ !@@#$
+    a abcde
+(@#$) ((())
