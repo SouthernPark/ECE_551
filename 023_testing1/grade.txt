@@ -1,6 +1,6 @@
-Grading at 09/06/2021:16:46:22.992867
-For commit ID 7c6d0a9100b86f5b6a077a2b45a2cebc863dc531
-Grading at Mon Sep  6 12:46:02 EDT 2021
+Grading at 09/06/2021:16:56:36.903104
+For commit ID c5c62d643e5f5fef00312da3c34cc70ff3086d84
+Grading at Mon Sep  6 12:56:15 EDT 2021
 #################################################
 test input.1:
 Your file matched the expected output
@@ -15,19 +15,7 @@ Your file matched the expected output
 input.3 passed
 #################################################
 test input.4:
-I expected to find a file called 'input.4' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-correct.txt
-input.1
-input.2
-input.3
-isPrime-broken1
-isPrime-broken2
-isPrime-broken3
-isPrime-broken4
-isPrime-correct
-README
-student.txt
+Your file matched the expected output
+input.4 passed
 
-Overall Grade: B
+Overall Grade: A
