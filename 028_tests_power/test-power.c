@@ -56,7 +56,7 @@ int main(void) {
   //run_check(4294967296, 0, 1);
   //run_check(4294967295, 2, 18446744065119617000);
   //run_check(4294967296, 1, 4294967296);
-  run_check(2, 2, 3);
+  run_check(2, 2, 4);
   return EXIT_SUCCESS;
 }
 
