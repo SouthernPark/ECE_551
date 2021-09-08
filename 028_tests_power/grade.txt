@@ -1,0 +1,55 @@
+Grading at 09/08/2021:19:12:26.517445
+For commit ID 6b18b2e8840add08c3656de3ae9fde44e30abbd6
+Grading at Wed Sep  8 15:12:25 EDT 2021
+**Testing broken implementation 10 **
+-------------------------------------
+
+3 power to 20 is not correct, the correct answer should be 3486784401 ranther than 3 
+**Testing broken implementation 11 **
+-------------------------------------
+
+4294967295 power to 1 is not correct, the correct answer should be 4294967295 ranther than 7 
+**Testing broken implementation 1 **
+-------------------------------------
+
+0 power to 1 is not correct, the correct answer should be 0 ranther than 1 
+**Testing broken implementation 2 **
+-------------------------------------
+
+0 power to 1 is not correct, the correct answer should be 0 ranther than 1 
+**Testing broken implementation 3 **
+-------------------------------------
+
+0 power to 0 is not correct, the correct answer should be 1 ranther than 0 
+**Testing broken implementation 4 **
+-------------------------------------
+
+4294967295 power to 1 is not correct, the correct answer should be 4294967295 ranther than 65535 
+**Testing broken implementation 5 **
+-------------------------------------
+
+3 power to 20 is not correct, the correct answer should be 3486784401 ranther than 0 
+**Testing broken implementation 6 **
+-------------------------------------
+
+0 power to 1 is not correct, the correct answer should be 0 ranther than 2 
+**Testing broken implementation 7 **
+-------------------------------------
+
+0 power to 1 is not correct, the correct answer should be 0 ranther than 3 
+**Testing broken implementation 8 **
+-------------------------------------
+
+3 power to 20 is not correct, the correct answer should be 3486784401 ranther than 60 
+**Testing broken implementation 9 **
+-------------------------------------
+
+4294967295 power to 1 is not correct, the correct answer should be 4294967295 ranther than 0 
+**Testing correct implementation **
+-------------------------------------
+
+
+All tests were ok.
+
+
+Overall Grade: PASSED
