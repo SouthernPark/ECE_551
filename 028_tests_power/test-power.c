@@ -13,29 +13,15 @@ int main(void) {
 
   run_check(0, 0, 1);
   run_check(0, 1, 0);
-  run_check(0, 4294967295, 0);
 
   //check if power is 0
-  run_check(4294967295, 0, 1);
+
   run_check(1, 0, 1);
-  run_check(4294967294, 0, 1);
-  //check if base is 1
-  run_check(1, 2147483647, 1);
-  run_check(1, 2147483648, 1);
-  run_check(1, 2147483649, 1);
 
   //check power is 1
-  run_check(4294967295, 1, 4294967295);
+
   run_check(0, 1, 0);
   run_check(1, 1, 1);
-  run_check(4294967294, 1, 4294967294);
-  run_check(2147483646, 1, 2147483646);
-
-  run_check(2147483647, 1, 2147483647);
-  //checking overflow if first is int
-  run_check(2147483647, 1, 2147483647);
-  run_check(2147483648, 1, 2147483648);
-  run_check(2147483649, 1, 2147483649);
 
   //run some normal cases
   run_check(3, 20, 3486784401);
@@ -43,7 +29,6 @@ int main(void) {
   run_check(20, 3, 8000);
   run_check(20, 3, 8000);
   run_check(20, 3, 8000);
-  run_check(65535, 2, 4294836225);
 
   //run some overflow
 
