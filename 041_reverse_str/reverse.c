@@ -4,6 +4,9 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if (str == NULL) {
+    return;
+  }
   int first = 0;
   int last = 0;
   while (str[last] != '\0') {
@@ -25,6 +28,9 @@ void reverse(char * str) {
 }
 
 int main(void) {
+  char * str = NULL;
+  reverse(str);
+  printf("%s", str);
   char str0[] = "";
   char str1[] = "123";
   char str2[] = "abcd";
@@ -38,5 +44,6 @@ int main(void) {
     reverse(array[i]);
     printf("%s\n", array[i]);
   }
+
   return EXIT_SUCCESS;
 }
