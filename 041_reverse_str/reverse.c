@@ -11,9 +11,10 @@ void reverse(char * str) {
   }
 
   last--;
+  char temp;
   while (first < last) {
     //swap str[first] with str[last]
-    char temp = str[first];
+    temp = str[first];
     str[first] = str[last];
     str[last] = temp;
     first++;
