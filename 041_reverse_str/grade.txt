@@ -1,10 +1,9 @@
-Grading at 09/20/2021:22:14:45.798252
-For commit ID 6a4e4442e3765172b503f6abc38382f45c195c04
-Grading at Mon Sep 20 18:14:45 EDT 2021
+Grading at 09/20/2021:22:16:46.330031
+For commit ID 3a80463e8f29c3f420ebc8da2e9087ca86aafeca
+Grading at Mon Sep 20 18:16:45 EDT 2021
 Attempting to compile  reverse.c
-Line_1_did_not_match
-Your file did not match the expected ouput
-Your output did not match what we expected.
+Your file matched the expected output
+Your output matched what we expected
 Removing your main() and replacing it with our own to run more tests...
 #################################################
 testcase2:
@@ -19,4 +18,4 @@ Your file matched the expected output
 testcase5:
 Your file matched the expected output
 
-Overall Grade: C
+Overall Grade: A
