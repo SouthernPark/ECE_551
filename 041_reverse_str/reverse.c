@@ -28,9 +28,6 @@ void reverse(char * str) {
 }
 
 int main(void) {
-  char * str = NULL;
-  reverse(str);
-  printf("%s", str);
   char str0[] = "";
   char str1[] = "123";
   char str2[] = "abcd";
