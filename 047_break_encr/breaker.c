@@ -9,6 +9,7 @@ int frequen(FILE * stream) {
   int c;
   while ((c = fgetc(stream)) != EOF) {
     if (isalpha(c)) {
+      c = tolower(c);
       arr[c - 'a']++;
     }
   }
