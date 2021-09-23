@@ -44,7 +44,9 @@ int main(int argc, char ** argv) {
   if (c == -1) {
     fprintf(stderr, "You file does not contain any alpha");
   }
-  fprintf(stdout, "%d\n", c);
+
+  int key = (c + 26 - 4) % 26;
+  fprintf(stdout, "%d\n", key);
 
   return EXIT_SUCCESS;
 }
