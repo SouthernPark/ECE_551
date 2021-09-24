@@ -5,7 +5,7 @@
 //load one line to the dest
 char * loadOneLine(FILE * f, char * dest) {
   char * res = fgets(dest, row_size, f);
-  if (res = NULL) {
+  if (res == NULL) {
     fprintf(stderr, "The number of rows is less than 10");
     return NULL;
   }
