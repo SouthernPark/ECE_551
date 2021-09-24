@@ -1,0 +1,12 @@
+Grading at 09/24/2021:02:31:18.349220
+For commit ID 7472822001f4d23d0df3c116bdbbd58cdfe0b7f2
+Grading at Thu Sep 23 22:31:18 EDT 2021
+Attempting to compile rotateMatrix.c
+rotateMatrix.c: In function ‘loadOneLine’:
+rotateMatrix.c:8:7: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   if (res = NULL) {
+       ^~~
+cc1: all warnings being treated as errors
+The code did not compile!
+
+Overall Grade: F
