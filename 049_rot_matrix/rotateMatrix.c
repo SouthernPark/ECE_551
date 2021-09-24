@@ -9,9 +9,11 @@ char * loadOneLine(FILE * f, char * dest) {
     fprintf(stderr, "The number of rows is less than 10");
     return NULL;
   }
-  if (dest[row_size - 1] != '\0' || dest[row_size - 2] != '\n') {
-    fprintf(stderr, "the lenth of one row is not 10\n");
-    return NULL;
+  else {
+    if (dest[row_size - 1] != '\0' || dest[row_size - 2] != '\n') {
+      fprintf(stderr, "the lenth of one row is not 10\n");
+      return NULL;
+    }
   }
 
   return dest;
@@ -31,14 +33,17 @@ int main(int argc, char ** argv) {
   }
   //create a char array to sotre
   //load the data into the arr
-  char input[12][12];
+  char input[10][12] = {0};
+  char * res;
   for (int i = 0; i < mat_sz; i++) {
-    char * res = loadOneLine(f, input[i]);
+    res = loadOneLine(f, input[i]);
     if (res == NULL) {
-      return EXIT_FAILURE;
+      break;
     }
   }
-
+  if (res == NULL) {
+    return EXIT_FAILURE;
+  }
   //check whetehr there is still some data
   char left[12];
   char * left_res = fgets(left, row_size, f);
