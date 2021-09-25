@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define seven_days 7
+
 country_t parseLine(char * line) {
   //WRITE ME
   //check whether the line is a string(check '\0' and '\n')
@@ -41,7 +43,7 @@ country_t parseLine(char * line) {
   //check how many chars before the comma
   char * first_char = line;
   //check the length of the country name
-  int name_len = (first_comma - first_char) / sizeof(char);
+  size_t name_len = (first_comma - first_char) / sizeof(char);
   //the length of the name should be smaller than MAX_NAME_LEN, cause we still need some space to hold \0
   if (name_len >= MAX_NAME_LEN) {
     fprintf(
@@ -49,7 +51,7 @@ country_t parseLine(char * line) {
     exit(EXIT_FAILURE);
   }
   //else we can put it into struct
-  int index = 0;  //record the position where we should put the char
+  size_t index = 0;  //record the position where we should put the char
   for (; index < MAX_NAME_LEN - 1; index++) {
     //when we encounter a comma, we stop
     if (first_char[index] == ',') {
@@ -86,6 +88,27 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   //WRITE ME
+  if (n_days < seven_days) {
+    return;
+  }
+
+  // how senven-day running average, I am gonna to calculate
+  size_t N = n_days - (seven_days - 1);
+  //unsigned is 4 bytes, may be I should use uint_64 to do calculation
+  uint64_t total_cases = 0;
+  //calculate the sum of the first seven days
+  for (int i = 0; i < seven_days; i++) {
+    total_cases += data[i];
+  }
+  avg[0] = ((double)total_cases) / seven_days;
+  for (size_t i = 1; i < N; i++) {
+    //remove the old first day case
+    total_cases -= data[i - 1];
+    //add the new last day case
+    total_cases += data[i + seven_days - 1];
+    avg[i] = ((double)total_cases) / seven_days;
+  }
+  return;
 }
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
