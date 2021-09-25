@@ -6,6 +6,7 @@
 #include <string.h>
 
 #define seven_days 7
+#define base_hundred_thousand 100000
 
 country_t parseLine(char * line) {
   //WRITE ME
@@ -113,6 +114,18 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
   //WRITE ME
+  if (n_days == 0) {
+    return;
+  }
+
+  uint64_t cum_sum = 0;
+  for (size_t i = 0; i < n_days; i++) {
+    //the cum_sum of the [0..i] th day
+    cum_sum += data[i];
+    cum[i] = ((double)cum_sum) / pop * base_hundred_thousand;
+  }
+
+  return;
 }
 
 void printCountryWithMax(country_t * countries,
