@@ -103,12 +103,13 @@ EXIT_FAILURE if the population is out of bound
 */
 void fillThePop(const char * first_num, country_t * ans) {
   //use strtoul to convert string to 64 bits value
-  errno = 0;
+  //errno = 0;
+  //strtoul
   ans->population = strtoul(first_num, NULL, 10);
-  if (errno != 0) {
-    perror("strtol:");
-    exit(EXIT_FAILURE);
-  }
+  //if (errno != 0) {
+  //perror("strtol:");
+  // exit(EXIT_FAILURE);
+  //}
 }
 
 country_t parseLine(char * line) {
@@ -120,7 +121,7 @@ country_t parseLine(char * line) {
   /*check whether the population field is valid*/
   //get the first char
   const char * first_comma = strchr(line, ',');
-  checkPop(first_comma + 1);
+  //checkPop(first_comma + 1);
 
   /*fill the country struct*/
   country_t ans;
