@@ -1,11 +1,12 @@
 #error
-printCountries testcases/printCountries/max64_overflow.csv
 printCountries testcases/printCountries/toomanycomma.csv
 printCountries testcases/printCountries/toomanycomma1.csv
 printCountries testcases/printCountries/nameLen64Wrong.csv
 printCountries testcases/printCountries/nameLen65Wrong.csv
 printCountries testcases/printCountries/no_such.csv
-printCountries testcases/printCountries/no_poplation.csv
+printCountries testcases/printCountries/no_comma.csv
+printCountries testcases/printCountries/no_comma1.csv
+
 
 #success
 printCountries testcases/printCountries/population.csv
@@ -17,3 +18,5 @@ printCountries testcases/printCountries/charInNum2.csv
 printCountries testcases/printCountries/charInNum3.csv	 
 printCountries testcases/printCountries/charInNum4.csv	 
 printCountries testcases/printCountries/no_content.csv
+printCountries testcases/printCountries/no_poplation.csv
+printCountries testcases/printCountries/max64_overflow.csv
