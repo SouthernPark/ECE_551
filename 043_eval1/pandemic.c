@@ -7,17 +7,25 @@
 
 #define seven_days 7
 #define base_hundred_thousand 100000
-
-country_t parseLine(char * line) {
-  //WRITE ME
+/*
+this function will check the format of the input line including:
+    the ending \0
+    the ending \n
+    two many commas
+    the length of name field should be smaller than 64
+Input: the pointer to the line
+EXIT_FAILURE if the line is invalid
+*/
+void check_line(char * line) {
   //check whether the line is a string(check '\0' and '\n')
-  char * first_null = strchr(line, '\0');
+  const char * first_null = strchr(line, '\0');
   if (first_null == NULL) {
     fprintf(stderr, "The input is not a string (not ending with \\0) \n");
     exit(EXIT_FAILURE);
   }
+
   //check whether the first '\n' is right before the '\0'
-  char * first_nxt_line = strchr(line, '\n');
+  const char * first_nxt_line = strchr(line, '\n');
   if (first_nxt_line == NULL) {
     fprintf(stderr, "The input line is not a line (does not contain \\n) \n");
     exit(EXIT_FAILURE);
@@ -27,24 +35,19 @@ country_t parseLine(char * line) {
     exit(EXIT_FAILURE);
   }
   //check whether there are two many commas in the string
-  char * first_comma = strchr(line, ',');
+  const char * first_comma = strchr(line, ',');
   if (first_comma == NULL) {
     fprintf(stderr, "The input line does not contain a comma \n");
     exit(EXIT_FAILURE);
   }
-  char * second_comma = strchr(first_comma + 1, ',');
+  const char * second_comma = strchr(first_comma + 1, ',');
   if (second_comma != NULL) {
     fprintf(stderr, "The input line has too many commas \n");
     exit(EXIT_FAILURE);
   }
 
-  //fill the country struct
-  country_t ans;
-  ans.name[0] = '\0';
-  //check how many chars before the comma
-  char * first_char = line;
   //check the length of the country name
-  size_t name_len = (first_comma - first_char) / sizeof(char);
+  size_t name_len = (first_comma - line) / sizeof(char);
   //the length of the name should be smaller than MAX_NAME_LEN, cause we still need some space to hold \0
   if (name_len >= MAX_NAME_LEN) {
     fprintf(
@@ -52,21 +55,19 @@ country_t parseLine(char * line) {
     exit(EXIT_FAILURE);
   }
   //else we can put it into struct
-  size_t index = 0;  //record the position where we should put the char
-  for (; index < MAX_NAME_LEN - 1; index++) {
-    //when we encounter a comma, we stop
-    if (first_char[index] == ',') {
-      break;
-    }
-    ans.name[index] = first_char[index];
-  }
-  //set the last position with null terminator
-  ans.name[index] = '\0';
+}
 
+/*
+this function will check whether the population field is valid including:
+   not contain char other than 0~9
+   number can be hold in 64 bits unsigned integer
+Input: the first pointer of the first number
+EXIT_FAILURE if population field is invalid
+*/
+void checkPop(const char * first_num) {
   //check the population
   //the population is behind the comma but before '\n'
   //we need first to check they are 0~9
-  char * first_num = first_comma + 1;
   while (*first_num != '\n') {
     if (*first_num < '0' || *first_num > '9') {
       fprintf(stderr, "There are characters other than 0~9 in population fild\n");
@@ -74,16 +75,60 @@ country_t parseLine(char * line) {
     }
     first_num++;
   }
-  //reset the pointer of the first number
-  first_num = first_comma + 1;
+}
+/*
+This function will fill the name field of the counrty struct
+Input:the pointer of the first char or the line
+      the pointer to the dest which is the conutry struct
+*/
+void fillTheName(const char * first_char, country_t * ans) {
+  size_t index = 0;  //record the position where we should put the char
+  for (; index < MAX_NAME_LEN - 1; index++) {
+    //when we encounter a comma, we stop
+    if (first_char[index] == ',') {
+      break;
+    }
+    //else we put the char into name field
+    ans->name[index] = first_char[index];
+  }
+  //set the last position with null terminator
+  ans->name[index] = '\0';
+}
+
+/*                                                            
+This function will fill the population field of the counrty struct  
+Input:the pointer of the first number (the first pointer after the comma)               
+      the pointer to the dest which is the conutry struct
+EXIT_FAILURE if the population is out of bound     
+*/
+void fillThePop(const char * first_num, country_t * ans) {
   //use strtoul to convert string to 64 bits value
   errno = 0;
-  ans.population = strtoul(first_num, NULL, 10);
+  ans->population = strtoul(first_num, NULL, 10);
   if (errno != 0) {
     perror("strtol:");
     exit(EXIT_FAILURE);
   }
+}
 
+country_t parseLine(char * line) {
+  //WRITE ME
+
+  /*check whether the line is valid*/
+  check_line(line);
+
+  /*check whether the population field is valid*/
+  //get the first char
+  const char * first_comma = strchr(line, ',');
+  checkPop(first_comma + 1);
+
+  /*fill the country struct*/
+  country_t ans;
+  ans.name[0] = '\0';
+  //fill the name field
+  fillTheName(line, &ans);
+  //fill the population field
+  fillThePop(first_comma + 1, &ans);
   return ans;
 }
 
@@ -126,6 +171,13 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
   }
 
   return;
+}
+
+/*
+the input of this functon is an array with size n_countries
+this function will return the max 
+*/
+void maxForEachCountry() {
 }
 
 void printCountryWithMax(country_t * countries,
