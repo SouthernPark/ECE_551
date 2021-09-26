@@ -1,6 +1,6 @@
-Grading at 09/26/2021:18:43:48.890448
-For commit ID 025d743fe494837a13a02260fa5100a538217a62
-Grading at Sun Sep 26 14:43:33 EDT 2021
+Grading at 09/26/2021:19:29:52.516667
+For commit ID a127cff21917d65a5ec4d9ad7f8aaadb75d0e773
+Grading at Sun Sep 26 15:29:34 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -74,6 +74,27 @@ Test case printCountries testcases/printCountries/numStartWithSpaces1.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charStartWithNeg1.csv
+Your file matched the expected output
+
+Compiling printRunningAvg
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv daily_small.csv
+Your file matched the expected output
+
+Compiling printCumulative
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
++-----------------------------------------------------------------------+
+Test case printCumulative population.csv daily_small.csv
+Your file matched the expected output
+
+Compiling printDailyMax
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv daily_small.csv
 Your file matched the expected output
 
 You have PASSED all of your test cases
