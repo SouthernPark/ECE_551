@@ -42,7 +42,7 @@ void check_line(char * line) {
   }
   //check the next char of first comma if number or not
   char nxt = *(first_comma + 1);
-  if (nxt != '-' || nxt < '0' || nxt > '9') {
+  if (nxt < '0' || nxt > '9') {
     fprintf(stderr, "The population field is invalid\n");
     exit(EXIT_FAILURE);
   }
