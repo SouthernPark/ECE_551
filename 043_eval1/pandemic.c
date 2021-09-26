@@ -40,10 +40,15 @@ void check_line(char * line) {
     fprintf(stderr, "The input line does not contain a comma \n");
     exit(EXIT_FAILURE);
   }
-  //check the next char of first comma if number or not
-  char nxt = *(first_comma + 1);
+  //get the the first non-space char after the comma
+  const char * first_num = first_comma + 1;
+  while (*first_num == ' ') {
+    first_num++;
+  }
+
   //the nxt char can be +, -, 0123456789
-  if ((nxt != ' ') && (nxt != '-') && (nxt != '+') && (nxt < '0' || nxt > '9')) {
+  if ((*first_num != '-') && (*first_num != '+') &&
+      (*first_num < '0' || *first_num > '9')) {
     fprintf(stderr, "The population field is invalid\n");
     exit(EXIT_FAILURE);
   }
