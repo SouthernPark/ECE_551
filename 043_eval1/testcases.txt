@@ -7,16 +7,16 @@ printCountries testcases/printCountries/no_comma.csv
 printCountries testcases/printCountries/no_comma1.csv
 printCountries testcases/printCountries/no_population.csv
 printCountries testcases/printCountries/max64_overflow.csv
+printCountries testcases/printCountries/charInNum.csv
 
 #success
 printCountries testcases/printCountries/population.csv
 printCountries testcases/printCountries/max64_corr.csv
-printCountries testcases/printCountries/nameLen63Corr.csv
-printCountries testcases/printCountries/charInNum.csv	 
+printCountries testcases/printCountries/nameLen63Corr.csv	 
 printCountries testcases/printCountries/charInNum2.csv
 printCountries testcases/printCountries/charInNum3.csv
 printCountries testcases/printCountries/charInNum4.csv
 printCountries testcases/printCountries/no_content.csv
-printCountries testcases/printCountries/no_poplation.csv
+printCountries testcases/printCountries/no_population.csv
 printCountries testcases/printCountries/toomanycomma1.csv
 printCountries testcases/printCountries/charInNum1.csv
