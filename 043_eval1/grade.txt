@@ -1,6 +1,6 @@
-Grading at 09/26/2021:02:07:52.356780
-For commit ID a0956cf1469fdd91032ab88756dcadd2198be087
-Grading at Sat Sep 25 22:07:37 EDT 2021
+Grading at 09/26/2021:02:24:32.671162
+For commit ID 9272d784a47aeda3e5f0b81629fc61c10407a10e
+Grading at Sat Sep 25 22:24:17 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -71,6 +71,9 @@ Test case printCountries testcases/printCountries/numStartWithSpacesMax64.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/numStartWithSpaces1.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charStartWithNeg1.csv
 Your file matched the expected output
 
 You have PASSED all of your test cases
