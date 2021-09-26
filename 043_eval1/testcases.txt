@@ -25,3 +25,6 @@ printCountries testcases/printCountries/no_content.csv
 printCountries testcases/printCountries/numStartWithSpacesMax64.csv
 printCountries testcases/printCountries/numStartWithSpaces1.csv
 printCountries testcases/printCountries/charStartWithNeg1.csv
+printRunningAvg population.csv daily_small.csv
+printCumulative population.csv daily_small.csv
+printDailyMax population.csv daily_small.csv

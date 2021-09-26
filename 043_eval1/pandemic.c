@@ -181,10 +181,20 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
 }
 
 /*
-the input of this functon is an array with size n_countries
-this function will return the max 
+This function will find the maximum case in a counrty
+Input: The data of a particular counrty
+       The number of days the data measured
+Output: the max case in this country theses days
 */
-void maxForEachCountry() {
+unsigned findMaxCaseInACounrty(const unsigned * data, size_t n_days) {
+  unsigned max = 0;
+  for (size_t i = 0; i < n_days; i++) {
+    if (data[i] > max) {
+      max = data[i];
+    }
+  }
+
+  return max;
 }
 
 void printCountryWithMax(country_t * countries,
@@ -192,4 +202,36 @@ void printCountryWithMax(country_t * countries,
                          unsigned ** data,
                          size_t n_days) {
   //WRITE ME
+  if (n_days == 0 || n_countries == 0) {
+    return;
+  }
+  //the counrty with the maximum cases
+  long first_max = -1;
+  size_t first_max_index = 0;
+  //the counrty with the second maximum cases
+  long second_max = -1;
+
+  for (size_t i = 0; i < n_countries; i++) {
+    unsigned tmp = findMaxCaseInACounrty(data[i], n_days);
+    if (tmp > first_max) {
+      first_max = tmp;
+      first_max_index = i;
+    }
+    else {
+      if (tmp > second_max) {
+        second_max = tmp;
+      }
+    }
+  }
+
+  if (first_max == second_max) {
+    printf("There is a tie between at least two countries");
+    return;
+  }
+
+  unsigned max = (unsigned)first_max;
+
+  printf("%s has the most daily cases with %u\n", countries[first_max_index].name, max);
+
+  return;
 }
