@@ -1,6 +1,6 @@
-Grading at 09/26/2021:01:20:54.143778
-For commit ID 0f73cbdf8c006a578b19df03bf4907af8fc9d9c4
-Grading at Sat Sep 25 21:20:41 EDT 2021
+Grading at 09/26/2021:01:32:06.310007
+For commit ID d4df6fb7db5f2ef1267609832bc92419c915b2e9
+Grading at Sat Sep 25 21:31:53 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -34,12 +34,11 @@ Your program successfully indicated a failure case
 Test case printCountries testcases/printCountries/no_population.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/toomanycomma1.csv
+Test case printCountries testcases/printCountries/commaInsideNum.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Test case printCountries testcases/printCountries/charStartWithPlus.csv
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/population.csv
 Your file matched the expected output
@@ -50,9 +49,8 @@ Your file matched the expected output
 Test case printCountries testcases/printCountries/nameLen63Corr.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum1.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Test case printCountries testcases/printCountries/charStartWithNeg.csv
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum2.csv
 Line_1_did_not_match
