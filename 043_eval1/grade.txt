@@ -1,6 +1,6 @@
-Grading at 09/26/2021:00:33:29.379698
-For commit ID 7d34542ea6610830028ba55e703e35c040652716
-Grading at Sat Sep 25 20:33:16 EDT 2021
+Grading at 09/26/2021:00:40:31.517330
+For commit ID bc989c99c0798538205870169c01786991c44cde
+Grading at Sat Sep 25 20:40:19 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -8,7 +8,17 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/toomanycomma.csv
-Your program successfully indicated a failure case
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 331002647
+United S: 0
+Your program did not indicate a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/nameLen64Wrong.csv
 Your program successfully indicated a failure case
@@ -71,13 +81,8 @@ Test case printCountries testcases/printCountries/no_poplation.csv
 Line_1_did_not_match
 Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/max64_overflow.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
-+-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/toomanycomma1.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
