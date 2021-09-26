@@ -11,8 +11,9 @@
 this function will check the format of the input line including:
     the ending \0
     the ending \n
+    whether then ending \0 and \n are ajacent
     the length of name field should be smaller than 64
-    whether the first char after the first comma is a number or not
+    
 Input: the pointer to the line
 EXIT_FAILURE if the line is invalid
 */
@@ -40,22 +41,17 @@ void check_line(char * line) {
     fprintf(stderr, "The input line does not contain a comma \n");
     exit(EXIT_FAILURE);
   }
-  //get the the first non-space char after the comma
-  const char * first_num = first_comma + 1;
-  while (*first_num == ' ') {
-    first_num++;
-  }
-
-  //the first num char can be +, -, 0123456789
-  if ((*first_num != '-') && (*first_num != '+') &&
-      (*first_num < '0' || *first_num > '9')) {
-    fprintf(stderr, "The population field is invalid\n");
-    exit(EXIT_FAILURE);
-  }
-
+}
+/*
+ This function will check whether the length of the country's name is smaller than
+64 or not.
+The length of the name should be smaller than MAX_NAME_LEN, cause we still need some space to hold \0
+Input: the start of the counrty field, the next end of the counrty field
+Exit failure if the length is bigger or equal to 64
+*/
+void checkName(const char * start, const char * first_comma) {
   //check the length of the country name
-  size_t name_len = (first_comma - line) / sizeof(char);
-  //the length of the name should be smaller than MAX_NAME_LEN, cause we still need some space to hold \0
+  size_t name_len = (first_comma - start) / sizeof(char);
   if (name_len >= MAX_NAME_LEN) {
     fprintf(
         stderr, "The length of the country name is bigger than %d \n", MAX_NAME_LEN - 1);
@@ -64,9 +60,7 @@ void check_line(char * line) {
 }
 
 /*
-this function will check whether the population field is valid including:
-   not contain char other than 0~9
-   number can be hold in 64 bits unsigned integer
+this function will check whether the population start with a char other than +/-/space/0~9 afer trip the initial spaces
 Input: the first pointer of the first number
 EXIT_FAILURE if population field is invalid
 */
@@ -74,12 +68,16 @@ void checkPop(const char * first_num) {
   //check the population
   //the population is behind the comma but before '\n'
   //we need first to check they are 0~9
-  while (*first_num != '\n') {
-    if (*first_num < '0' || *first_num > '9') {
-      fprintf(stderr, "There are characters other than 0~9 in population fild\n");
-      exit(EXIT_FAILURE);
-    }
+  //trim the leading space
+  while (*first_num == ' ') {
     first_num++;
+  }
+
+  //the first num char can be +, - or  0~9
+  if ((*first_num != '-') && (*first_num != '+') &&
+      (*first_num < '0' || *first_num > '9')) {
+    fprintf(stderr, "The population field is invalid\n");
+    exit(EXIT_FAILURE);
   }
 }
 /*
@@ -103,7 +101,7 @@ void fillTheName(const char * first_char, country_t * ans) {
 
 /*                                                            
 This function will fill the population field of the counrty struct  
-Input:the pointer of the first number (the first pointer after the comma)               
+Input:the pointer of the first number (the first pointer after the comma)           
       the pointer to the dest which is the conutry struct
 EXIT_FAILURE if the population is out of bound     
 */
@@ -126,7 +124,10 @@ country_t parseLine(char * line) {
   /*check whether the population field is valid*/
   //get the first char
   const char * first_comma = strchr(line, ',');
-  //checkPop(first_comma + 1);
+  checkPop(first_comma + 1);
+
+  /*check whether the name field is valid*/
+  checkName(line, first_comma);
 
   /*fill the country struct*/
   country_t ans;
