@@ -34,7 +34,7 @@ void check_line(char * line) {
     fprintf(stderr, "The input line format is not right \n");
     exit(EXIT_FAILURE);
   }
-  //check whether there are two many commas in the string
+  //check whether there is a comma
   const char * first_comma = strchr(line, ',');
   if (first_comma == NULL) {
     fprintf(stderr, "The input line does not contain a comma \n");
@@ -46,17 +46,12 @@ void check_line(char * line) {
     first_num++;
   }
 
-  //the nxt char can be +, -, 0123456789
+  //the first num char can be +, -, 0123456789
   if ((*first_num != '-') && (*first_num != '+') &&
       (*first_num < '0' || *first_num > '9')) {
     fprintf(stderr, "The population field is invalid\n");
     exit(EXIT_FAILURE);
   }
-  //const char * second_comma = strchr(first_comma + 1, ',');
-  //if (second_comma != NULL) {
-  //fprintf(stderr, "The input line has too many commas \n");
-  //exit(EXIT_FAILURE);
-  //}
 
   //check the length of the country name
   size_t name_len = (first_comma - line) / sizeof(char);
@@ -66,7 +61,6 @@ void check_line(char * line) {
         stderr, "The length of the country name is bigger than %d \n", MAX_NAME_LEN - 1);
     exit(EXIT_FAILURE);
   }
-  //else we can put it into struct
 }
 
 /*
