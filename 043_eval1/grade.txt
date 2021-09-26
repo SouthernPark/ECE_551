@@ -1,6 +1,6 @@
-Grading at 09/26/2021:00:56:33.537888
-For commit ID 84e2019eef1ca7c1e3a58079b756ebbcf5751692
-Grading at Sat Sep 25 20:56:20 EDT 2021
+Grading at 09/26/2021:01:06:56.026377
+For commit ID dae6f7b83fe1e7af75ad0080a1e96b5ff370cd8d
+Grading at Sat Sep 25 21:06:43 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -32,16 +32,13 @@ Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/population.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_corr.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/nameLen63Corr.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum.csv
 Line_1_did_not_match
@@ -52,12 +49,10 @@ Line_1_did_not_match
 Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum3.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum4.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_content.csv
 Your file matched the expected output
@@ -67,8 +62,7 @@ Line_1_did_not_match
 Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/toomanycomma1.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum1.csv
 Line_1_did_not_match
