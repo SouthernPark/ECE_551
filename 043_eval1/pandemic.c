@@ -12,6 +12,7 @@ this function will check the format of the input line including:
     the ending \0
     the ending \n
     the length of name field should be smaller than 64
+    whether the first char after the first comma is a number or not
 Input: the pointer to the line
 EXIT_FAILURE if the line is invalid
 */
@@ -33,12 +34,18 @@ void check_line(char * line) {
     fprintf(stderr, "The input line format is not right \n");
     exit(EXIT_FAILURE);
   }
-  ////check whether there are two many commas in the string
+  //check whether there are two many commas in the string
   const char * first_comma = strchr(line, ',');
-  //if (first_comma == NULL) {
-  //fprintf(stderr, "The input line does not contain a comma \n");
-  //exit(EXIT_FAILURE);
-  //}
+  if (first_comma == NULL) {
+    fprintf(stderr, "The input line does not contain a comma \n");
+    exit(EXIT_FAILURE);
+  }
+  //check the next char of first comma if number or not
+  char nxt = *(first_comma + 1);
+  if (nxt < '0' || nxt > '9') {
+    fprintf(stderr, "The population field is invalid\n");
+    exit(EXIT_FAILURE);
+  }
   //const char * second_comma = strchr(first_comma + 1, ',');
   //if (second_comma != NULL) {
   //fprintf(stderr, "The input line has too many commas \n");
