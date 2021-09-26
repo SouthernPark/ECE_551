@@ -7,7 +7,7 @@ printCountries testcases/printCountries/no_comma.csv
 printCountries testcases/printCountries/no_comma1.csv
 printCountries testcases/printCountries/no_population.csv
 printCountries testcases/printCountries/max64_overflow.csv	  
-printCountries testcases/printCountries/no_population.csv 
+printCountries testcases/printCountries/no_population_but_a_space.csv 
 printCountries testcases/printCountries/popStartWitha.csv 
 
 
@@ -22,3 +22,5 @@ printCountries testcases/printCountries/charStartWithSpace.csv
 printCountries testcases/printCountries/charInNum3.csv
 printCountries testcases/printCountries/charInNum4.csv
 printCountries testcases/printCountries/no_content.csv
+printCountries testcases/printCountries/numStartWithSpacesMax64.cs
+printCountries testcases/printCountries/charStartWithSpace1.csv
