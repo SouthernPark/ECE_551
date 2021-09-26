@@ -1,6 +1,6 @@
-Grading at 09/26/2021:01:32:06.310007
-For commit ID d4df6fb7db5f2ef1267609832bc92419c915b2e9
-Grading at Sat Sep 25 21:31:53 EDT 2021
+Grading at 09/26/2021:01:38:40.653083
+For commit ID e00f55121c38967c69223d41f4588489e9813457
+Grading at Sat Sep 25 21:38:27 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -26,12 +26,33 @@ Test case printCountries testcases/printCountries/no_comma1.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
-Your program successfully indicated a failure case
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 0
+Your program did not indicate a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 0
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/popStartWitha.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/commaInsideNum.csv
@@ -52,9 +73,8 @@ Your file matched the expected output
 Test case printCountries testcases/printCountries/charStartWithNeg.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum2.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
+Test case printCountries testcases/printCountries/charStartWithSpace.csv
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum3.csv
 Your file matched the expected output
