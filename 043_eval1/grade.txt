@@ -1,6 +1,6 @@
-Grading at 09/26/2021:01:12:24.883860
-For commit ID 19659eb12ed0d4c944e2c240796b7a2b623b92a4
-Grading at Sat Sep 25 21:12:18 EDT 2021
+Grading at 09/26/2021:01:20:54.143778
+For commit ID 0f73cbdf8c006a578b19df03bf4907af8fc9d9c4
+Grading at Sat Sep 25 21:20:41 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -31,38 +31,41 @@ Your program successfully indicated a failure case
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/population.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/max64_corr.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/nameLen63Corr.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum2.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum3.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum4.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_content.csv
-Our printCountries does not consider this an error case
-+-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/toomanycomma1.csv
-Our printCountries does not consider this an error case
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charInNum.csv
+Line_1_did_not_match
+Your file did not match the expected ouput
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/population.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/max64_corr.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/nameLen63Corr.csv
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum1.csv
-Our printCountries does not consider this an error case
+Line_1_did_not_match
+Your file did not match the expected ouput
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charInNum2.csv
+Line_1_did_not_match
+Your file did not match the expected ouput
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charInNum3.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charInNum4.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/no_content.csv
+Your file matched the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
