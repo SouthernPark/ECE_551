@@ -106,10 +106,10 @@ void fillThePop(const char * first_num, country_t * ans) {
   //errno = 0;
   //strtoul
   ans->population = strtoul(first_num, NULL, 10);
-  //if (errno != 0) {
-  //perror("strtol:");
-  // exit(EXIT_FAILURE);
-  //}
+  if (errno != 0) {
+    perror("strtol:");
+    exit(EXIT_FAILURE);
+  }
 }
 
 country_t parseLine(char * line) {
