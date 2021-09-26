@@ -1,6 +1,6 @@
-Grading at 09/26/2021:00:45:25.300842
-For commit ID 72e258c8677eea0bb083ee78d3b015d2248759c5
-Grading at Sat Sep 25 20:45:13 EDT 2021
+Grading at 09/26/2021:00:52:03.376992
+For commit ID ce700a3b4296e485f230b7fa558428ad2fbd4502
+Grading at Sat Sep 25 20:51:51 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -8,17 +8,7 @@ rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/toomanycomma.csv
-Brazil: 212559409
-China: 1439323774
-Germany: 83783945
-India: 1380004385
-Nigeria: 206139587
-Norway: 5421242
-South Korea: 51269183
-United Kingdom: 67886004
-United States: 331002647
-United S: 0
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/nameLen64Wrong.csv
 Your program successfully indicated a failure case
@@ -36,16 +26,7 @@ Test case printCountries testcases/printCountries/no_comma1.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
-Brazil: 212559409
-China: 1439323774
-Germany: 83783945
-India: 1380004385
-Nigeria: 206139587
-Norway: 5421242
-South Korea: 51269183
-United Kingdom: 67886004
-United States: 0
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
@@ -63,10 +44,12 @@ Test case printCountries testcases/printCountries/nameLen63Corr.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum.csv
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum2.csv
-Your file matched the expected output
+Line_1_did_not_match
+Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum3.csv
 Your file matched the expected output
