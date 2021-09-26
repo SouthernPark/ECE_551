@@ -11,7 +11,6 @@
 this function will check the format of the input line including:
     the ending \0
     the ending \n
-    two many commas
     the length of name field should be smaller than 64
 Input: the pointer to the line
 EXIT_FAILURE if the line is invalid
@@ -34,17 +33,17 @@ void check_line(char * line) {
     fprintf(stderr, "The input line format is not right \n");
     exit(EXIT_FAILURE);
   }
-  //check whether there are two many commas in the string
+  ////check whether there are two many commas in the string
   const char * first_comma = strchr(line, ',');
-  if (first_comma == NULL) {
-    fprintf(stderr, "The input line does not contain a comma \n");
-    exit(EXIT_FAILURE);
-  }
-  const char * second_comma = strchr(first_comma + 1, ',');
-  if (second_comma != NULL) {
-    fprintf(stderr, "The input line has too many commas \n");
-    exit(EXIT_FAILURE);
-  }
+  //if (first_comma == NULL) {
+  //fprintf(stderr, "The input line does not contain a comma \n");
+  //exit(EXIT_FAILURE);
+  //}
+  //const char * second_comma = strchr(first_comma + 1, ',');
+  //if (second_comma != NULL) {
+  //fprintf(stderr, "The input line has too many commas \n");
+  //exit(EXIT_FAILURE);
+  //}
 
   //check the length of the country name
   size_t name_len = (first_comma - line) / sizeof(char);
@@ -103,8 +102,7 @@ EXIT_FAILURE if the population is out of bound
 */
 void fillThePop(const char * first_num, country_t * ans) {
   //use strtoul to convert string to 64 bits value
-  //errno = 0;
-  //strtoul
+  errno = 0;
   ans->population = strtoul(first_num, NULL, 10);
   if (errno != 0) {
     perror("strtol:");

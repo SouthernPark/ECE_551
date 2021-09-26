@@ -19,5 +19,4 @@ printCountries testcases/printCountries/charInNum3.csv
 printCountries testcases/printCountries/charInNum4.csv
 printCountries testcases/printCountries/no_content.csv
 printCountries testcases/printCountries/no_poplation.csv
-printCountries testcases/printCountries/max64_overflow.csv
 printCountries testcases/printCountries/toomanycomma1.csv
