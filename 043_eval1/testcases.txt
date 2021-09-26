@@ -22,5 +22,5 @@ printCountries testcases/printCountries/charStartWithSpace.csv
 printCountries testcases/printCountries/charInNum3.csv
 printCountries testcases/printCountries/charInNum4.csv
 printCountries testcases/printCountries/no_content.csv
-printCountries testcases/printCountries/numStartWithSpacesMax64.cs
-printCountries testcases/printCountries/charStartWithSpace1.csv
+printCountries testcases/printCountries/numStartWithSpacesMax64.csv
+printCountries testcases/printCountries/numStartWithSpaces1.csv
