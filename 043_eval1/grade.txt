@@ -1,6 +1,6 @@
-Grading at 09/26/2021:01:06:56.026377
-For commit ID dae6f7b83fe1e7af75ad0080a1e96b5ff370cd8d
-Grading at Sat Sep 25 21:06:43 EDT 2021
+Grading at 09/26/2021:01:10:48.222703
+For commit ID 685c0171154d1ddcee18b7e173c7e6a74f1552c0
+Grading at Sat Sep 25 21:10:35 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -31,6 +31,9 @@ Your program successfully indicated a failure case
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charInNum.csv
+Our printCountries does not consider this an error case
++-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/population.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
@@ -39,10 +42,6 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/nameLen63Corr.csv
 Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum.csv
-Line_1_did_not_match
-Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/charInNum2.csv
 Line_1_did_not_match
@@ -57,7 +56,7 @@ Your file matched the expected output
 Test case printCountries testcases/printCountries/no_content.csv
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_poplation.csv
+Test case printCountries testcases/printCountries/no_population.csv
 Line_1_did_not_match
 Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
