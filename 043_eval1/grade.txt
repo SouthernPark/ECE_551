@@ -1,6 +1,6 @@
-Grading at 09/26/2021:01:38:40.653083
-For commit ID e00f55121c38967c69223d41f4588489e9813457
-Grading at Sat Sep 25 21:38:27 EDT 2021
+Grading at 09/26/2021:01:48:44.375860
+For commit ID c8ecf514b98db6c10c88d18456ed978f04d9a35a
+Grading at Sat Sep 25 21:48:30 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -26,31 +26,13 @@ Test case printCountries testcases/printCountries/no_comma1.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
-Brazil: 212559409
-China: 1439323774
-Germany: 83783945
-India: 1380004385
-Nigeria: 206139587
-Norway: 5421242
-South Korea: 51269183
-United Kingdom: 67886004
-United States: 0
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_population.csv
-Brazil: 212559409
-China: 1439323774
-Germany: 83783945
-India: 1380004385
-Nigeria: 206139587
-Norway: 5421242
-South Korea: 51269183
-United Kingdom: 67886004
-United States: 0
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/popStartWitha.csv
 Your program successfully indicated a failure case
@@ -85,7 +67,7 @@ Your file matched the expected output
 Test case printCountries testcases/printCountries/no_content.csv
 Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
