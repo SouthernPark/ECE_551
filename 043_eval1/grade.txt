@@ -1,6 +1,6 @@
-Grading at 09/25/2021:23:18:58.267644
-For commit ID b7dcd97188750e6d06e6d9e35762072072d8fe15
-Grading at Sat Sep 25 19:18:45 EDT 2021
+Grading at 09/26/2021:00:21:07.067701
+For commit ID 1fc0302485b40af6de2f8439ba25243026309c2d
+Grading at Sat Sep 25 20:20:54 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -29,17 +29,7 @@ Test case printCountries testcases/printCountries/no_comma1.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_poplation.csv
-Brazil: 212559409
-China: 1439323774
-Germany: 83783945
-India: 1380004385
-Nigeria: 206139587
-Norway: 5421242
-South Korea: 5126
-183: 0
-United Kingdom: 67886004
-United States: 331002647
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_overflow.csv
 Brazil: 212559409
@@ -48,8 +38,9 @@ Germany: 83783945
 India: 1380004385
 Nigeria: 206139587
 Norway: 5421242
-South Korea: 5126
-max_uint64_over: 18446744073709551615
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 18446744073709551615
 Your program did not indicate a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/population.csv
@@ -81,15 +72,6 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_poplation.csv
 Line_1_did_not_match
-Line_2_did_not_match
-Line_3_did_not_match
-Line_4_did_not_match
-Line_5_did_not_match
-Line_6_did_not_match
-Line_7_did_not_match
-Line_8_did_not_match
-Line_9_did_not_match
-Line_10_did_not_match
 Your file did not match the expected ouput
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/max64_overflow.csv
@@ -101,6 +83,7 @@ Line_5_did_not_match
 Line_6_did_not_match
 Line_7_did_not_match
 Line_8_did_not_match
+Line_9_did_not_match
 Your file did not match the expected ouput
 
 You have FAILED one or more of your test cases
