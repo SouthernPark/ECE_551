@@ -1,13 +1,13 @@
-Grading at 09/26/2021:19:29:52.516667
-For commit ID a127cff21917d65a5ec4d9ad7f8aaadb75d0e773
-Grading at Sun Sep 26 15:29:34 EDT 2021
+Grading at 09/27/2021:04:23:39.864408
+For commit ID a90224f71c5f3086936be5938d1b36772f540acc
+Grading at Mon Sep 27 00:23:19 EDT 2021
 Running your test cases
 
 Compiling printCountries
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
 gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/toomanycomma.csv
+Test case printCountries testcases/printCountries/commaInName.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/nameLen64Wrong.csv
@@ -36,6 +36,56 @@ Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/popStartWitha.csv
 Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charStartWithTwoPlus.csv
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 331002647
+United States: 0
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charStartWithSpaceTwoPlus.csv
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 331002647
+United States: 0
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charStartWithTwoNeg.csv
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 0
+Your program did not indicate a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/charStartWithSpaceTwoNeg.csv
+Brazil: 212559409
+China: 1439323774
+Germany: 83783945
+India: 1380004385
+Nigeria: 206139587
+Norway: 5421242
+South Korea: 51269183
+United Kingdom: 67886004
+United States: 0
+Your program did not indicate a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/commaInsideNum.csv
 Your file matched the expected output
@@ -97,7 +147,7 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o prin
 Test case printDailyMax population.csv daily_small.csv
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
