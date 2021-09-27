@@ -60,27 +60,6 @@ void checkName(const char * start, const char * first_comma) {
 }
 
 /*
-this function will check whether the population start with a char other than +/-/space/0~9 afer trip the initial spaces
-Input: the first pointer of the first number
-EXIT_FAILURE if population field is invalid
-*/
-void checkPop(const char * first_num) {
-  //check the population
-  //the population is behind the comma but before '\n'
-  //we need first to check they are 0~9
-  //trim the leading space
-  while (*first_num == ' ') {
-    first_num++;
-  }
-
-  //the first num char can be +, - or  0~9
-  if ((*first_num != '-') && (*first_num != '+') &&
-      (*first_num < '0' || *first_num > '9')) {
-    fprintf(stderr, "The population field is invalid\n");
-    exit(EXIT_FAILURE);
-  }
-}
-/*
 This function will fill the name field of the counrty struct
 Input:the pointer of the first char or the line
       the pointer to the dest which is the conutry struct
@@ -105,14 +84,25 @@ Input:the pointer of the first number (the first pointer after the comma)
       the pointer to the dest which is the conutry struct
 EXIT_FAILURE if the population is out of bound     
 */
-void fillThePop(const char * first_num, country_t * ans) {
+uint64_t readThePop(char * first_num) {
   //use strtoul to convert string to 64 bits value
+
+  //set the error number to 0 before use strtoul, can help to check overflow
   errno = 0;
-  ans->population = strtoul(first_num, NULL, 10);
+  //end ptr is the pointer the first invalid char
+  char ** endptr = &first_num;
+  uint64_t pop = strtoul(first_num, endptr, 10);
+  //check whether the char before the first invalid char is 0~9
+  if (*(*endptr - 1) < '0' || *(*endptr - 1) > '9') {
+    fprintf(stderr, "There is no valid number in the population field");
+    exit(EXIT_FAILURE);
+  }
   if (errno != 0) {
     perror("strtol:");
     exit(EXIT_FAILURE);
   }
+
+  return pop;
 }
 
 country_t parseLine(char * line) {
@@ -123,8 +113,7 @@ country_t parseLine(char * line) {
 
   /*check whether the population field is valid*/
   //get the first char
-  const char * first_comma = strchr(line, ',');
-  checkPop(first_comma + 1);
+  char * first_comma = strchr(line, ',');
 
   /*check whether the name field is valid*/
   checkName(line, first_comma);
@@ -135,7 +124,7 @@ country_t parseLine(char * line) {
   //fill the name field
   fillTheName(line, &ans);
   //fill the population field
-  fillThePop(first_comma + 1, &ans);
+  ans.population = readThePop(first_comma + 1);
   return ans;
 }
 
