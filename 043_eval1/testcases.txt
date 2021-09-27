@@ -1,5 +1,5 @@
 #error
-printCountries testcases/printCountries/toomanycomma.csv
+printCountries testcases/printCountries/commaInName.csv
 printCountries testcases/printCountries/nameLen64Wrong.csv
 printCountries testcases/printCountries/nameLen65Wrong.csv
 printCountries testcases/printCountries/no_such.csv
@@ -9,7 +9,10 @@ printCountries testcases/printCountries/no_population.csv
 printCountries testcases/printCountries/max64_overflow.csv	  
 printCountries testcases/printCountries/no_population_but_a_space.csv 
 printCountries testcases/printCountries/popStartWitha.csv 
-
+printCountries testcases/printCountries/charStartWithTwoPlus.csv
+printCountries testcases/printCountries/charStartWithSpaceTwoPlus.csv
+printCountries testcases/printCountries/charStartWithTwoNeg.csv
+printCountries testcases/printCountries/charStartWithSpaceTwoNeg.csv
 
 #success
 printCountries testcases/printCountries/commaInsideNum.csv
