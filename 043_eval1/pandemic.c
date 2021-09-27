@@ -82,7 +82,7 @@ void fillTheName(const char * first_char, country_t * ans) {
 This function will fill the population field of the counrty struct  
 Input:the pointer of the first number (the first pointer after the comma)           
       the pointer to the dest which is the conutry struct
-EXIT_FAILURE if the population is out of bound     
+EXIT_FAILURE if the population is out of bound or the population field is not valid     
 */
 uint64_t readThePop(char * first_num) {
   //use strtoul to convert string to 64 bits value
@@ -97,6 +97,7 @@ uint64_t readThePop(char * first_num) {
     fprintf(stderr, "There is no valid number in the population field");
     exit(EXIT_FAILURE);
   }
+  //check overflow
   if (errno != 0) {
     perror("strtol:");
     exit(EXIT_FAILURE);
