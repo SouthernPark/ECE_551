@@ -65,12 +65,12 @@ int main(int argc, char ** argv) {
         return EXIT_FAILURE;
       }
       readSortPrint(f);
-    }
 
-    //close the file
-    int c = fclose(f);
-    if (c == EOF) {
-      perror("can not close");
+      //close the file
+      int c = fclose(f);
+      if (c == EOF) {
+        perror("can not close");
+      }
     }
   }
 
