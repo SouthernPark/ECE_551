@@ -136,6 +136,7 @@ country_t parseLine(char * line) {
 
 void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   //WRITE ME
+  //if n_days is smaller than seven, then return
   if (n_days < seven_days) {
     return;
   }
