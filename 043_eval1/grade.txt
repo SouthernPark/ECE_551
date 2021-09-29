@@ -1,6 +1,6 @@
-Grading at 09/29/2021:17:10:45.857613
-For commit ID a7293ee94f91033eecb9df720e674e768b24d1bd
-Grading at Wed Sep 29 13:10:40 EDT 2021
+Grading at 09/29/2021:17:35:26.808542
+For commit ID a080a438aac3b8524773131cc1a7a75e2b2ba041
+Grading at Wed Sep 29 13:35:20 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -26,8 +26,8 @@ Your program successfully indicated a failure case
 Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_neg_num.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
-Our printRunningAvg does not consider this an error case
+Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_overflow.csv
+Your program successfully indicated a failure case
 
 Compiling printCountries
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -38,6 +38,14 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_content.csv
 Your file matched the expected output
+
+Compiling printRunningAvg
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
+Line_4_did_not_match
+Your file did not match the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
