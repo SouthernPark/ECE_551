@@ -165,11 +165,11 @@ void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) 
     return;
   }
 
-  uint64_t cum_sum = 0;
+  double cum_sum = 0;
   for (size_t i = 0; i < n_days; i++) {
     //the cum_sum of the [0..i] th day
     cum_sum += data[i];
-    cum[i] = ((double)cum_sum) / pop * base_hundred_thousand;
+    cum[i] = cum_sum / pop * base_hundred_thousand;
   }
 
   return;
