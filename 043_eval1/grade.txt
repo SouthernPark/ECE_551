@@ -1,6 +1,6 @@
-Grading at 09/29/2021:04:27:04.252646
-For commit ID 447d19f4a36c3413f4c5ac18bbcbc6a36a52ca21
-Grading at Wed Sep 29 00:26:56 EDT 2021
+Grading at 09/29/2021:04:28:59.146438
+For commit ID 9d607ba403fb75cd24a1e32c1f61cb6afc9b6228
+Grading at Wed Sep 29 00:28:50 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -47,7 +47,15 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv testcases/printCumulative/no_daily_data
 Your file matched the expected output
-Program must be one of printCountries printRunningAvg printCumulative printDailyMax
-But found "./printRunningAvg"
+
+Compiling printRunningAvg
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv testcases/printCumulative/no_daily_data
+Your file matched the expected output
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
