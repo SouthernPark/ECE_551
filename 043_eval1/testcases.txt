@@ -1,5 +1,5 @@
 #error
-printCounrties testcases/printCountries/countryNegWithpop.csv
-printCounrties testcases/printCountries/countryNegNopop.csv
+printCountries testcases/printCountries/countryNegWithpop.csv
+printCountries testcases/printCountries/countryNegNopop.csv
 #success
 
