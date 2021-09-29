@@ -13,4 +13,4 @@ printCumulative population.csv testcases/printCumulative/no_daily_data
 printDailyMax population.csv daily_small.csv
 printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
 printDailyMax population.csv testcases/printCumulative/no_daily_data
-./printRunningAvg population.csv testcases/printCumulative/no_daily_data 
+printRunningAvg population.csv testcases/printCumulative/no_daily_data 
