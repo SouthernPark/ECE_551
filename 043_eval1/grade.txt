@@ -1,6 +1,6 @@
-Grading at 09/27/2021:04:47:25.774344
-For commit ID df271b571aebbb41612ad1bcd50e2728e6dec96f
-Grading at Mon Sep 27 00:47:05 EDT 2021
+Grading at 09/29/2021:03:59:32.188074
+For commit ID 9dc416085e30578c06d2e38df365182f389e4d47
+Grading at Tue Sep 28 23:59:11 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -101,13 +101,12 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o pr
 +-----------------------------------------------------------------------+
 Test case printCumulative population.csv daily_small.csv
 Your file matched the expected output
-
-Compiling printDailyMax
-rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
-gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
 +-----------------------------------------------------------------------+
-Test case printDailyMax population.csv daily_small.csv
+Test case printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
 Your file matched the expected output
+
+Grading has taken more than 20 seconds
+Skipping remaining test cases
 
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
