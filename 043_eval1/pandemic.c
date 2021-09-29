@@ -148,7 +148,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   for (int i = 0; i < seven_days; i++) {
     total_cases += data[i];
   }
-  avg[0] = total_cases / seven_days;
+  avg[0] = ((double)total_cases) / seven_days;
   for (size_t i = 1; i < N; i++) {
     //remove the old first day case
     total_cases -= data[i - 1];
