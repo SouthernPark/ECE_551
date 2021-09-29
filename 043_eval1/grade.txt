@@ -1,99 +1,7 @@
-Grading at 09/29/2021:03:59:32.188074
-For commit ID 9dc416085e30578c06d2e38df365182f389e4d47
-Grading at Tue Sep 28 23:59:11 EDT 2021
+Grading at 09/29/2021:04:04:37.384274
+For commit ID 47af6a00d68370adc38eea76abbcf3faaeec4ad1
+Grading at Wed Sep 29 00:04:34 EDT 2021
 Running your test cases
-
-Compiling printCountries
-rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
-gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/commaInName.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/nameLen64Wrong.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/nameLen65Wrong.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_such.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_comma.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_comma1.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_population.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/max64_overflow.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_population_but_a_space.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/popStartWitha.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithTwoPlus.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithSpaceTwoPlus.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithTwoNeg.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithSpaceTwoNeg.csv
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/commaInsideNum.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithPlus.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/population.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/max64_corr.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/nameLen63Corr.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithNeg.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithSpace.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum3.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charInNum4.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/no_content.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/numStartWithSpacesMax64.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/numStartWithSpaces1.csv
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case printCountries testcases/printCountries/charStartWithNeg1.csv
-Your file matched the expected output
-
-Compiling printRunningAvg
-rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
-gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
-+-----------------------------------------------------------------------+
-Test case printRunningAvg population.csv daily_small.csv
-Your file matched the expected output
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
@@ -105,8 +13,15 @@ Your file matched the expected output
 Test case printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
 Your file matched the expected output
 
-Grading has taken more than 20 seconds
-Skipping remaining test cases
+Compiling printDailyMax
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv daily_small.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
+Your file matched the expected output
 
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
