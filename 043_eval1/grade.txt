@@ -1,6 +1,6 @@
-Grading at 09/29/2021:16:56:30.438443
-For commit ID df2c931497f9292338936dca458b33d31557e309
-Grading at Wed Sep 29 12:56:27 EDT 2021
+Grading at 09/29/2021:16:59:02.416099
+For commit ID 45d396ee937951df7c185d8aa7f36989342af165
+Grading at Wed Sep 29 12:59:00 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -14,12 +14,12 @@ Test case printCountries testcases/printCountries/countryNegNopop.csv
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_counrty
-Your file matched the expected output
+Our printCountries does not consider this an error case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_content.csv
-Your file matched the expected output
+Our printCountries does not consider this an error case
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
