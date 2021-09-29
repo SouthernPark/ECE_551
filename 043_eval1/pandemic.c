@@ -162,7 +162,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
 
 void calcCumulative(unsigned * data, size_t n_days, uint64_t pop, double * cum) {
   //WRITE ME
-  if (n_days == 0) {
+  if (n_days <= 0) {
     return;
   }
 
