@@ -6,6 +6,7 @@ printCountries
 printCumulative
 printDailyMax
 printRunningAvg
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
 
 #success
 printCountries testcases/printCountries/float_num
@@ -18,4 +19,3 @@ printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
 printDailyMax population.csv testcases/printCumulative/no_daily_data
 printRunningAvg population.csv testcases/printCumulative/no_daily_data 
 printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
