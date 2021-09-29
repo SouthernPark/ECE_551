@@ -1,6 +1,6 @@
-Grading at 09/29/2021:18:14:25.386018
-For commit ID 0673ea0214d178f8a932441a2cde281f0246aba2
-Grading at Wed Sep 29 14:14:11 EDT 2021
+Grading at 09/29/2021:18:19:36.014865
+For commit ID 73304cad8adf29fdfda636718aa70dfc00e3b43e
+Grading at Wed Sep 29 14:19:19 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -88,7 +88,33 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
 Your file matched the expected output
-Program must be one of printCountries printRunningAvg printCumulative printDailyMax
-But found "printCounrties"
+
+Compiling printCountries
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/countryNegNopop.csv
+Line_1_did_not_match
+Your file did not match the expected output
+
+Compiling printCumulative
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
++-----------------------------------------------------------------------+
+Test case printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
+Your file matched the expected output
+
+Compiling printDailyMax
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv daily_small.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
+Your file matched the expected output
+
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
