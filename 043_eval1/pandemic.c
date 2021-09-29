@@ -215,7 +215,7 @@ void printCountryWithMax(country_t * countries,
   }
 
   if (first_max == second_max) {
-    printf("There is a tie between at least two countries");
+    printf("There is a tie between at least two countries\n");
     return;
   }
 
