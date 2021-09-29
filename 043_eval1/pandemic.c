@@ -143,7 +143,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
   // how senven-day running average, I am gonna to calculate
   size_t N = n_days - (seven_days - 1);
   //unsigned is 4 bytes, may be I should use uint_64 to do calculation
-  double total_cases = 0;
+  unsigned total_cases = 0;
   //calculate the sum of the first seven days
   for (int i = 0; i < seven_days; i++) {
     total_cases += data[i];
@@ -154,7 +154,7 @@ void calcRunningAvg(unsigned * data, size_t n_days, double * avg) {
     total_cases -= data[i - 1];
     //add the new last day case
     total_cases += data[i + seven_days - 1];
-    avg[i] = total_cases / seven_days;
+    avg[i] = ((double)total_cases) / seven_days;
   }
   return;
 }
