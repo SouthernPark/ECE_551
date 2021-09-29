@@ -206,13 +206,15 @@ void printCountryWithMax(country_t * countries,
   size_t first_max_index = 0;
   //the counrty with the second maximum cases
   long second_max = -1;
-
+  //find the max case for each country
   for (size_t i = 0; i < n_countries; i++) {
     unsigned tmp = findMaxCaseInACounrty(data[i], n_days);
+    //find the max
     if (tmp > first_max) {
       first_max = tmp;
       first_max_index = i;
     }
+    //find the second max
     else {
       if (tmp > second_max) {
         second_max = tmp;
