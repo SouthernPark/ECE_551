@@ -1,7 +1,23 @@
-Grading at 09/29/2021:04:04:37.384274
-For commit ID 47af6a00d68370adc38eea76abbcf3faaeec4ad1
-Grading at Wed Sep 29 00:04:34 EDT 2021
+Grading at 09/29/2021:04:15:48.479422
+For commit ID 0beb043dd51fedd8b3b4704691abf8b1128d5e33
+Grading at Wed Sep 29 00:15:42 EDT 2021
 Running your test cases
+
+Compiling printCountries
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/onlyOne-inPop
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/onlyOne+inPop
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/onlyOneSpaceinPop
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/float_num
+Your file matched the expected output
 
 Compiling printCumulative
 rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
