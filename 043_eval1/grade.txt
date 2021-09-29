@@ -1,6 +1,6 @@
-Grading at 09/29/2021:18:34:28.129768
-For commit ID debb516f3e934bab3a016a5ef73ae521dc5d390c
-Grading at Wed Sep 29 14:34:24 EDT 2021
+Grading at 09/29/2021:19:36:59.464562
+For commit ID d2b511fac2129d5950d4aa5ef6beb6bfd06e1186
+Grading at Wed Sep 29 15:36:55 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -17,6 +17,13 @@ Test case printCountries testcases/printCountries/no_counrty
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/no_content.csv
+Your file matched the expected output
+
+Compiling printCumulative
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
++-----------------------------------------------------------------------+
+Test case printCumulative population.csv testcases/printCumulative/daily_small.csv
 Your file matched the expected output
 
 You have PASSED all of your test cases
