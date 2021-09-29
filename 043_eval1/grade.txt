@@ -1,6 +1,6 @@
-Grading at 09/29/2021:04:28:59.146438
-For commit ID 9d607ba403fb75cd24a1e32c1f61cb6afc9b6228
-Grading at Wed Sep 29 00:28:50 EDT 2021
+Grading at 09/29/2021:14:48:50.763220
+For commit ID cf4b0f3540e699771594884f174c40bf0c3d7143
+Grading at Wed Sep 29 10:48:37 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -15,6 +15,34 @@ Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/onlyOneSpaceinPop
 Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries 
+Your program successfully indicated a failure case
+
+Compiling printCumulative
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCumulative.o -o printCumulative
++-----------------------------------------------------------------------+
+Test case printCumulative 
+Your program successfully indicated a failure case
+
+Compiling printDailyMax
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printDailyMax.o -o printDailyMax
++-----------------------------------------------------------------------+
+Test case printDailyMax 
+Your program successfully indicated a failure case
+
+Compiling printRunningAvg
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o printRunningAvg
++-----------------------------------------------------------------------+
+Test case printRunningAvg 
+Your program successfully indicated a failure case
+
+Compiling printCountries
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/float_num
 Your file matched the expected output
@@ -54,8 +82,15 @@ gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printRunningAvg.o -o pr
 +-----------------------------------------------------------------------+
 Test case printRunningAvg population.csv testcases/printCumulative/no_daily_data
 Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
+Line_1_did_not_match
+Your file did not match the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
