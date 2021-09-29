@@ -18,6 +18,11 @@ Input: the pointer to the line
 EXIT_FAILURE if the line is invalid
 */
 void check_line(char * line) {
+  //check whether line is null
+  if (line == NULL) {
+    fprintf(stderr, "The input line is null");
+    exit(EXIT_FAILURE);
+  }
   //check whether the line is a string(check '\0' and '\n')
   const char * first_null = strchr(line, '\0');
   if (first_null == NULL) {
