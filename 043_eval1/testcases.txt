@@ -1,35 +1,25 @@
 #error
-printCountries testcases/printCountries/commaInName.csv
-printCountries testcases/printCountries/nameLen64Wrong.csv
-printCountries testcases/printCountries/nameLen65Wrong.csv
-printCountries testcases/printCountries/no_such.csv
-printCountries testcases/printCountries/no_comma.csv
-printCountries testcases/printCountries/no_comma1.csv
-printCountries testcases/printCountries/no_population.csv
-printCountries testcases/printCountries/max64_overflow.csv	  
-printCountries testcases/printCountries/no_population_but_a_space.csv 
-printCountries testcases/printCountries/popStartWitha.csv 
-printCountries testcases/printCountries/charStartWithTwoPlus.csv
-printCountries testcases/printCountries/charStartWithSpaceTwoPlus.csv
-printCountries testcases/printCountries/charStartWithTwoNeg.csv
-printCountries testcases/printCountries/charStartWithSpaceTwoNeg.csv
+printCountries testcases/printCountries/onlyOne-inPop
+printCountries testcases/printCountries/onlyOne+inPop
+printCountries testcases/printCountries/onlyOneSpaceinPop
+printCountries
+printCumulative
+printDailyMax
+printRunningAvg
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
 
 #success
-printCountries testcases/printCountries/commaInsideNum.csv
-printCountries testcases/printCountries/charStartWithPlus.csv
-printCountries testcases/printCountries/population.csv
-printCountries testcases/printCountries/max64_corr.csv
-printCountries testcases/printCountries/nameLen63Corr.csv
-printCountries testcases/printCountries/charStartWithNeg.csv
-printCountries testcases/printCountries/charStartWithSpace.csv
-printCountries testcases/printCountries/charInNum3.csv
-printCountries testcases/printCountries/charInNum4.csv
-printCountries testcases/printCountries/no_content.csv
-printCountries testcases/printCountries/numStartWithSpacesMax64.csv
-printCountries testcases/printCountries/numStartWithSpaces1.csv
-printCountries testcases/printCountries/charStartWithNeg1.csv
-printRunningAvg population.csv daily_small.csv
+printCountries testcases/printCountries/float_num
+printCountries testcases/printCountries/no_counrty
 printCumulative population.csv daily_small.csv
+printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
+printCumulative population.csv testcases/printCumulative/no_daily_data
+printDailyMax population.csv daily_small.csv
+printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
+printDailyMax population.csv testcases/printCumulative/no_daily_data
+printRunningAvg population.csv testcases/printCumulative/no_daily_data 
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
+printCounrties testcases/printCountries/countryNegNopop.csv
 printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
 printDailyMax population.csv daily_small.csv
 printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
