@@ -2,7 +2,10 @@
 printCountries testcases/printCountries/onlyOne-inPop
 printCountries testcases/printCountries/onlyOne+inPop
 printCountries testcases/printCountries/onlyOneSpaceinPop
-
+printCountries
+printCumulative
+printDailyMax
+printRunningAvg
 
 #success
 printCountries testcases/printCountries/float_num
@@ -14,3 +17,5 @@ printDailyMax population.csv daily_small.csv
 printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
 printDailyMax population.csv testcases/printCumulative/no_daily_data
 printRunningAvg population.csv testcases/printCumulative/no_daily_data 
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
