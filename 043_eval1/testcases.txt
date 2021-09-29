@@ -1,14 +1,9 @@
 #error
 printCountries testcases/printCountries/countryNegWithpop.csv
 printCountries testcases/printCountries/countryNegNopop.csv
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_float_num.csv
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_neg_num.csv
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_overflow.csv
-
 
 #success
 printCountries testcases/printCountries/no_counrty	  
 printCountries testcases/printCountries/no_content.csv	  
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
-printCumulative population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
+
+
