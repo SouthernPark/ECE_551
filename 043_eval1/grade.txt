@@ -1,6 +1,6 @@
-Grading at 09/29/2021:04:20:14.988856
-For commit ID 86f4b1e39063ca3bc96582805567b1716bdf44b2
-Grading at Wed Sep 29 00:20:08 EDT 2021
+Grading at 09/29/2021:04:27:04.252646
+For commit ID 447d19f4a36c3413f4c5ac18bbcbc6a36a52ca21
+Grading at Wed Sep 29 00:26:56 EDT 2021
 Running your test cases
 
 Compiling printCountries
@@ -17,6 +17,9 @@ Test case printCountries testcases/printCountries/onlyOneSpaceinPop
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case printCountries testcases/printCountries/float_num
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/no_counrty
 Your file matched the expected output
 
 Compiling printCumulative
@@ -41,8 +44,10 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
 Your file matched the expected output
-
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
++-----------------------------------------------------------------------+
+Test case printDailyMax population.csv testcases/printCumulative/no_daily_data
+Your file matched the expected output
+Program must be one of printCountries printRunningAvg printCumulative printDailyMax
+But found "./printRunningAvg"
 
 Overall Grade: NO GRADE YET
