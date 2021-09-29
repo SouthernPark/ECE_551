@@ -1,8 +1,11 @@
 #error
-
+printCountries testcases/printCountries/onlyOne-inPop
+printCountries testcases/printCountries/onlyOne+inPop
+printCountries testcases/printCountries/onlyOneSpaceinPop
 
 
 #success
+printCountries testcases/printCountries/float_num
 printCumulative population.csv daily_small.csv
 printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
 printDailyMax population.csv daily_small.csv
