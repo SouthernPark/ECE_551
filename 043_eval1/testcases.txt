@@ -1,25 +1,14 @@
 #error
-printCountries testcases/printCountries/onlyOne-inPop
-printCountries testcases/printCountries/onlyOne+inPop
-printCountries testcases/printCountries/onlyOneSpaceinPop
-printCountries
-printCumulative
-printDailyMax
-printRunningAvg
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
+printCountries testcases/printCountries/countryNegWithpop.csv
 printCountries testcases/printCountries/countryNegNopop.csv
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_float_num.csv
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_neg_num.csv
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_overflow.csv
+
 
 #success
-printCountries testcases/printCountries/float_num
-printCountries testcases/printCountries/no_counrty
-printCumulative population.csv daily_small.csv
-printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
-printCumulative population.csv testcases/printCumulative/no_daily_data
-printDailyMax population.csv daily_small.csv
-printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
-printDailyMax population.csv testcases/printCumulative/no_daily_data
-printRunningAvg population.csv testcases/printCumulative/no_daily_data 
-printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
-printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
-printDailyMax population.csv daily_small.csv
-printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
+printCountries testcases/printCountries/no_counrty	  
+printCountries testcases/printCountries/no_content.csv	  
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
+printCumulative population.csv testcases/printRunningAvg/daily_cases_with_int_max_num.csv
