@@ -8,5 +8,6 @@ printCountries testcases/printCountries/onlyOneSpaceinPop
 printCountries testcases/printCountries/float_num
 printCumulative population.csv daily_small.csv
 printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
+printCumulative population.csv testcases/printCumulative/no_daily_data
 printDailyMax population.csv daily_small.csv
 printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
