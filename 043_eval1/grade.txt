@@ -1,8 +1,19 @@
-Grading at 09/29/2021:15:10:50.959890
-For commit ID 1f45d904977f374e5993eaa8717c6d224617b0c1
-Grading at Wed Sep 29 11:10:50 EDT 2021
+Grading at 09/29/2021:15:13:08.189938
+For commit ID 09433b13468a2ccc08e54c38823a44e554a8f24e
+Grading at Wed Sep 29 11:13:06 EDT 2021
 Running your test cases
-Program must be one of printCountries printRunningAvg printCumulative printDailyMax
-But found "printCounrties"
+
+Compiling printCountries
+rm -f *~ printCountries printRunningAvg printCumulative printDailyMax
+gcc -std=gnu99 -Werror -Wall -pedantic -ggdb3 pandemic.c printCountries.o -o printCountries
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/countryNegWithpop.csv
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case printCountries testcases/printCountries/countryNegNopop.csv
+Your program successfully indicated a failure case
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
