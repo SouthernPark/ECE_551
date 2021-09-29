@@ -1,0 +1,22 @@
+#error
+printCountries testcases/printCountries/onlyOne-inPop
+printCountries testcases/printCountries/onlyOne+inPop
+printCountries testcases/printCountries/onlyOneSpaceinPop
+printCountries
+printCumulative
+printDailyMax
+printRunningAvg
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases_with_max_unit64.csv
+
+#success
+printCountries testcases/printCountries/float_num
+printCountries testcases/printCountries/no_counrty
+printCumulative population.csv daily_small.csv
+printCumulative testcases/printCumulative/population_with_pop0.csv daily_cases.csv
+printCumulative population.csv testcases/printCumulative/no_daily_data
+printDailyMax population.csv daily_small.csv
+printDailyMax population.csv testcases/printDailyMax/daily_small_two_max.csv
+printDailyMax population.csv testcases/printCumulative/no_daily_data
+printRunningAvg population.csv testcases/printCumulative/no_daily_data 
+printRunningAvg population.csv testcases/printRunningAvg/daily_cases.csv
+printCounrties testcases/printCountries/countryNegNopop.csv
