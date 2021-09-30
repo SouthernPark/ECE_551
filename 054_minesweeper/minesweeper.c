@@ -31,6 +31,7 @@ void addRandomMine(board_t * b) {
   //we give up
   int limit = b->width * b->height * 10;
   do {
+    //random mod x (random number betweent 0->(x-1) )
     x = random() % b->width;
     y = random() % b->height;
     assert(limit > 0);
@@ -49,9 +50,19 @@ board_t * makeBoard(int w, int h, int numMines) {
   for (int i = 0; i < h; i++) {
     res->board[i] = malloc(w * sizeof(*(res->board[i])));
   }
+  //fill up the board with unknown
+  for (int i = 0; i < h; i++) {
+    for (int j = 0; j < w; j++) {
+      res->board[i][j] = UNKNOWN;
+    }
+  }
+  //set the number of mines needed
   res->totalMines = numMines;
-
-  return NULL;
+  //add mine in the square randomly
+  for (int i = 0; i < numMines; i++) {
+    addRandomMine(res);
+  }
+  return res;
 }
 void printBoard(board_t * b) {
   int found = 0;
@@ -105,7 +116,21 @@ void printBoard(board_t * b) {
 }
 int countMines(board_t * b, int x, int y) {
   //WRITE ME!
-  return 0;
+  int count = 0;
+  for (int i = y - 1; i <= y + 1; i++) {
+    if (i < 0 || i >= b->height) {
+      continue;
+    }
+    for (int j = x - 1; j <= x + 1; j++) {
+      if (j < 0 || j >= b->width) {
+        continue;
+      }
+      if (IS_MINE(b->board[i][j])) {
+        count++;
+      }
+    }
+  }
+  return count;
 }
 int click(board_t * b, int x, int y) {
   if (x < 0 || x >= b->width || y < 0 || y >= b->height) {
@@ -126,12 +151,26 @@ int click(board_t * b, int x, int y) {
 }
 
 int checkWin(board_t * b) {
-  //WRITE ME!
-  return 0;
+  for (int i = 0; i < b->height; i++) {
+    for (int j = 0; j < b->width; j++) {
+      if (b->board[i][j] == UNKNOWN) {
+        return 0;
+      }
+    }
+  }
+  return 1;
 }
 
 void freeBoard(board_t * b) {
   //WRITE ME!
+  //free each column
+  for (int i = 0; i < b->height; i++) {
+    free(b->board[i]);
+  }
+
+  free(b->board);
+  free(b);
+  return;
 }
 
 int readInt(char ** linep, size_t * lineszp) {
