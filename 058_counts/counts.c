@@ -39,9 +39,9 @@ void addCount(counts_t * c, const char * name) {
 void printCounts(counts_t * c, FILE * outFile) {
   //WRITE ME
   for (size_t i = 0; i < c->sz; i++) {
-    fprintf(outFile, "%s: %lu\n", c->arr[i].count, c->arr[i].value);
+    fprintf(outFile, "%s:%lu\n", c->arr[i].count, c->arr[i].value);
   }
-  fprintf(outFile, "<unknown> : %lu\n", c->unknown);
+  fprintf(outFile, "<unknown>:%lu\n", c->unknown);
   fclose(outFile);
 }
 
