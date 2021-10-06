@@ -44,7 +44,10 @@ void printCounts(counts_t * c, FILE * outFile) {
   if (c->unknown != 0) {
     fprintf(outFile, "<unknown> : %lu\n", c->unknown);
   }
-  fclose(outFile);
+  int status = fclose(outFile);
+  if (status == EOF) {
+    perror("can not close file:");
+  }
 }
 
 void freeCounts(counts_t * c) {

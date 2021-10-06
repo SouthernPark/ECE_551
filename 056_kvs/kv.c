@@ -19,6 +19,10 @@ kvpair_t split(char * line) {
 kvarray_t * readKVs(const char * fname) {
   //WRITE ME
   FILE * f = fopen(fname, "r");
+  if (f == NULL) {
+    perror("Can not open file");
+    return NULL;
+  }
   kvarray_t * pairs = malloc(sizeof(*pairs));
   pairs->arr = NULL;
   pairs->sz = 0;
