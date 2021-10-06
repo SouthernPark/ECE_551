@@ -41,7 +41,9 @@ void printCounts(counts_t * c, FILE * outFile) {
   for (size_t i = 0; i < c->sz; i++) {
     fprintf(outFile, "%s: %lu\n", c->arr[i].count, c->arr[i].value);
   }
-  fprintf(outFile, "<unknown>: %lu\n", c->unknown);
+  if (c->unknown != 0) {
+    fprintf(outFile, "<unknown> : %lu\n", c->unknown);
+  }
   fclose(outFile);
 }
 
