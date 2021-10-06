@@ -7,10 +7,12 @@
 //this function will split according to the first '='
 kvpair_t split(char * line) {
   kvpair_t kv;
-  char * first_ = strchr(line, '=');
-  *first_ = '\0';
+  char * first_equal = strchr(line, '=');
+  char * first_new_line = strchr(line, '\n');
+  *first_equal = '\0';
   kv.key = strdup(line);
-  kv.value = strdup(first_ + 1);
+  *first_new_line = '\0';
+  kv.value = strdup(first_equal + 1);
   return kv;
 }
 
@@ -55,7 +57,7 @@ char * lookupValue(kvarray_t * pairs, const char * key) {
 
   for (size_t i = 0; i < pairs->sz; i++) {
     if (strcmp(pairs->arr[i].key, key) == 0) {
-      return pairs->arr[i].key;
+      return pairs->arr[i].value;
     }
   }
 
