@@ -20,6 +20,8 @@ kvarray_t * readKVs(const char * fname) {
   //WRITE ME
   FILE * f = fopen(fname, "r");
   kvarray_t * pairs = malloc(sizeof(*pairs));
+  pairs->arr = NULL;
+  pairs->sz = 0;
   char * line = NULL;
   size_t sz = 0;
   size_t i = 0;
