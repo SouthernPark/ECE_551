@@ -1,0 +1,4 @@
+#include "points.hpp"
+
+void Point::move(double dx, double dy) {
+}
