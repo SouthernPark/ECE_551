@@ -13,6 +13,11 @@ class Vector2D {
 
   Vector2D(double init_x, double init_y) : x(init_x), y(init_y){};
 
+  void initVector(double init_x, double init_y) {
+    x = init_x;
+    y = init_y;
+  }
+
   double getMagnitude() const;
 
   Vector2D operator+(const Vector2D & rhs) const;
