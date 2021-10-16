@@ -20,6 +20,8 @@ char ** loadTemp(char * fileName, size_t * n) {
   while (getline(&line, &sz, f) >= 0) {
     char ** tmp = realloc(lines, ((*n) + 1) * sizeof(*lines));
     if (tmp == NULL) {
+      free(line);
+      free(lines);
       fprintf(stderr, "Can not realloc");
       return NULL;
     }

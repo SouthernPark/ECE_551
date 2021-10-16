@@ -13,7 +13,9 @@ int main(int argc, char ** argv) {
 
   size_t n = 0;
   char ** templates = loadTemp(argv[1], &n);
-
+  if (templates == NULL) {
+    exit(EXIT_FAILURE);
+  }
   //2.parse and replace the templates
   parseTemp(templates, n);
   //3.free templates

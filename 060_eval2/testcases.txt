@@ -1,5 +1,4 @@
 #error
-story-step1 test/fail/no_line
 story-step1 test/fail/fail1
 story-step1 test/fail/story.txt
 story-step1 test/fail/no_file
@@ -8,3 +7,4 @@ story-step1 test/fail/no_file
 #success
 story-step1 story.txt
 story-step1 test/story.txt  
+story-step1 test/fail/no_line  
