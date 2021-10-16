@@ -1,0 +1,6 @@
+#error
+
+
+#success
+story-step1 story.txt
+story-step1 test/story.txt  
