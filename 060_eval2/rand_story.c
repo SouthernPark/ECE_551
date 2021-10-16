@@ -4,10 +4,10 @@
 
 /*Fuctions used for story-step1*/
 
-//this function will load the template from the file specified by the file name
+//this function will load the file specified by the file name
 //The input is file name and the address which will record the number of lines of tjefile
-//output: loaded templates
-char ** loadTemp(char * fileName, size_t * n) {
+//output: loaded file
+char ** loadFile(char * fileName, size_t * n) {
   FILE * f = fopen(fileName, "r");
   if (f == NULL) {
     perror("Can not open file:");

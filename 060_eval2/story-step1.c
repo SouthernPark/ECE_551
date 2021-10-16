@@ -12,7 +12,7 @@ int main(int argc, char ** argv) {
   //1.load the story template
 
   size_t n = 0;
-  char ** templates = loadTemp(argv[1], &n);
+  char ** templates = loadFile(argv[1], &n);
   if (templates == NULL) {
     exit(EXIT_FAILURE);
   }

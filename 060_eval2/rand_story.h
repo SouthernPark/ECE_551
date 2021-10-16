@@ -6,7 +6,7 @@
 
 #include "provided.h"
 //any functions you want your main to use
-char ** loadTemp(char * fileName, size_t * n);
+char ** loadFile(char * fileName, size_t * n);
 void freeTemp(char ** temp, size_t N);
 
 void parseLine(char * line);
