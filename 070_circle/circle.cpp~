@@ -1,0 +1,5 @@
+#include "circle.hpp"
+
+void Circle::move(double dx, double dy) {
+  this->move(dx, dy);
+}
