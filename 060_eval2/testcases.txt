@@ -1,4 +1,8 @@
 #error
+story-step1 test/fail/no_line
+story-step1 test/fail/fail1
+story-step1 test/fail/story.txt
+story-step1 test/fail/no_file
 
 
 #success
