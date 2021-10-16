@@ -1,0 +1,22 @@
+Grading at 10/16/2021:19:35:08.237949
+For commit ID 47fe1aee24cd3cde61e803b2ec4f50861dcc1059
+Grading at Sat Oct 16 15:35:06 EDT 2021
+Running your test cases
+
+Compiling story-step1
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
++-----------------------------------------------------------------------+
+Test case story-step1 story.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step1 test/story.txt
+Your file matched the expected output
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
+
+Overall Grade: NO GRADE YET
