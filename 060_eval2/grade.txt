@@ -1,6 +1,6 @@
-Grading at 10/16/2021:21:42:18.001005
-For commit ID fbcfabed5be9fac92b31db87d2089d02beadcfab
-Grading at Sat Oct 16 17:42:13 EDT 2021
+Grading at 10/16/2021:21:46:32.543732
+For commit ID 43c9b466e4ceaec547221fa24331ee40910fdc3f
+Grading at Sat Oct 16 17:46:28 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -20,6 +20,9 @@ Your program successfully indicated a failure case
 Test case story-step1 test/fail/no_file
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
+Test case story-step1 test/fail/fail2
+Our story-step1 does not consider this an error case
++-----------------------------------------------------------------------+
 Test case story-step1 story.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
@@ -29,7 +32,7 @@ Your file matched the expected output
 Test case story-step1 test/fail/no_line
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
