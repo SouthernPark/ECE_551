@@ -1,6 +1,6 @@
-Grading at 10/17/2021:18:30:32.592326
-For commit ID ddb648bf63397626dad859269b8bae85c69177dc
-Grading at Sun Oct 17 14:30:24 EDT 2021
+Grading at 10/17/2021:18:52:29.943761
+For commit ID c08c7b102a6ca232dc0d37fb0ccbdff084cfb90f
+Grading at Sun Oct 17 14:52:20 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -10,10 +10,17 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
 rm story-step1.o
 +-----------------------------------------------------------------------+
-Test case story-step1 
+Test case story-step1 test/fail/fail1
+asfadfbmasfcat
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step1 words.txt words.txt
+Test case story-step1 test/fail/story.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step1 test/fail/no_file
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step1 test/fail/fail2
 Your program successfully indicated a failure case
 
 Compiling story-step2
@@ -25,18 +32,32 @@ rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/nocolon
 Your program successfully indicated a failure case
+
+Compiling story-step1
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
 +-----------------------------------------------------------------------+
-Test case story-step2 test2/nocolonBegin
-Your program successfully indicated a failure case
+Test case story-step1 story.txt
+Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case story-step2 test2/nocolonEnd
-Your program successfully indicated a failure case
+Test case story-step1 test/story.txt
+Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case story-step2 
-Your program successfully indicated a failure case
+Test case story-step1 test/fail/no_line
+Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case story-step2 test2/nocolon test2/nocolon
-Your program successfully indicated a failure case
+Test case story-step1 test/goo1
+Your file matched the expected output
+
+Compiling story-step2
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 words.txt
 Your file matched the expected output
@@ -45,12 +66,6 @@ Test case story-step2 test2/nokey
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/noword
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step2 test2/colonInKey
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step2 test2/colonInVal
 Your file matched the expected output
 
 You have PASSED all of your test cases
