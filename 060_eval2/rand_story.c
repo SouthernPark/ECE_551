@@ -86,7 +86,11 @@ long findUnderScore(char * line, size_t index, size_t len) {
 }
 
 void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
-  char * cat = strndup(line + i, j - i + 1);
+  if (catArr != NULL && j == i + 1) {
+    fprintf(stderr, "The __ underscore matchin is invalid\n");
+    exit(EXIT_FAILURE);
+  }
+  char * cat = strndup(line + i + 1, j - i - 1);
   const char * str = chooseWord(cat, catArr);
   printf("%s", str);
   free(cat);

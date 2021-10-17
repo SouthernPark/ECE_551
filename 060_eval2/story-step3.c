@@ -28,8 +28,18 @@ int main(int argc, char ** argv) {
   //printWords(catArray);
 
   //3. load the story template
+  size_t n_line = 0;
+  char ** templates = loadFile(argv[2], &n_line);
+  if (templates == NULL) {
+    exit(EXIT_FAILURE);
+  }
+  //4. parse the templates using the given words and category
+  parseTemp(templates, n_line, catArray);
 
-  //3. free words
+  //5. free words
   freeCatArray(catArray);
   freeFile(words, n_words);
+
+  //6.free templates
+  freeFile(templates, n_line);
 }
