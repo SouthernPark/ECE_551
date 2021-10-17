@@ -5,14 +5,30 @@
 #include <stdlib.h>
 
 #include "provided.h"
+
+/* story-step1*/
 //any functions you want your main to use
 char ** loadFile(char * fileName, size_t * n);
-void freeTemp(char ** temp, size_t N);
+void freeFile(char ** temp, size_t N);
 
 void parseLine(char * line);
 
 void parseTemp(char ** temp, size_t n);
 
-//_matches * parseTemp(char * temp);
+/* story-step2*/
+
+struct _kv_t {
+  char * cat;
+  char * val;
+};
+
+typedef struct _kv_t _kv;
+
+_kv * lineTokv(char * line);
+
+catarray_t * catToWords(char ** file, size_t n);
+
+void freeCat(category_t cat);
+void freeCatArray(catarray_t * catArr);
 
 #endif

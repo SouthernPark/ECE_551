@@ -10,3 +10,4 @@ story-step1 story.txt
 story-step1 test/story.txt  
 story-step1 test/fail/no_line  
 story-step1 test/goo1
+story-step2 words.txt

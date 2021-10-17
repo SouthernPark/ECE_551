@@ -37,7 +37,7 @@ char ** loadFile(char * fileName, size_t * n) {
 }
 
 //this function will free the heap memo occupied by the tempalte
-void freeTemp(char ** temp, size_t N) {
+void freeFile(char ** temp, size_t N) {
   for (size_t i = 0; i < N; i++) {
     free(temp[i]);
   }
@@ -133,4 +133,98 @@ void parseTemp(char ** temp, size_t n) {
   for (size_t i = 0; i < n; i++) {
     parseLine(temp[i]);
   }
+}
+
+/*Function for story-step2*/
+
+//this function convert a line with cat:word format into key value pair
+//format
+_kv * lineTokv(char * line) {
+  //check whether there is a : inside the line
+  char * colon = strchr(line, ':');
+  if (colon == NULL) {
+    fprintf(stderr, "This line does not have a colon");
+    return NULL;
+  }
+  _kv * res = malloc(sizeof(*res));
+  res->cat = NULL;
+  res->val = NULL;
+
+  char * newLine = strchr(line, '\n');
+  *newLine = '\0';
+  res->val = strdup(colon + 1);
+  *colon = '\0';
+  res->cat = strdup(line);
+
+  return res;
+}
+
+size_t findKey(catarray_t * array, size_t n, char * key) {
+  for (size_t i = 0; i < n; i++) {
+    if (strcmp(array->arr[i].name, key) == 0) {
+      return i;
+    }
+  }
+
+  return n;
+}
+
+//for each line in the file, this function will extract its category and word
+//Then the category and word will be put into kvs_t
+catarray_t * catToWords(char ** file, size_t n) {
+  catarray_t * array = malloc(sizeof(*array));
+  if (array == NULL) {
+    fprintf(stderr, "Can not malloc \n");
+    return NULL;
+  }
+  array->arr = NULL;
+  array->n = 0;
+  for (size_t i = 0; i < n; i++) {
+    _kv * kv = lineTokv(file[i]);
+    if (kv == NULL) {
+      freeCatArray(array);
+      return NULL;
+    }
+    size_t index = findKey(array, array->n, kv->cat);
+    if (index == array->n) {
+      array->arr = realloc(array->arr, (array->n + 1) * sizeof(*array->arr));
+      array->arr[array->n].name = kv->cat;
+      array->arr[array->n].words = malloc(sizeof(*array->arr[n].words));
+      array->arr[array->n].words[0] = kv->val;
+      array->arr[array->n].n_words = 1;
+      array->n++;
+    }
+    else {
+      array->arr[index].words =
+          realloc(array->arr[index].words,
+                  (array->arr[index].n_words + 1) * sizeof(*array->arr[index].words));
+
+      array->arr[index].words[array->arr[index].n_words] = kv->val;
+      array->arr[index].n_words++;
+      free(kv->cat);
+    }
+
+    free(kv);
+  }
+
+  return array;
+}
+
+//free the words and name in one category
+void freeCat(category_t cat) {
+  for (size_t i = 0; i < cat.n_words; i++) {
+    free(cat.words[i]);
+  }
+  free(cat.words);
+  free(cat.name);
+}
+
+//free the categories and words
+void freeCatArray(catarray_t * catArr) {
+  for (size_t i = 0; i < catArr->n; i++) {
+    freeCat(catArr->arr[i]);
+  }
+
+  free(catArr->arr);
+  free(catArr);
 }
