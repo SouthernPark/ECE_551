@@ -1,6 +1,6 @@
-Grading at 10/17/2021:18:20:53.364443
-For commit ID 883a003b4f78df5f612b61e8858c4a2ede96e9a2
-Grading at Sun Oct 17 14:20:49 EDT 2021
+Grading at 10/17/2021:18:27:17.018404
+For commit ID 37f11c5b526d06bf8a711e3daa00212c0418cee3
+Grading at Sun Oct 17 14:27:12 EDT 2021
 Running your test cases
 
 Compiling story-step2
@@ -16,6 +16,9 @@ Your program successfully indicated a failure case
 Test case story-step2 test2/nocolonBegin
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
+Test case story-step2 test2/nocolonEnd
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
 Test case story-step2 words.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
@@ -24,8 +27,10 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/noword
 Your file matched the expected output
-
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
++-----------------------------------------------------------------------+
+Test case story-step2 test2/colonInKey
+Your file matched the expected output
+Program must be one of story-step1 story-step2 story-step3 story-step4
+But found "stoey-step2"
 
 Overall Grade: NO GRADE YET
