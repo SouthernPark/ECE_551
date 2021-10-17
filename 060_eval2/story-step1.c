@@ -17,7 +17,7 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //2.parse and replace the templates
-  parseTemp(templates, n);
+  parseTemp(templates, n, NULL);
   //3.free templates
   freeFile(templates, n);
 }

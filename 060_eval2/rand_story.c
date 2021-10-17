@@ -85,15 +85,15 @@ long findUnderScore(char * line, size_t index, size_t len) {
   return len;
 }
 
-void printCat(char * line, size_t i, size_t j) {
+void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
   char * cat = strndup(line + i, j - i + 1);
-  const char * str = chooseWord(cat, NULL);
+  const char * str = chooseWord(cat, catArr);
   printf("%s", str);
   free(cat);
 }
 
 //this function will return
-void parseLine(char * line) {
+void parseLine(char * line, catarray_t * catArr) {
   //1. check whether _ exist in this line
   char * first = strchr(line, '_');
   if (first == NULL) {
@@ -122,16 +122,16 @@ void parseLine(char * line) {
     if (left < len) {
       //find the matching underscore
       right = findUnderScore(line, right + 1, len);
-      printCat(line, left, right);
+      printCat(line, left, right, catArr);
       right++;
       left = right;
     }
   }
 }
 //this function will parse each line of the template
-void parseTemp(char ** temp, size_t n) {
+void parseTemp(char ** temp, size_t n, catarray_t * catArr) {
   for (size_t i = 0; i < n; i++) {
-    parseLine(temp[i]);
+    parseLine(temp[i], catArr);
   }
 }
 

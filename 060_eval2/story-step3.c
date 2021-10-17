@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "rand_story.h"
+
+int main(int argc, char ** argv) {
+  //0.check argu
+  if (argc != 3) {
+    fprintf(stderr, "Incorrect argument number\n");
+    return EXIT_FAILURE;
+  }
+
+  //1. load the category-words
+  size_t n_words = 0;
+  char ** words = loadFile(argv[1], &n_words);
+
+  if (words == NULL) {
+    //file can not be loaded
+    exit(EXIT_FAILURE);
+  }
+
+  //2. convert the each line to categori words and store them in an array
+  catarray_t * catArray = catToWords(words, n_words);
+  if (catArray == NULL) {
+    freeFile(words, n_words);
+    exit(EXIT_FAILURE);
+  }
+  //printWords(catArray);
+
+  //3. load the story template
+
+  //3. free words
+  freeCatArray(catArray);
+  freeFile(words, n_words);
+}
