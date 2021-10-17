@@ -1,8 +1,11 @@
 #error
 story-step2 test2/nocolon
 story-step2 test2/nocolonBegin
+story-step2 test2/nocolonEnd
 
 #success
 story-step2 words.txt
 story-step2 test2/nokey	   
-story-step2 test2/noword   
+story-step2 test2/noword
+story-step2 test2/colonInKey
+stoey-step2 test2/colonInVal
