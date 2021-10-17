@@ -21,6 +21,10 @@ int main(int argc, char ** argv) {
 
   //2. convert the each line to categori words and store them in an array
   catarray_t * catArray = catToWords(file, n);
+  if (catArray == NULL) {
+    freeFile(file, n);
+    exit(EXIT_FAILURE);
+  }
   printWords(catArray);
 
   //3. free

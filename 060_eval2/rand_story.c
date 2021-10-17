@@ -143,7 +143,7 @@ _kv * lineTokv(char * line) {
   //check whether there is a : inside the line
   char * colon = strchr(line, ':');
   if (colon == NULL) {
-    fprintf(stderr, "This line does not have a colon");
+    fprintf(stderr, "This line does not have a colon\n");
     return NULL;
   }
   _kv * res = malloc(sizeof(*res));
