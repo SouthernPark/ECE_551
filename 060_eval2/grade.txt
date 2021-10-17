@@ -1,6 +1,6 @@
-Grading at 10/17/2021:18:52:29.943761
-For commit ID c08c7b102a6ca232dc0d37fb0ccbdff084cfb90f
-Grading at Sun Oct 17 14:52:20 EDT 2021
+Grading at 10/17/2021:19:30:56.180408
+For commit ID f030249ce7a46b154d89d35146af62b51ff26f8a
+Grading at Sun Oct 17 15:30:46 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -32,6 +32,16 @@ rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/nocolon
 Your program successfully indicated a failure case
+
+Compiling story-step3
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
+gcc -o story-step3 story-step3.o rand_story.o provided.o
+rm story-step3.o
++-----------------------------------------------------------------------+
+Test case story-step3 words.txt story.txt
+Once upon a time, there was a Your program successfully indicated a failure case
 
 Compiling story-step1
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
