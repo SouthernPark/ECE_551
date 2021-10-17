@@ -1,6 +1,6 @@
-Grading at 10/17/2021:18:05:41.099551
-For commit ID 2ca75451bf71e4b3d212ad97ece13f09ac12ddf2
-Grading at Sun Oct 17 14:05:33 EDT 2021
+Grading at 10/17/2021:18:07:33.893664
+For commit ID a64844d80393016f68b6adea26cfc1b81a3beea3
+Grading at Sun Oct 17 14:07:25 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -32,12 +32,6 @@ rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/nocolon
 Valgrind reported memory errors
-+-----------------------------------------------------------------------+
-Test case story-step2 test2/nokey
-Our story-step2 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case story-step2 test2/noword
-Our story-step2 does not consider this an error case
 
 Compiling story-step1
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -66,6 +60,12 @@ gcc -o story-step2 story-step2.o rand_story.o provided.o
 rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 words.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nokey
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/noword
 Your file matched the expected output
 
 You have FAILED one or more of your test cases
