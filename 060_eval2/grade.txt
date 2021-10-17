@@ -1,27 +1,7 @@
-Grading at 10/17/2021:18:07:33.893664
-For commit ID a64844d80393016f68b6adea26cfc1b81a3beea3
-Grading at Sun Oct 17 14:07:25 EDT 2021
+Grading at 10/17/2021:18:20:53.364443
+For commit ID 883a003b4f78df5f612b61e8858c4a2ede96e9a2
+Grading at Sun Oct 17 14:20:49 EDT 2021
 Running your test cases
-
-Compiling story-step1
-rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
-gcc -o story-step1 story-step1.o rand_story.o provided.o
-rm story-step1.o
-+-----------------------------------------------------------------------+
-Test case story-step1 test/fail/fail1
-asfadfbmasfcat
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step1 test/fail/story.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step1 test/fail/no_file
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step1 test/fail/fail2
-Your program successfully indicated a failure case
 
 Compiling story-step2
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -31,33 +11,10 @@ gcc -o story-step2 story-step2.o rand_story.o provided.o
 rm story-step2.o
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/nocolon
-Valgrind reported memory errors
-
-Compiling story-step1
-rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
-gcc -o story-step1 story-step1.o rand_story.o provided.o
-rm story-step1.o
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step1 story.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step1 test/story.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step1 test/fail/no_line
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step1 test/goo1
-Your file matched the expected output
-
-Compiling story-step2
-rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
-gcc -o story-step2 story-step2.o rand_story.o provided.o
-rm story-step2.o
+Test case story-step2 test2/nocolonBegin
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step2 words.txt
 Your file matched the expected output
@@ -68,7 +25,7 @@ Your file matched the expected output
 Test case story-step2 test2/noword
 Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
