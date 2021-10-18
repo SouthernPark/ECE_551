@@ -1,68 +1,65 @@
-Grading at 10/18/2021:22:05:24.521038
-For commit ID a7e5cb6b50784fdf982b93bbcd09429763e300ab
-Grading at Mon Oct 18 18:05:13 EDT 2021
+Grading at 10/18/2021:22:09:03.721427
+For commit ID 72079e3da200b3375471e886adb37b7d3e64b66f
+Grading at Mon Oct 18 18:08:53 EDT 2021
 Running your test cases
 
-Compiling story-step3
+Compiling story-step1
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
-gcc -o story-step3 story-step3.o rand_story.o provided.o
-rm story-step3.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
 +-----------------------------------------------------------------------+
-Test case story-step3 
+Test case story-step1 
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt
+Test case story-step1 words.txt words.txt
 Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story.txt test3/story.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story_num.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words_num.txt test3/story_num.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolon test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolonBegin test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolonEnd test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/story.txt test3/words.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/noNewLine test3/story2.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/noword test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/nokey test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/mutiColon test3/story2.txt
-Valgrind reported memory errors
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/colonAtBegining test3/story2.txt
-Valgrind reported memory errors
 
-You have FAILED one or more of your test cases
-Keep debugging
+Compiling story-step2
+rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nocolon
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nocolonBegin
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nocolonEnd
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nocolon test2/nocolon
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 test3/noNewLine
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step2 words.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/nokey
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/noword
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/colonInKey
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test2/colonInVal
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step2 test3/colonAtBegining
+Your file matched the expected output
+
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
