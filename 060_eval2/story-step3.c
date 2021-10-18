@@ -37,7 +37,7 @@ int main(int argc, char ** argv) {
   for (size_t i = 0; i < n_line; i++) {
     //check the line is valid for the underscore
     checkLine(templates[i]);
-    printLineStep1(templates[i], NULL);
+    printLineStep1(templates[i], catArray);
   }
 
   //5. free words

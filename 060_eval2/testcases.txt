@@ -4,7 +4,7 @@ story-step1 test/fail/story.txt
 story-step1 test/fail/no_file
 story-step1 test/fail/fail2
 story-step2 test2/nocolon
-
+story-step3 words.txt story.txt
 
 #success
 story-step1 story.txt
