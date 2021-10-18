@@ -1,6 +1,6 @@
-Grading at 10/18/2021:22:00:06.295657
-For commit ID 1b2421ebaf20297d455c56170a8483184234c771
-Grading at Mon Oct 18 17:59:55 EDT 2021
+Grading at 10/18/2021:22:03:25.245763
+For commit ID f40ff4852a64adc75263682af9e0272faca17a77
+Grading at Mon Oct 18 18:03:16 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -39,9 +39,7 @@ Test case story-step2 test2/nocolon test2/nocolon
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step2 test3/noNewLine
-animal:
-  :wa::lrus
-Your program did not indicate a failure case
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step2 words.txt
 Your file matched the expected output
@@ -57,13 +55,8 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step2 test2/colonInVal
 Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case story-step2 test3/noNewLine
-Line_1_did_not_match
-Line_2_did_not_match
-Your file did not match the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
