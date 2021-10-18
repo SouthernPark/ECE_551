@@ -33,17 +33,22 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //4. parse the templates using the given words and category
-  //parseTemp(templates, n_line, catArray);
+  category_t * usedWords = malloc(sizeof(*usedWords));
+  usedWords->name = NULL;
+  usedWords->words = NULL;
+  usedWords->n_words = 0;
   for (size_t i = 0; i < n_line; i++) {
     //check the line is valid for the underscore
     checkLine(templates[i]);
-    printLineStep1(templates[i], catArray);
+    printLineStep3(templates[i], catArray, usedWords);
   }
-
   //5. free words
   freeCatArray(catArray);
   freeFile(words, n_words);
 
   //6.free templates
   freeFile(templates, n_line);
+
+  //7. free words
+  freeWords(usedWords);
 }

@@ -1,6 +1,6 @@
-animals:dragon
-animals:walrus
-animals:walrus
+animal:dragon
+animal:walrus
+animal:ox
 place:cave
 adjective:peculiar
 adjective:scary

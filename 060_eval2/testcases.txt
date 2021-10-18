@@ -4,7 +4,6 @@ story-step1 test/fail/story.txt
 story-step1 test/fail/no_file
 story-step1 test/fail/fail2
 story-step2 test2/nocolon
-story-step3 words.txt story.txt
 
 #success
 story-step1 story.txt
@@ -15,3 +14,4 @@ story-step1 test/good
 story-step2 words.txt
 story-step2 test2/nokey	   
 story-step2 test2/noword   
+story-step3 words.txt story2.txt

@@ -33,4 +33,8 @@ catarray_t * catToWords(char ** file, size_t n);
 void freeCat(category_t cat);
 void freeCatArray(catarray_t * catArr);
 
+/* story-step3 */
+void printLineStep3(char * line, catarray_t * catArr, category_t * words);
+void freeWords(category_t * words);
+
 #endif

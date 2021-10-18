@@ -126,6 +126,84 @@ void printLineStep1(char * line, catarray_t * catArr) {
   }
 }
 
+int isNum(char * line) {
+  char ** end = &line;
+  int num = strtol(line, end, 10);
+  if (**end != '\0') {
+    return -1;
+  }
+  return num;
+}
+
+int validNum(int num, int len) {
+  if (num < 1 || num > len) {
+    return 0;
+  }
+  return 1;
+}
+
+void addToWords(category_t * words, char * str) {
+  words->words = realloc(words->words, (words->n_words + 1) * sizeof(*words->words));
+  words->words[words->n_words] = str;
+  words->n_words++;
+}
+
+//free the memo used for recordind the words that have been used
+void freeWords(category_t * words) {
+  free(words->words);
+  free(words);
+}
+
+void printCatStep3(char * line,
+                   size_t i,
+                   size_t j,
+                   catarray_t * catArr,
+                   category_t * words) {
+  if (catArr != NULL && j == i + 1) {
+    fprintf(stderr, "The __ underscore matchin is invalid\n");
+    exit(EXIT_FAILURE);
+  }
+
+  char * cat = strndup(line + i + 1, j - i - 1);
+  int num = isNum(cat);
+  if (num == -1 || validNum(num, words->n_words) == 0) {
+    //then category is not a number
+    const char * str = chooseWord(cat, catArr);
+    printf("%s", str);
+    addToWords(words, (char *)str);
+  }
+  else {
+    printf("%s", words->words[words->n_words - num]);
+    addToWords(words, words->words[words->n_words - num]);
+  }
+
+  free(cat);
+}
+
+//this function will print the line replaced by word in catArr
+void printLineStep3(char * line, catarray_t * catArr, category_t * words) {
+  //print the line
+  size_t len = strlen(line);
+  //left, right pointer for the substring
+  size_t left = 0;
+  size_t right = 0;
+  while (left < len) {
+    //find the first underscore
+    right = findUnderScore(line, right, len);
+    printStr(line, left, right - 1);
+
+    left = right;
+    //if there is one underscore, we need to print according to category
+    if (left < len) {
+      //find the matching underscore
+      right = findUnderScore(line, right + 1, len);
+      printCatStep3(line, left, right, catArr, words);
+      right++;
+      left = right;
+    }
+  }
+}
+
 void checkLine(char * line) {
   //1. check whether _ exist in this line
   char * first = strchr(line, '_');
