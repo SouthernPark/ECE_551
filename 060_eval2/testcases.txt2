@@ -14,3 +14,4 @@ story-step2 test2/nokey
 story-step2 test2/noword
 story-step2 test2/colonInKey
 story-step2 test2/colonInVal
+story-step2 test3/colonAtBegining
