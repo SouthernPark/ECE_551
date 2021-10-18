@@ -96,21 +96,7 @@ void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
   free(cat);
 }
 
-//this function will return
-void parseLine(char * line, catarray_t * catArr) {
-  //1. check whether _ exist in this line
-  char * first = strchr(line, '_');
-  if (first == NULL) {
-    //just print this line and return if does not exit '_'
-    printf("%s", line);
-    return;
-  }
-  //2. check whether there is a underscore that can not be matched
-  if (matchable(first) == 0) {
-    fprintf(stderr, "There is one '_' in the line that can not be matched\n");
-    exit(EXIT_FAILURE);
-  }
-
+void printLine(char * line, catarray_t * catArr) {
   //3. print the line
   size_t len = strlen(line);
   //left, right pointer for the substring
@@ -131,6 +117,24 @@ void parseLine(char * line, catarray_t * catArr) {
       left = right;
     }
   }
+}
+
+//this function will print the line replaced by word in catArr
+void parseLine(char * line, catarray_t * catArr) {
+  //1. check whether _ exist in this line
+  char * first = strchr(line, '_');
+  if (first == NULL) {
+    //just print this line and return if does not exit '_'
+    printf("%s", line);
+    return;
+  }
+  //2. check whether there is a underscore that can not be matched
+  if (matchable(first) == 0) {
+    fprintf(stderr, "There is one '_' in the line that can not be matched\n");
+    exit(EXIT_FAILURE);
+  }
+
+  printLine(line, catArr);
 }
 //this function will parse each line of the template
 void parseTemp(char ** temp, size_t n, catarray_t * catArr) {

@@ -25,7 +25,6 @@ int main(int argc, char ** argv) {
     freeFile(words, n_words);
     exit(EXIT_FAILURE);
   }
-  //printWords(catArray);
 
   //3. load the story template
   size_t n_line = 0;
