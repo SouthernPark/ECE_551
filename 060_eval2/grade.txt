@@ -1,6 +1,6 @@
-Grading at 10/18/2021:19:56:57.787389
-For commit ID 3df32bd281b719aeb4ffee5327d42153153d2cfb
-Grading at Mon Oct 18 15:56:54 EDT 2021
+Grading at 10/18/2021:20:03:58.101780
+For commit ID 79a203b7eb62167fa34cd1484a6c682e21e27daa
+Grading at Mon Oct 18 16:03:52 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -19,6 +19,15 @@ Test case story-step3 test3/words_num.txt test3/story_num.txt
 Once upon a time, there was a walrus. This walrus lived in a very
 scary cave. One day, it left its scary cave and met a walrus.
 Test for Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test2/nocolon test3/story_perfect.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test2/nocolonBegin test3/story_perfect.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test2/nocolonEnd test3/story_perfect.txt
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 test3/words.txt test3/story.txt
 Your file matched the expected output
