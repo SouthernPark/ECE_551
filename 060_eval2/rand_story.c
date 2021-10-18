@@ -124,8 +124,7 @@ void checkLine(char * line) {
   //1. check whether _ exist in this line
   char * first = strchr(line, '_');
   if (first == NULL) {
-    //just print this line and return if does not exit '_'
-    printf("%s", line);
+    //just return if does not exit '_'
     return;
   }
   //2. check whether there is a underscore that can not be matched
