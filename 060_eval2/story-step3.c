@@ -33,7 +33,7 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
   //4. parse the templates using the given words and category
-  parseTemp(templates, n_line, catArray);
+  //parseTemp(templates, n_line, catArray);
 
   //5. free words
   freeCatArray(catArray);

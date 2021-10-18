@@ -12,8 +12,10 @@ char ** loadFile(char * fileName, size_t * n);
 void freeFile(char ** temp, size_t N);
 
 //void parseLine(char * line, catarray_t * cats);
+void checkLine(char * line);
+void printLineStep1(char * line, catarray_t * catArr);
 
-void parseTemp(char ** temp, size_t n, catarray_t * cats);
+//void parseTemp(char ** temp, size_t n, catarray_t * cats);
 
 /* story-step2*/
 
