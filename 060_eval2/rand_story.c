@@ -137,7 +137,9 @@ void checkLine(char * line) {
 
 //this function will check the line and then print the line replaced by word in catArr
 void parseLine(char * line, catarray_t * catArr) {
+  //check the line is underscore matchable
   checkLine(line);
+
   printLine(line, catArr);
 }
 //this function will parse each line of the template
