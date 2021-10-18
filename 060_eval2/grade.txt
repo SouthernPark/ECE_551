@@ -1,6 +1,6 @@
-Grading at 10/18/2021:05:20:22.581859
-For commit ID 9ba3116b2cea7235a5dce566eca964f2f07e54fb
-Grading at Mon Oct 18 01:20:12 EDT 2021
+Grading at 10/18/2021:05:23:23.157377
+For commit ID c8eff90b4d893b0ea29bc0605d495edca2773af5
+Grading at Mon Oct 18 01:23:12 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -41,10 +41,7 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt story.txt
-Once upon a time, there was a cat who lived in a very cat
-cat. 
-asdbabsdad
-Your program did not indicate a failure case
+Once upon a time, there was a Your program successfully indicated a failure case
 
 Compiling story-step1
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -84,7 +81,7 @@ Your file matched the expected output
 Test case story-step2 test2/noword
 Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
