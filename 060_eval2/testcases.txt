@@ -6,6 +6,7 @@ story-step2 test2/nocolonBegin
 story-step2 test2/nocolonEnd
 story-step2
 story-step2 test2/nocolon test2/nocolon
+story-step2 test3/noNewLine
 
 #success
 story-step2 words.txt
