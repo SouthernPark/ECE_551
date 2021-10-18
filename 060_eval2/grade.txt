@@ -1,6 +1,6 @@
-Grading at 10/18/2021:22:17:07.425851
-For commit ID 8a585addb91c1ecda4cb03dc4adc4655aac80055
-Grading at Mon Oct 18 18:16:56 EDT 2021
+Grading at 10/18/2021:22:20:00.228843
+For commit ID f33b6b2d835d84cbdcf900127f06877acbc25a5c
+Grading at Mon Oct 18 18:19:48 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -42,6 +42,9 @@ Test case story-step3 test3/story.txt test3/words.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 test3/noNewLine test3/story2.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test3/noNewLine2 test3/story2.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 test3/words.txt test3/story.txt
