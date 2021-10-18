@@ -1,0 +1,5 @@
+#error
+story-step3 test3/words.txt test3/story_num.txt
+
+#success
+story-step3 test3/words_num.txt test3/story_num.txt 
