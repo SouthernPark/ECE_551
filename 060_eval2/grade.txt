@@ -1,6 +1,6 @@
-Grading at 10/18/2021:04:31:31.713677
-For commit ID 460e8b2839b1f4aba014011ab4a5a452dcda6d28
-Grading at Mon Oct 18 00:31:21 EDT 2021
+Grading at 10/18/2021:05:16:31.722131
+For commit ID d3e30badb2ff08a2a581e3c4a7f0b6ac38928dde
+Grading at Mon Oct 18 01:16:21 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -41,7 +41,7 @@ gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
 +-----------------------------------------------------------------------+
 Test case story-step3 words.txt story.txt
-Once upon a time, there was a Your program successfully indicated a failure case
+Your program did not indicate a failure case
 
 Compiling story-step1
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
@@ -81,7 +81,7 @@ Your file matched the expected output
 Test case story-step2 test2/noword
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
