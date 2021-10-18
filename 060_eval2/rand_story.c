@@ -165,14 +165,21 @@ void printCatStep3(char * line,
   }
 
   char * cat = strndup(line + i + 1, j - i - 1);
+  //translate cat into number if possible
   int num = isNum(cat);
-  if (num == -1 || validNum(num, words->n_words) == 0) {
-    //then category is not a number
+  if (num == -1) {
+    //category is not a number
     const char * str = chooseWord(cat, catArr);
     printf("%s", str);
     addToWords(words, (char *)str);
   }
   else {
+    //else category is a number
+    //check if it is valid
+    if (validNum(num, words->n_words) == 0) {
+      fprintf(stderr, "category number out of bound\n");
+      exit(EXIT_FAILURE);
+    }
     printf("%s", words->words[words->n_words - num]);
     addToWords(words, words->words[words->n_words - num]);
   }
