@@ -241,8 +241,13 @@ _kv * lineTokv(char * line) {
   res->val = NULL;
 
   char * newLine = strchr(line, '\n');
-  *newLine = '\0';
-  res->val = strdup(colon + 1);
+  if (newLine == NULL) {
+    res->val = strdup(colon + 1);
+  }
+  else {
+    *newLine = '\0';
+    res->val = strdup(colon + 1);
+  }
   *colon = '\0';
   res->cat = strdup(line);
 
