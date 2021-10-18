@@ -34,6 +34,11 @@ int main(int argc, char ** argv) {
   }
   //4. parse the templates using the given words and category
   //parseTemp(templates, n_line, catArray);
+  for (size_t i = 0; i < n_line; i++) {
+    //check the line is valid for the underscore
+    checkLine(templates[i]);
+    printLineStep1(templates[i], NULL);
+  }
 
   //5. free words
   freeCatArray(catArray);
