@@ -1,6 +1,6 @@
-Grading at 10/18/2021:21:33:56.966531
-For commit ID 87e13ac296e59fad3d38c9661774ce6d52e0f1e8
-Grading at Mon Oct 18 17:33:50 EDT 2021
+Grading at 10/18/2021:21:39:10.089040
+For commit ID ebaea4fe60b014127cec0397447b5acdfc021de3
+Grading at Mon Oct 18 17:38:59 EDT 2021
 Running your test cases
 
 Compiling story-step3
@@ -9,6 +9,15 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
 gcc -o story-step3 story-step3.o rand_story.o provided.o
 rm story-step3.o
++-----------------------------------------------------------------------+
+Test case story-step3 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test3/words.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step3 test3/words.txt test3/story.txt test3/story.txt
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step3 test3/words.txt test3/story_num.txt
 Once upon a time, there was a walrus. This walrus lived in a very
@@ -29,6 +38,9 @@ Your program successfully indicated a failure case
 Test case story-step3 test2/nocolonEnd test3/story_perfect.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
+Test case story-step3 test3/story.txt test3/words.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
 Test case story-step3 test3/words.txt test3/story.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
@@ -40,8 +52,14 @@ Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step3 test3/nokey test3/story2.txt
 Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case story-step3 test3/mutiColon test3/story2.txt
+Valgrind reported memory errors
++-----------------------------------------------------------------------+
+Test case story-step3 test3/colonAtBegining test3/story2.txt
+Valgrind reported memory errors
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
