@@ -96,6 +96,7 @@ void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
   free(cat);
 }
 
+//this function will print the line replaced by word in catArr
 void printLine(char * line, catarray_t * catArr) {
   //3. print the line
   size_t len = strlen(line);
@@ -119,8 +120,7 @@ void printLine(char * line, catarray_t * catArr) {
   }
 }
 
-//this function will print the line replaced by word in catArr
-void parseLine(char * line, catarray_t * catArr) {
+void checkLine(char * line) {
   //1. check whether _ exist in this line
   char * first = strchr(line, '_');
   if (first == NULL) {
@@ -133,7 +133,11 @@ void parseLine(char * line, catarray_t * catArr) {
     fprintf(stderr, "There is one '_' in the line that can not be matched\n");
     exit(EXIT_FAILURE);
   }
+}
 
+//this function will check the line and then print the line replaced by word in catArr
+void parseLine(char * line, catarray_t * catArr) {
+  checkLine(line);
   printLine(line, catArr);
 }
 //this function will parse each line of the template
