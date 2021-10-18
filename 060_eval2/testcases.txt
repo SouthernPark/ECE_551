@@ -1,17 +1,5 @@
 #error
-story-step1 test/fail/fail1
-story-step1 test/fail/story.txt
-story-step1 test/fail/no_file
-story-step1 test/fail/fail2
-story-step2 test2/nocolon
+story-step3 test3/words.txt test3/story_num.txt
 
 #success
-story-step1 story.txt
-story-step1 test/story.txt  
-story-step1 test/fail/no_line  
-story-step1 test/goo1
-story-step1 test/good
-story-step2 words.txt
-story-step2 test2/nokey	   
-story-step2 test2/noword   
-story-step3 words.txt story2.txt
+story-step3 test3/words_num.txt test3/story_num.txt 
