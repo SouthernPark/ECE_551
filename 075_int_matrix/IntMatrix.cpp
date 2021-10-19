@@ -20,15 +20,15 @@ IntMatrix::IntMatrix(const IntMatrix & rhs) :
 
   //copy
   for (int i = 0; i < numRows; i++) {
-    (*this)[i] = rhs[i];
+    *rows[i] = *rhs.rows[i];
   }
 }
 IntMatrix::~IntMatrix() {
   //destructor
   //destruct rows
-  //for (int i = 0; i < numRows; i++) {
-  //delete rows[i];
-  //}
+  for (int i = 0; i < numRows; i++) {
+    delete rows[i];
+  }
   delete[] rows;
 }
 IntMatrix & IntMatrix::operator=(const IntMatrix & rhs) {
@@ -41,7 +41,7 @@ IntMatrix & IntMatrix::operator=(const IntMatrix & rhs) {
 
     //copy
     for (int i = 0; i < rhs.numRows; i++) {
-      temp[i] = rhs.rows[i];
+      *temp[i] = *rhs.rows[i];
     }
 
     //remvoe old rows
@@ -92,7 +92,7 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
   IntMatrix res = IntMatrix(numRows, numColumns);
   for (int i = 0; i < numRows; i++) {
     for (int j = 0; j < numColumns; j++) {
-      res[i][j] = rhs[i][j] + (*this)[i][j];
+      (*res.rows[i])[j] = (*rows[i])[j] + (*rhs.rows[i])[j];
     }
   }
 
@@ -100,17 +100,13 @@ IntMatrix IntMatrix::operator+(const IntMatrix & rhs) const {
 }
 
 std::ostream & operator<<(std::ostream & s, const IntMatrix & rhs) {
-  s << "[";
+  s << "[ ";
   for (int i = 0; i < rhs.getRows(); i++) {
+    s << rhs[i];
     if (i != rhs.getRows() - 1) {
-      s << "\n" << rhs[i] << ",";
-    }
-    else {
-      s << "\n" << rhs[i] << "\n";
+      s << ",\n";
     }
   }
-
-  s << "]";
-
+  s << " ]";
   return s;
 }
