@@ -5,7 +5,7 @@
 #include <ostream>
 
 IntArray::IntArray() {
-  data = NULL;
+  data = new int[0];
   numElements = 0;
 }
 IntArray::IntArray(int n) {
@@ -71,10 +71,10 @@ bool IntArray::operator!=(const IntArray & rhs) const {
 
 std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
   s << "{";
-  for (int i = 0; i < rhs.size(); i++) {
+  for (int i = 0; i < rhs.size() - 1; i++) {
     s << rhs[i] << ", ";
   }
-  s << "}";
+  s << rhs[rhs.size() - 1] << "}";
 
   return s;
 }
