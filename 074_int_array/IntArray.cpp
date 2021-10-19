@@ -5,7 +5,7 @@
 #include <ostream>
 
 IntArray::IntArray() {
-  data = new int[0];
+  data = NULL;
   numElements = 0;
 }
 IntArray::IntArray(int n) {
