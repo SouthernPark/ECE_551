@@ -6,7 +6,7 @@
 
 int main(int argc, char ** argv) {
   //0.check argu
-  if (argc != 4 || argc != 3) {
+  if (argc != 3 && argc != 4) {
     fprintf(stderr, "Incorrect argument number\n");
     return EXIT_FAILURE;
   }
