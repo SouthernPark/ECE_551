@@ -1,71 +1,76 @@
-Grading at 10/19/2021:01:00:12.852453
-For commit ID 215b08b135a85aa78a19243749e12490313cbe4d
-Grading at Mon Oct 18 21:00:00 EDT 2021
+Grading at 10/19/2021:01:04:40.649027
+For commit ID b085c10d65215f64d2a360e2028f6a73f33b50fa
+Grading at Mon Oct 18 21:04:28 EDT 2021
 Running your test cases
 
-Compiling story-step3
+Compiling story-step4
 rm -f *~ story-step1 story-step2 story-step3 story-step4 story-step1.o story-step2.o story-step3.o story-step4.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
-gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step3.c
-gcc -o story-step3 story-step3.o rand_story.o provided.o
-rm story-step3.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
+gcc -o story-step4 story-step4.o rand_story.o provided.o
+rm story-step4.o
 +-----------------------------------------------------------------------+
-Test case story-step3 
+Test case story-step4 
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt
+Test case story-step4 test3/words.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story.txt test3/story.txt
+Test case story-step4 -x test3/story.txt test3/story.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story_num.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test3/words_num.txt test3/story_num.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolon test3/story_perfect.txt
+Test case story-step4 -x test3/story.txt test3/story.txt test3/story.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolonBegin test3/story_perfect.txt
+Test case story-step4 test3/words.txt test3/story_num.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test2/nocolonEnd test3/story_perfect.txt
+Test case story-step4 test3/words_num.txt test3/story_num.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/story.txt test3/words.txt
+Test case story-step4 test2/nocolon test3/story_perfect.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/noNewLine test3/story2.txt
+Test case story-step4 test2/nocolonBegin test3/story_perfect.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/noNewLine2 test3/story2.txt
+Test case story-step4 test2/nocolonEnd test3/story_perfect.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story.txt
-Your file matched the expected output
+Test case story-step4 test3/story.txt test3/words.txt
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/words.txt test3/story2.txt
-Your file matched the expected output
+Test case story-step4 test3/noNewLine test3/story2.txt
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/noword test3/story2.txt
-Your file matched the expected output
+Test case story-step4 test3/noNewLine2 test3/story2.txt
+Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/nokey test3/story2.txt
-Your file matched the expected output
+Test case story-step4 test3/words.txt test3/story.txt
+Line_1_did_not_match
+Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/mutiColon test3/story2.txt
-Your file matched the expected output
+Test case story-step4 test3/words.txt test3/story2.txt
+Line_1_did_not_match
+Your file did not match the expected output
 +-----------------------------------------------------------------------+
-Test case story-step3 test3/colonAtBegining test3/story2.txt
-Your file matched the expected output
+Test case story-step4 test3/noword test3/story2.txt
+Line_1_did_not_match
+Your file did not match the expected output
++-----------------------------------------------------------------------+
+Test case story-step4 test3/nokey test3/story2.txt
+Line_1_did_not_match
+Your file did not match the expected output
++-----------------------------------------------------------------------+
+Test case story-step4 test3/mutiColon test3/story2.txt
+Line_1_did_not_match
+Your file did not match the expected output
++-----------------------------------------------------------------------+
+Test case story-step4 test3/colonAtBegining test3/story2.txt
+Line_1_did_not_match
+Your file did not match the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
