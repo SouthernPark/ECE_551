@@ -32,7 +32,7 @@ void randomizeAndPrint(IntArray & array) {
 }
 
 int main(void) {
-  IntArray intArray;
+  IntArray intArray(0);
   for (int i = 0; i < intArray.size(); i++) {
     intArray[i] = i * i;
   }
