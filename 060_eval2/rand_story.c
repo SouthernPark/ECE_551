@@ -154,11 +154,61 @@ void freeWords(category_t * words) {
   free(words);
 }
 
+//this function will find the category with name cat in the catArray
+//return NULL if not find
+category_t * findcat(catarray_t * catArr, char * cat) {
+  for (size_t i = 0; i < catArr->n; i++) {
+    if (strcmp(catArr->arr[i].name, cat) == 0) {
+      return &catArr->arr[i];
+    }
+  }
+
+  return NULL;
+}
+
+//this function will return the index of
+//return the length of kvs if not find
+size_t findWordInKvs(category_t * kvs, char * word) {
+  for (size_t i = 0; i < kvs->n_words; i++) {
+    if (strcmp(kvs->words[i], word) == 0) {
+      return i;
+    }
+  }
+
+  return kvs->n_words;
+}
+
+//this function will copy string after words[index] one forward
+void copyForward(char ** words, int index, size_t n) {
+  for (size_t i = index + 1; i < n; i++) {
+    words[i - 1] = words[i];
+  }
+}
+
+//this function will remove the words used int the category words array
+void rmWordInCatArr(catarray_t * catArr, char * word, char * cat) {
+  category_t * kvs = findcat(catArr, cat);
+  if (kvs == NULL) {
+    fprintf(stderr, "can not find category\n");
+    exit(EXIT_FAILURE);
+  }
+  size_t index = findWordInKvs(kvs, word);
+  if (index == kvs->n_words) {
+    fprintf(stderr, "can not find word \n");
+    exit(EXIT_FAILURE);
+  }
+  //copy string after kvs->words[index] one forward
+  copyForward(kvs->words, index, kvs->n_words);
+  //reset the words length
+  kvs->n_words--;
+}
+
 void printCatStep3(char * line,
                    size_t i,
                    size_t j,
                    catarray_t * catArr,
-                   category_t * words) {
+                   category_t * words,
+                   int remove) {
   if (catArr != NULL && j == i + 1) {
     fprintf(stderr, "The __ underscore matchin is invalid\n");
     exit(EXIT_FAILURE);
@@ -172,6 +222,11 @@ void printCatStep3(char * line,
     const char * str = chooseWord(cat, catArr);
     printf("%s", str);
     addToWords(words, (char *)str);
+    //remove the word if remove bit is on
+    if (remove == 1) {
+      //remove the word we find in the category and words
+      rmWordInCatArr(catArr, (char *)str, cat);
+    }
   }
   else {
     //else category is a number
@@ -188,7 +243,7 @@ void printCatStep3(char * line,
 }
 
 //this function will print the line replaced by word in catArr
-void printLineStep3(char * line, catarray_t * catArr, category_t * words) {
+void printLineStep3(char * line, catarray_t * catArr, category_t * words, int remove) {
   //print the line
   size_t len = strlen(line);
   //left, right pointer for the substring
@@ -204,7 +259,7 @@ void printLineStep3(char * line, catarray_t * catArr, category_t * words) {
     if (left < len) {
       //find the matching underscore
       right = findUnderScore(line, right + 1, len);
-      printCatStep3(line, left, right, catArr, words);
+      printCatStep3(line, left, right, catArr, words, remove);
       right++;
       left = right;
     }
