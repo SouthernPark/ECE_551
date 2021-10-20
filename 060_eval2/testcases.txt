@@ -1,22 +1,23 @@
 #error
-story-step3
-story-step3 test3/words.txt
-story-step3 test3/words.txt test3/story.txt test3/story.txt 
-story-step3 test3/words.txt test3/story_num.txt
-story-step3 test3/words_num.txt test3/story_num.txt
-story-step3 test2/nocolon test3/story_perfect.txt
-story-step3 test2/nocolonBegin test3/story_perfect.txt
-story-step3 test2/nocolonEnd test3/story_perfect.txt
-story-step3 test3/story.txt test3/words.txt
-story-step3 words.txt test3/negative.txt
-story-step3 words.txt test3/zero.txt
-story-step3 words.txt test3/numFirst.txt
+story-step4
+story-step4 test3/words.txt
+story-step4 -x  test3/story.txt test3/story.txt
+story-step4 -x  test3/story.txt test3/story.txt test3/story.txt
+story-step4 test3/words.txt test3/story_num.txt
+story-step4 test3/words_num.txt test3/story_num.txt
+story-step4 test2/nocolon test3/story_perfect.txt
+story-step4 test2/nocolonBegin test3/story_perfect.txt
+story-step4 test2/nocolonEnd test3/story_perfect.txt
+story-step4 test3/story.txt test3/words.txt
+
+
 
 #success
-story-step3 test3/words.txt test3/story.txt
-story-step3 test3/words.txt test3/story2.txt
-story-step3 test3/noword test3/story2.txt
-story-step3 test3/nokey test3/story2.txt
-story-step3 test3/mutiColon test3/story2.txt
-story-step3 test3/colonAtBegining test3/story2.txt 
-story-step3 test3/noNewLine2 test3/story2.txt
+story-step4 test3/words.txt test3/story.txt
+story-step4 test3/words.txt test3/story2.txt
+story-step4 test3/noword test3/story2.txt
+story-step4 test3/nokey test3/story2.txt
+story-step4 test3/mutiColon test3/story2.txt
+story-step4 test3/colonAtBegining test3/story2.txt 
+story-step4 test3/noNewLine plain.txt	     
+story-step4 test3/noNewLine2 test3/story2.txt
