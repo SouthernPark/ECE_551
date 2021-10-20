@@ -9,10 +9,8 @@ story-step4 words.txt test3/zero.txt
 story-step4 words.txt test3/numFirst.txt
 story-step4 words.txt test4/notANum.txt
 
-
 #success
 story-step4 -n test4/words.txt test4/storyClose
 story-step4 -n test4/words.txt test4/storyClose1
 story-step4 -n test4/words-a.txt test4/story-a
 story-step4 -n test4/words-12a.txt test4/story-12a
-story-step4 words.txt story2.txt
