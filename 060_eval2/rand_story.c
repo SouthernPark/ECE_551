@@ -135,9 +135,9 @@ void printLineStep1(char * line, catarray_t * catArr) {
   }
 }
 
-//this function will check whether the input line is a number
+//this function will check whether the input line is a word
 //input a line of string
-//output the number if it is, otherwise return -1
+//output
 int isNum(char * line) {
   char ** end = &line;
   strtol(line, end, 10);
@@ -145,6 +145,12 @@ int isNum(char * line) {
     return -1;
   }
   return 1;
+}
+
+int getNum(char * line) {
+  char ** end = &line;
+  int num = strtol(line, end, 10);
+  return num;
 }
 
 int validNum(int num, int len) {
@@ -234,8 +240,9 @@ void printCatStep3(char * line,
 
   char * cat = strndup(line + i + 1, j - i - 1);
   //translate cat into number if possible
-  int num = isNum(cat);
-  if (num == -1) {
+  int check = isNum(cat);
+  int num = getNum(cat);
+  if (check == -1) {
     //category is not a number
     const char * str = chooseWord(cat, catArr);
     printf("%s", str);
@@ -249,8 +256,7 @@ void printCatStep3(char * line,
   else {
     //else category is a number
     //check if it is valid
-    int number = strtol(cat, NULL, 10);
-    if (validNum(number, words->n_words) == 0) {
+    if (validNum(num, words->n_words) == 0) {
       fprintf(stderr, "category number out of bound\n");
       exit(EXIT_FAILURE);
     }
