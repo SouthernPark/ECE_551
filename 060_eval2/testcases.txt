@@ -1,16 +1,17 @@
 #error
-story-step4 test3/words.txt -n test3/story.txt
-story-step4 test3/words.txt test3/story.txt -n
-story-step4 -n test4/fail/words.txt test4/fail/story1.txt
-story-step4 -n test4/fail/words.txt test4/fail/story2.txt
-story-step4 -n test4/fail/words.txt test4/fail/story3.txt
-story-step4 words.txt test3/negative.txt	     
-story-step4 words.txt test3/zero.txt	     
-story-step4 words.txt test3/numFirst.txt
-story-step4 words.txt test4/notANum.txt
+story-step1 test/fail/fail1
+story-step1 test/fail/story.txt
+story-step1 test/fail/no_file
+story-step1 test/fail/fail2
+story-step2 test2/nocolon
 
 #success
-story-step4 -n test4/words.txt test4/storyClose
-story-step4 -n test4/words.txt test4/storyClose1
-story-step4 -n test4/words-a.txt test4/story-a
-story-step4 -n test4/words-12a.txt test4/story-12a
+story-step1 story.txt
+story-step1 test/story.txt  
+story-step1 test/fail/no_line  
+story-step1 test/goo1
+story-step1 test/good
+story-step2 words.txt
+story-step2 test2/nokey	   
+story-step2 test2/noword   
+story-step3 words.txt story2.txt

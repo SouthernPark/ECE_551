@@ -231,6 +231,10 @@ void rmWordInCatArr(catarray_t * catArr, char * word, char * cat) {
   catArr->arr[kv_index].n_words--;
 }
 
+//this fucntion was used choose word for an category and print it out
+//if the number is not valid, we exit with error
+//else, we will print the previous used word
+//if it is not a number, we will choose a word from the category and print it out
 void printCatStep3(char * line,
                    size_t i,
                    size_t j,
@@ -295,6 +299,7 @@ void printLineStep3(char * line, catarray_t * catArr, category_t * words, int re
   }
 }
 
+//this function will check whether the line is valid
 void checkLine(char * line) {
   //1. check whether _ exist in this line
   char * first = strchr(line, '_');
@@ -340,6 +345,10 @@ _kv * lineTokv(char * line) {
   return res;
 }
 
+//this function is used to find the category index which matchde then key
+//input the category array, the length of the array, the string we want to match with category name
+//return the index of the category if found
+//otherwise return the length of the array
 size_t findKey(catarray_t * array, size_t n, char * key) {
   for (size_t i = 0; i < n; i++) {
     if (strcmp(array->arr[i].name, key) == 0) {
