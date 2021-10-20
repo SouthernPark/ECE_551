@@ -162,6 +162,8 @@ int validNum(int num, int len) {
   return 1;
 }
 
+//this function will add a word to the list, once the word has been used
+//input words: a list keep recording the used words
 void addToWords(category_t * words, char * str) {
   words->words = realloc(words->words, (words->n_words + 1) * sizeof(*words->words));
   words->words[words->n_words] = strdup(str);
