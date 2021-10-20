@@ -4,8 +4,10 @@ story-step4 test3/words.txt test3/story.txt -n
 story-step4 -n test4/fail/words.txt test4/fail/story1.txt
 story-step4 -n test4/fail/words.txt test4/fail/story2.txt
 story-step4 -n test4/fail/words.txt test4/fail/story3.txt
-
-
+story-step4 words.txt test3/negative.txt	     
+story-step4 words.txt test3/zero.txt	     
+story-step4 words.txt test3/numFirst.txt
 
 #success
-
+story-step4 -n test4/words.txt test4/storyClose
+story-step4 -n test4/words.txt test4/storyClose1
