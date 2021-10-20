@@ -322,8 +322,9 @@ _kv * lineTokv(char * line) {
 
   char * newLine = strchr(line, '\n');
   if (newLine == NULL) {
-    fprintf(stderr, "Your kv pairs does not end with a new line\n");
-    return NULL;
+    res->val = strdup(colon + 1);
+    //fprintf(stderr, "Your kv pairs does not end with a new line\n");
+    //return NULL;
   }
   else {
     *newLine = '\0';
