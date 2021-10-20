@@ -9,7 +9,7 @@ story-step4 test2/nocolon test3/story_perfect.txt
 story-step4 test2/nocolonBegin test3/story_perfect.txt
 story-step4 test2/nocolonEnd test3/story_perfect.txt
 story-step4 test3/story.txt test3/words.txt
-story-step4 test3/noNewLine test3/story2.txt
+story-step4 test3/noNewLine story.txt
 story-step4 test3/noNewLine2 test3/story2.txt
 
 #success
