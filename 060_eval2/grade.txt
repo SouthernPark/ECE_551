@@ -1,6 +1,6 @@
-Grading at 10/20/2021:19:12:18.595989
-For commit ID 5a20a6c482e31b1cdcfca6488eec363a1c2b69c7
-Grading at Wed Oct 20 15:12:09 EDT 2021
+Grading at 10/20/2021:19:19:15.173794
+For commit ID 79d28073b7083146fd353d44b8a83d5a0bc3fb37
+Grading at Wed Oct 20 15:19:05 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -40,7 +40,7 @@ Once upon a time Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 9 (error): story-step4 words.txt test4/notANum.txt
 Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its cave Your program successfully indicated a failure case
+scary cave. One day, it left its scary Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 10 (success): story-step4 -n test4/words.txt test4/storyClose
 Your file matched the expected output
@@ -49,14 +49,12 @@ Test case 11 (success): story-step4 -n test4/words.txt test4/storyClose1
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 12 (success): story-step4 -n test4/words-a.txt test4/story-a
-Line_2_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 13 (success): story-step4 -n test4/words-12a.txt test4/story-12a
-Line_2_did_not_match
-Your file did not match the expected output
+Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
