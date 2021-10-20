@@ -1,6 +1,6 @@
-Grading at 10/20/2021:01:11:51.865205
-For commit ID dc52fc6acef7ee7a0f6a71245e72f3a1babb5cb0
-Grading at Tue Oct 19 21:11:44 EDT 2021
+Grading at 10/20/2021:02:11:05.496933
+For commit ID 40a077b01999e64f5fe20f1412160f132020481c
+Grading at Tue Oct 19 22:10:58 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -39,12 +39,12 @@ Test case story-step4 words.txt test3/numFirst.txt
 Once upon a time Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case story-step4 -n test4/words.txt test4/storyClose
-Valgrind reported memory errors
+Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case story-step4 -n test4/words.txt test4/storyClose1
-Valgrind reported memory errors
+Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
