@@ -147,12 +147,14 @@ int isNum(char * line) {
   return 1;
 }
 
+//this function will get the number represented by the line
 int getNum(char * line) {
   char ** end = &line;
   int num = strtol(line, end, 10);
   return num;
 }
 
+//this function will check if the number is valid
 int validNum(int num, int len) {
   if (num < 1 || num > len) {
     return 0;
