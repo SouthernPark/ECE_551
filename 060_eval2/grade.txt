@@ -1,6 +1,6 @@
-Grading at 10/20/2021:19:00:54.418894
-For commit ID 5d2d958862bdcb184a5cfc1607237d1350c19774
-Grading at Wed Oct 20 15:00:45 EDT 2021
+Grading at 10/20/2021:19:05:37.897335
+For commit ID 259552389b4ce545acd224bb7180fb0224aab795
+Grading at Wed Oct 20 15:05:28 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -30,9 +30,7 @@ peaceful
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 6 (error): story-step4 words.txt test3/negative.txt
-Once upon a time, there was a walrus. This abc lived in a very
-peculiar cave. One day, it left its peculiar cave and met a ox.
-Your program did not indicate a failure case
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 7 (error): story-step4 words.txt test3/zero.txt
 Once upon a time, there was a walrus. This Your program successfully indicated a failure case
@@ -41,8 +39,7 @@ Test case 8 (error): story-step4 words.txt test3/numFirst.txt
 Once upon a time Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 9 (error): story-step4 words.txt test4/notANum.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary Your program successfully indicated a failure case
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
 Test case 10 (success): story-step4 -n test4/words.txt test4/storyClose
 Your file matched the expected output
@@ -51,10 +48,14 @@ Test case 11 (success): story-step4 -n test4/words.txt test4/storyClose1
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 12 (success): story-step4 -n test4/words-a.txt test4/story-a
-Your file matched the expected output
+Line_1_did_not_match
+Line_2_did_not_match
+Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 13 (success): story-step4 -n test4/words-12a.txt test4/story-12a
-Your file matched the expected output
+Line_1_did_not_match
+Line_2_did_not_match
+Your file did not match the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
