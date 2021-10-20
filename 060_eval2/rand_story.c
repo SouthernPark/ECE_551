@@ -144,26 +144,26 @@ int validNum(int num, int len) {
 
 void addToWords(category_t * words, char * str) {
   words->words = realloc(words->words, (words->n_words + 1) * sizeof(*words->words));
-  words->words[words->n_words] = str;
+  words->words[words->n_words] = strdup(str);
   words->n_words++;
 }
 
 //free the memo used for recordind the words that have been used
 void freeWords(category_t * words) {
-  free(words->words);
+  freeCat(*words);
   free(words);
 }
 
 //this function will find the category with name cat in the catArray
 //return NULL if not find
-category_t * findcat(catarray_t * catArr, char * cat) {
+size_t findcat(catarray_t * catArr, char * cat) {
   for (size_t i = 0; i < catArr->n; i++) {
     if (strcmp(catArr->arr[i].name, cat) == 0) {
-      return &catArr->arr[i];
+      return i;
     }
   }
 
-  return NULL;
+  return catArr->n;
 }
 
 //this function will return the index of
@@ -180,27 +180,33 @@ size_t findWordInKvs(category_t * kvs, char * word) {
 
 //this function will copy string after words[index] one forward
 void copyForward(char ** words, int index, size_t n) {
+  char * tmp = words[index];
   for (size_t i = index + 1; i < n; i++) {
     words[i - 1] = words[i];
   }
+  words[n - 1] = tmp;
+  free(words[n - 1]);
 }
 
 //this function will remove the words used int the category words array
 void rmWordInCatArr(catarray_t * catArr, char * word, char * cat) {
-  category_t * kvs = findcat(catArr, cat);
-  if (kvs == NULL) {
+  size_t kv_index = findcat(catArr, cat);
+  if (kv_index == catArr->n) {
     fprintf(stderr, "can not find category\n");
     exit(EXIT_FAILURE);
   }
-  size_t index = findWordInKvs(kvs, word);
-  if (index == kvs->n_words) {
+  size_t index = findWordInKvs(&catArr->arr[kv_index], word);
+  if (index == catArr->arr[kv_index].n_words) {
     fprintf(stderr, "can not find word \n");
     exit(EXIT_FAILURE);
   }
   //copy string after kvs->words[index] one forward
-  copyForward(kvs->words, index, kvs->n_words);
-  //reset the words length
-  kvs->n_words--;
+  copyForward(catArr->arr[kv_index].words, index, catArr->arr[kv_index].n_words);
+  //reallocate the memo
+  catArr->arr[kv_index].words =
+      realloc(catArr->arr[kv_index].words,
+              (catArr->arr[kv_index].n_words - 1) * sizeof(*catArr->arr[kv_index].words));
+  catArr->arr[kv_index].n_words--;
 }
 
 void printCatStep3(char * line,
