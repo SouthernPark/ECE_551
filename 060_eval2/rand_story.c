@@ -111,7 +111,7 @@ void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
 }
 
 //this function will print the line replaced by word in catArr
-//input: the pointer to the line
+//input: the pointer to the line, the pointer to the category array
 void printLineStep1(char * line, catarray_t * catArr) {
   //3. print the line
   size_t len = strlen(line);
@@ -135,6 +135,9 @@ void printLineStep1(char * line, catarray_t * catArr) {
   }
 }
 
+//this function will check whether the input line is a number
+//input a line of string
+//output the number if it is, otherwise return -1
 int isNum(char * line) {
   char ** end = &line;
   int num = strtol(line, end, 10);

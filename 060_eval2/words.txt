@@ -5,3 +5,4 @@ place:cave
 adjective:peculiar
 adjective:scary
 adjective:peaceful
+-1:abc
