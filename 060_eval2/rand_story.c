@@ -249,8 +249,8 @@ void printCatStep3(char * line,
   else {
     //else category is a number
     //check if it is valid
-    num = strtol(line, NULL, 10);
-    if (validNum(num, words->n_words) == 0) {
+    int number = strtol(cat, NULL, 10);
+    if (validNum(number, words->n_words) == 0) {
       fprintf(stderr, "category number out of bound\n");
       exit(EXIT_FAILURE);
     }
