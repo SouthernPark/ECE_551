@@ -1,6 +1,6 @@
-Grading at 10/19/2021:01:25:46.166250
-For commit ID 0c7f8d08abcd621525c6d9dfe38323a1ca0fecb0
-Grading at Mon Oct 18 21:25:42 EDT 2021
+Grading at 10/20/2021:01:11:51.865205
+For commit ID dc52fc6acef7ee7a0f6a71245e72f3a1babb5cb0
+Grading at Tue Oct 19 21:11:44 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -28,8 +28,23 @@ scary
 peculiar
 peaceful
 Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step4 words.txt test3/negative.txt
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step4 words.txt test3/zero.txt
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step4 words.txt test3/numFirst.txt
+Once upon a time Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case story-step4 -n test4/words.txt test4/storyClose
+Valgrind reported memory errors
++-----------------------------------------------------------------------+
+Test case story-step4 -n test4/words.txt test4/storyClose1
+Valgrind reported memory errors
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
