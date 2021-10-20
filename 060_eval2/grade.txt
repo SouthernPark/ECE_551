@@ -1,6 +1,6 @@
-Grading at 10/20/2021:02:24:58.622293
-For commit ID 545aa17c0a5ab98d9aa5ba943e548e3034ee449b
-Grading at Tue Oct 19 22:24:49 EDT 2021
+Grading at 10/20/2021:02:47:36.615445
+For commit ID 017583c6f3009c36583cf8eca9a13d733c30a24e
+Grading at Tue Oct 19 22:47:27 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -38,6 +38,12 @@ Once upon a time, there was a walrus. This Your program successfully indicated a
 Test case story-step4 words.txt test3/numFirst.txt
 Once upon a time Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
+Test case story-step4 -n test4/words-a.txt test4/story-a
+Our story-step4 does not consider this an error case
++-----------------------------------------------------------------------+
+Test case story-step4 -n test4/words-12a.txt test4/story-12a
+Our story-step4 does not consider this an error case
++-----------------------------------------------------------------------+
 Test case story-step4 -n test4/words.txt test4/storyClose
 Your file matched the expected output
 +-----------------------------------------------------------------------+
@@ -50,7 +56,7 @@ Your file matched the expected output
 Test case story-step4 -n test4/words-12a.txt test4/story-12a
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
