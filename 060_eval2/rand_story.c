@@ -37,6 +37,7 @@ char ** loadFile(char * fileName, size_t * n) {
 }
 
 //this function will free the heap memo occupied by the tempalte
+//input: the pointer to the file, the size of the file (how many lines)
 void freeFile(char ** temp, size_t N) {
   for (size_t i = 0; i < N; i++) {
     free(temp[i]);
@@ -46,6 +47,8 @@ void freeFile(char ** temp, size_t N) {
 }
 
 //this fucntion will count how many underscores, this line has
+//input: the pointer to the line
+//output: the number of underscores in the line
 int underscoreCount(char * line) {
   int count = 0;
   const char * temp = line;
@@ -60,6 +63,8 @@ int underscoreCount(char * line) {
 
 //this function will check whether all the underscores are matchable
 //we can do this by check whether the number of '_' in the line is even or not
+//input: the pointer to the line
+//output: whether the line is matchable (has even number of '_')
 int matchable(char * line) {
   int count = underscoreCount(line);
   if (count % 2 == 0) {
@@ -71,6 +76,7 @@ int matchable(char * line) {
 }
 
 //this function will print the substring line[i, j]
+//input: the pointer to the line, the left and right index of the string
 void printStr(char * line, size_t i, size_t j) {
   int len = j - i + 1;
   char * str = strndup(line + i, len);
@@ -91,6 +97,8 @@ long findUnderScore(char * line, size_t index, size_t len) {
   return len;
 }
 
+//this function will randomly replace the category in the line with a word
+//input: the pointer to the line, the index of the category, and the category
 void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
   if (catArr != NULL && j == i + 1) {
     fprintf(stderr, "The __ underscore matchin is invalid\n");
@@ -103,6 +111,7 @@ void printCat(char * line, size_t i, size_t j, catarray_t * catArr) {
 }
 
 //this function will print the line replaced by word in catArr
+//input: the pointer to the line
 void printLineStep1(char * line, catarray_t * catArr) {
   //3. print the line
   size_t len = strlen(line);
