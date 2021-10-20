@@ -1,18 +1,23 @@
 #error
-story-step1
-story-step1 words.txt words.txt
-story-step2 test2/nocolon
-story-step2 test2/nocolonBegin
-story-step2 test2/nocolonEnd
-story-step2
-story-step2 test2/nocolon test2/nocolon
+story-step4
+story-step4 test3/words.txt
+story-step4 -x  test3/story.txt test3/story.txt
+story-step4 -x  test3/story.txt test3/story.txt test3/story.txt
+story-step4 test3/words.txt test3/story_num.txt
+story-step4 test3/words_num.txt test3/story_num.txt
+story-step4 test2/nocolon test3/story_perfect.txt
+story-step4 test2/nocolonBegin test3/story_perfect.txt
+story-step4 test2/nocolonEnd test3/story_perfect.txt
+story-step4 test3/story.txt test3/words.txt
+
 
 
 #success
-story-step2 words.txt
-story-step2 test2/nokey	   
-story-step2 test2/noword
-story-step2 test2/colonInKey
-story-step2 test2/colonInVal
-story-step2 test3/colonAtBegining
-story-step2 test3/noNewLine
+story-step4 test3/words.txt test3/story.txt
+story-step4 test3/words.txt test3/story2.txt
+story-step4 test3/noword test3/story2.txt
+story-step4 test3/nokey test3/story2.txt
+story-step4 test3/mutiColon test3/story2.txt
+story-step4 test3/colonAtBegining test3/story2.txt 
+story-step4 test3/noNewLine plain.txt	     
+story-step4 test3/noNewLine2 test3/story2.txt
