@@ -1,6 +1,6 @@
-Grading at 10/20/2021:19:19:15.173794
-For commit ID 79d28073b7083146fd353d44b8a83d5a0bc3fb37
-Grading at Wed Oct 20 15:19:05 EDT 2021
+Grading at 10/20/2021:19:21:21.876030
+For commit ID d4466c05ebabb40de5d21eae8c9bad319ee3b47a
+Grading at Wed Oct 20 15:21:09 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -10,51 +10,65 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
 gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
-Test case 1 (error): story-step4 test3/words.txt -n test3/story.txt
+Test case 1 (error): story-step4 
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 2 (error): story-step4 test3/words.txt test3/story.txt -n
+Test case 2 (error): story-step4 test3/words.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 3 (error): story-step4 -n test4/fail/words.txt test4/fail/story1.txt
-Once upon a time, there was a walrus who lived in a very scary
-cave. ox adcasdc dragon asdfasf Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 4 (error): story-step4 -n test4/fail/words.txt test4/fail/story2.txt
+Test case 3 (error): story-step4 -x test3/story.txt test3/story.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 5 (error): story-step4 -n test4/fail/words.txt test4/fail/story3.txt
-scary
-peculiar
-peaceful
+Test case 4 (error): story-step4 -x test3/story.txt test3/story.txt test3/story.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 6 (error): story-step4 words.txt test3/negative.txt
-Once upon a time, there was a walrus. This Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 7 (error): story-step4 words.txt test3/zero.txt
-Once upon a time, there was a walrus. This Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 8 (error): story-step4 words.txt test3/numFirst.txt
-Once upon a time Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 9 (error): story-step4 words.txt test4/notANum.txt
+Test case 5 (error): story-step4 test3/words.txt test3/story_num.txt
 Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary Your program successfully indicated a failure case
+scary cave. One day, it left its scary cave and met a walrus.
+Test for Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 10 (success): story-step4 -n test4/words.txt test4/storyClose
+Test case 6 (error): story-step4 test3/words_num.txt test3/story_num.txt
+Once upon a time, there was a walrus. This walrus lived in a very
+scary cave. One day, it left its scary cave and met a walrus.
+Test for Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 7 (error): story-step4 test2/nocolon test3/story_perfect.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 8 (error): story-step4 test2/nocolonBegin test3/story_perfect.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 9 (error): story-step4 test2/nocolonEnd test3/story_perfect.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 10 (error): story-step4 test3/story.txt test3/words.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 11 (error): story-step4 test3/noNewLine test3/story2.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 12 (error): story-step4 test3/noNewLine2 test3/story2.txt
+Our story-step4 does not consider this an error case
++-----------------------------------------------------------------------+
+Test case 13 (success): story-step4 test3/words.txt test3/story.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): story-step4 -n test4/words.txt test4/storyClose1
+Test case 14 (success): story-step4 test3/words.txt test3/story2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): story-step4 -n test4/words-a.txt test4/story-a
+Test case 15 (success): story-step4 test3/noword test3/story2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): story-step4 -n test4/words-12a.txt test4/story-12a
+Test case 16 (success): story-step4 test3/nokey test3/story2.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 17 (success): story-step4 test3/mutiColon test3/story2.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 18 (success): story-step4 test3/colonAtBegining test3/story2.txt
 Your file matched the expected output
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
