@@ -140,11 +140,11 @@ void printLineStep1(char * line, catarray_t * catArr) {
 //output the number if it is, otherwise return -1
 int isNum(char * line) {
   char ** end = &line;
-  int num = strtol(line, end, 10);
+  strtol(line, end, 10);
   if (**end != '\0') {
     return -1;
   }
-  return num;
+  return 1;
 }
 
 int validNum(int num, int len) {
@@ -249,6 +249,7 @@ void printCatStep3(char * line,
   else {
     //else category is a number
     //check if it is valid
+    num = strtol(line, NULL, 10);
     if (validNum(num, words->n_words) == 0) {
       fprintf(stderr, "category number out of bound\n");
       exit(EXIT_FAILURE);
