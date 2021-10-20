@@ -1,6 +1,6 @@
-Grading at 10/20/2021:20:08:25.406415
-For commit ID a80780100eb743e902bb163be3f156c5398ddc77
-Grading at Wed Oct 20 16:08:12 EDT 2021
+Grading at 10/20/2021:20:10:00.286650
+For commit ID 36494da660111e1074fdc017b33502af2ec2d1ad
+Grading at Wed Oct 20 16:09:50 EDT 2021
 Running your test cases
 
 Compiling story-step4
@@ -10,62 +10,48 @@ gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step4.c
 gcc -o story-step4 story-step4.o rand_story.o provided.o
 rm story-step4.o
 +-----------------------------------------------------------------------+
-Test case 1 (error): story-step4 
+Test case 1 (error): story-step4 test3/words.txt -n test3/story.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 2 (error): story-step4 test3/words.txt
+Test case 2 (error): story-step4 test3/words.txt test3/story.txt -n
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 3 (error): story-step4 -x test3/story.txt test3/story.txt
+Test case 3 (error): story-step4 -n test4/fail/words.txt test4/fail/story1.txt
+Once upon a time, there was a walrus who lived in a very scary
+cave. ox adcasdc dragon asdfasf Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 4 (error): story-step4 -n test4/fail/words.txt test4/fail/story2.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 4 (error): story-step4 -x test3/story.txt test3/story.txt test3/story.txt
+Test case 5 (error): story-step4 -n test4/fail/words.txt test4/fail/story3.txt
+scary
+peculiar
+peaceful
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 5 (error): story-step4 test3/words.txt test3/story_num.txt
+Test case 6 (error): story-step4 words.txt test3/negative.txt
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 7 (error): story-step4 words.txt test3/zero.txt
+Once upon a time, there was a walrus. This Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 8 (error): story-step4 words.txt test3/numFirst.txt
+Once upon a time Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 9 (error): story-step4 words.txt test4/notANum.txt
 Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
+scary cave. One day, it left its scary Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 6 (error): story-step4 test3/words_num.txt test3/story_num.txt
-Once upon a time, there was a walrus. This walrus lived in a very
-scary cave. One day, it left its scary cave and met a walrus.
-Test for Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 7 (error): story-step4 test2/nocolon test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 8 (error): story-step4 test2/nocolonBegin test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 9 (error): story-step4 test2/nocolonEnd test3/story_perfect.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 10 (error): story-step4 test3/story.txt test3/words.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 11 (success): story-step4 test3/words.txt test3/story.txt
+Test case 10 (success): story-step4 -n test4/words.txt test4/storyClose
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): story-step4 test3/words.txt test3/story2.txt
+Test case 11 (success): story-step4 -n test4/words.txt test4/storyClose1
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): story-step4 test3/noword test3/story2.txt
+Test case 12 (success): story-step4 -n test4/words-a.txt test4/story-a
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): story-step4 test3/nokey test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 15 (success): story-step4 test3/mutiColon test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 16 (success): story-step4 test3/colonAtBegining test3/story2.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 17 (success): story-step4 test3/noNewLine plain.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 18 (success): story-step4 test3/noNewLine2 test3/story2.txt
+Test case 13 (success): story-step4 -n test4/words-12a.txt test4/story-12a
 Your file matched the expected output
 
 You have PASSED all of your test cases
