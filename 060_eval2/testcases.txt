@@ -1,17 +1,18 @@
 #error
-story-step1 test/fail/fail1
-story-step1 test/fail/story.txt
-story-step1 test/fail/no_file
-story-step1 test/fail/fail2
+story-step1
+story-step1 words.txt words.txt
 story-step2 test2/nocolon
+story-step2 test2/nocolonBegin
+story-step2 test2/nocolonEnd
+story-step2
+story-step2 test2/nocolon test2/nocolon
+
 
 #success
-story-step1 story.txt
-story-step1 test/story.txt  
-story-step1 test/fail/no_line  
-story-step1 test/goo1
-story-step1 test/good
 story-step2 words.txt
 story-step2 test2/nokey	   
-story-step2 test2/noword   
-story-step3 words.txt story2.txt
+story-step2 test2/noword
+story-step2 test2/colonInKey
+story-step2 test2/colonInVal
+story-step2 test3/colonAtBegining
+story-step2 test3/noNewLine
