@@ -1,23 +1,16 @@
 #error
-story-step4
-story-step4 test3/words.txt
-story-step4 -x  test3/story.txt test3/story.txt
-story-step4 -x  test3/story.txt test3/story.txt test3/story.txt
-story-step4 test3/words.txt test3/story_num.txt
-story-step4 test3/words_num.txt test3/story_num.txt
-story-step4 test2/nocolon test3/story_perfect.txt
-story-step4 test2/nocolonBegin test3/story_perfect.txt
-story-step4 test2/nocolonEnd test3/story_perfect.txt
-story-step4 test3/story.txt test3/words.txt
-
-
+story-step4 test3/words.txt -n test3/story.txt
+story-step4 test3/words.txt test3/story.txt -n
+story-step4 -n test4/fail/words.txt test4/fail/story1.txt
+story-step4 -n test4/fail/words.txt test4/fail/story2.txt
+story-step4 -n test4/fail/words.txt test4/fail/story3.txt
+story-step4 words.txt test3/negative.txt	     
+story-step4 words.txt test3/zero.txt	     
+story-step4 words.txt test3/numFirst.txt
+story-step4 words.txt test4/notANum.txt
 
 #success
-story-step4 test3/words.txt test3/story.txt
-story-step4 test3/words.txt test3/story2.txt
-story-step4 test3/noword test3/story2.txt
-story-step4 test3/nokey test3/story2.txt
-story-step4 test3/mutiColon test3/story2.txt
-story-step4 test3/colonAtBegining test3/story2.txt 
-story-step4 test3/noNewLine plain.txt	     
-story-step4 test3/noNewLine2 test3/story2.txt
+story-step4 -n test4/words.txt test4/storyClose
+story-step4 -n test4/words.txt test4/storyClose1
+story-step4 -n test4/words-a.txt test4/story-a
+story-step4 -n test4/words-12a.txt test4/story-12a
