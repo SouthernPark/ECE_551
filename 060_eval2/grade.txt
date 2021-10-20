@@ -1,6 +1,6 @@
-Grading at 10/20/2021:19:35:49.030478
-For commit ID 16b2f242971c3fae83e39c00814058718de45a32
-Grading at Wed Oct 20 15:35:39 EDT 2021
+Grading at 10/20/2021:19:36:59.230815
+For commit ID 9074f67cd27f837b361fb1289d86a5284d0d6192
+Grading at Wed Oct 20 15:36:49 EDT 2021
 Running your test cases
 
 Compiling story-step1
@@ -38,28 +38,28 @@ Your program successfully indicated a failure case
 Test case 7 (error): story-step2 test2/nocolon test2/nocolon
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 8 (error): story-step2 test3/noNewLine
-Our story-step2 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case 9 (success): story-step2 words.txt
+Test case 8 (success): story-step2 words.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 10 (success): story-step2 test2/nokey
+Test case 9 (success): story-step2 test2/nokey
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 11 (success): story-step2 test2/noword
+Test case 10 (success): story-step2 test2/noword
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 12 (success): story-step2 test2/colonInKey
+Test case 11 (success): story-step2 test2/colonInKey
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 13 (success): story-step2 test2/colonInVal
+Test case 12 (success): story-step2 test2/colonInVal
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 14 (success): story-step2 test3/colonAtBegining
+Test case 13 (success): story-step2 test3/colonAtBegining
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 14 (success): story-step2 test3/noNewLine
 Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
