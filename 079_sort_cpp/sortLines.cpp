@@ -42,7 +42,7 @@ int main(int argc, char ** argv) {
       rfile.open(filename, std::ifstream::in);
       //check whether the file is opened
       if (rfile.fail()) {
-        std::cout << "The file " << filename << "Can not be open" << std::endl;
+        std::cerr << "The file" << filename << " Cann not be open" << std::endl;
         return EXIT_FAILURE;
       }
       //call the function to read the file
