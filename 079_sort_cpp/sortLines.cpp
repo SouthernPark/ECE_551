@@ -57,7 +57,7 @@ int main(int argc, char ** argv) {
       file.clear();
     }
 
-    //free memory
+    //delete memory
     delete lines;
   }
 
