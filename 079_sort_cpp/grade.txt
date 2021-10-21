@@ -1,0 +1,21 @@
+Grading at 10/21/2021:20:57:45.877054
+For commit ID 5478f0049559ec4fbc3e38a87afbf7263dc6b6a0
+Grading at Thu Oct 21 16:57:45 EDT 2021
+Looking for malloc in your files
+No uses found (good).
+Looking for free in your files
+sortLines.cpp:    //free memory
+No uses found (good).
+Looking for FILE in your files
+No uses found (good).
+Looking for realloc in your files
+No uses found (good).
+Looking for qsort in your files
+No uses found (good).
+Looking for printf in your files
+No uses found (good).
+Attempting to compile with make
+make: 'sort' is up to date.
+I couldnt find an executable!
+
+Overall Grade: F
