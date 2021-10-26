@@ -1,0 +1,19 @@
+Grading at 10/26/2021:20:07:29.282515
+For commit ID eadc061b159b28867793796ae4fa5d40fd7d03de
+Grading at Tue Oct 26 16:07:26 EDT 2021
+Compiling code
+The code compiled.
+---------------------
+Test case 1
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+---------------------
+Test case 2
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+---------------------
+Test case 3
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+
+Overall Grade: F
