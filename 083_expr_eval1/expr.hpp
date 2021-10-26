@@ -50,5 +50,8 @@ class PlusExpression : public Expression {
   }
 
   //destructor
-  virtual ~PlusExpression() {}
+  virtual ~PlusExpression() {
+    delete left;
+    delete right;
+  }
 };
