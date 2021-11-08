@@ -49,7 +49,24 @@ class NegSquareFunction : public Function<int, int> {
 
 class LinearFunction : public Function<int, int> {
  public:
-  virtual int invoke(int arg) { return arg + 2.5; }
+  virtual int invoke(int arg) { return arg - 2.5; }
+};
+
+class SegFunction : public Function<int, int> {
+ public:
+  virtual int invoke(int arg) {
+    if (arg >= 0) {
+      return arg + 1;
+    }
+    else {
+      return arg - 1;
+    }
+  }
+};
+
+class ConstFunction : public Function<int, int> {
+ public:
+  virtual int invoke(int arg) { return -1; }
 };
 
 #endif
