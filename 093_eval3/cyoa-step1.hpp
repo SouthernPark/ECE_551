@@ -144,7 +144,7 @@ class Page {
   //print the navigation
   void printNav() {
     for (size_t i = 0; i < choices_num.size(); i++) {
-      std::cout << " " << choices_num[i] << ". ";
+      std::cout << " " << i + 1 << ". ";
       std::cout << choice_content[i] << std::endl;
     }
   }
