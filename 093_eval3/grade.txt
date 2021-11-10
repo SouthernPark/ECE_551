@@ -1,10 +1,10 @@
-Grading at 11/10/2021:16:54:15.390298
-For commit ID da63d9a7a3f50557ff3c1dbb4651cc40e66f0845
-Grading at Wed Nov 10 11:54:05 EST 2021
+Grading at 11/10/2021:17:07:13.796834
+For commit ID f2c4937f6d74ceacaa2df41c35fe5f98fb9d7a4b
+Grading at Wed Nov 10 12:07:04 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
-g++     cyoa-step1.cpp   -o cyoa-step1
+make: 'cyoa-step1' is up to date.
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
