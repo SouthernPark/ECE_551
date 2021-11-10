@@ -255,7 +255,6 @@ int str_to_posint(std::string str) {
 
   char * first_invalid = NULL;
   int num = strtol(c_str, &first_invalid, 10);
-  delete[] c_str;
 
   //check the whether the first_invalid is '\0' or not
   if (*first_invalid != '\0') {
