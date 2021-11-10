@@ -49,9 +49,13 @@ class Page {
 
     if (cat == 1) {
       win_or_lose = 1;
+      //read one more line
+      std::getline(ifs, line);
     }
     else if (cat == 2) {
       win_or_lose = 2;
+      //read one more line
+      std::getline(ifs, line);
     }
     else {
       //check whether this line is choice valid
@@ -78,6 +82,28 @@ class Page {
         }
       } while (!ifs.eof());
     }
+
+    //if the next line after nav is not '#'
+    if (line.length() <= 0 || line.at(0) != '#') {
+      std::cerr << "We do not find a # to seperate betweeen nav and text" << std::endl;
+      exit(EXIT_FAILURE);
+    }
+    if (ifs.bad() || ifs.fail()) {
+      std::cerr << "Sorry there is some problem when reading the nav" << std::endl;
+      exit(EXIT_FAILURE);
+    }
+    //clear all the
+    ifs.clear();
+  }
+
+  //this function will read the text content into
+  //the text vector
+  void readText(std::ifstream & ifs) {
+    std::string line;
+    while (!std::getline(ifs, line).eof()) {
+      //push each line into the text vector
+      text.push_back(line);
+    }
   }
 
  public:
@@ -99,7 +125,7 @@ class Page {
     //read the navigation
     readNav(ifs);
     //read the text
-
+    readText(ifs);
     //close the stream
     ifs.close();
   }
@@ -115,16 +141,52 @@ class Page {
     }
   }
 
-  //open the file
-
   //print the navigation
   void printNav() {
     for (size_t i = 0; i < choices_num.size(); i++) {
-      std::cout << choices_num[i] << ":";
+      std::cout << choices_num[i] << ". ";
       std::cout << choice_content[i] << std::endl;
     }
   }
   //print the text
+
+  void printText() {
+    for (size_t i = 0; i < text.size(); i++) {
+      std::cout << text[i] << std::endl;
+    }
+  }
+
+  void printPage() {
+    //check WIN, LOSE, or choice page
+    if (win_or_lose == -1) {
+      //print choice page
+      //print the text
+      printText();
+      //print a blank line, message, blank line
+      std::cout << std::endl << "What would you like to do?" << std::endl << std::endl;
+      //print choices
+      printNav();
+    }
+    else {
+      //print WIN/LOSE page
+      printText();
+      if (win_or_lose == 1) {
+        //print WIN mess
+        std::cout << std::endl
+                  << "Congratulations! You have won. Hooray!" << std::endl
+                  << std::endl;
+      }
+      else if (win_or_lose == 0) {
+        //print LOSE mess
+        std::cout << std::endl
+                  << "Sorry, you have lost. Better luck next time!" << std::endl
+                  << std::endl;
+      }
+      else {
+        std::cout << "win_or_lose flag is not set correctly" << std::endl << std::endl;
+      }
+    }
+  }
 };
 
 //this function is used to classify navigation into 4 types;

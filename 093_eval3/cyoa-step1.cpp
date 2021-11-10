@@ -4,9 +4,15 @@
 
 int main(int argc, char ** argv) {
   //test for no file
-  Page page1("story1/page1.txt");
+  if (!(argc == 2)) {
+    std::cerr << "Sorry, please specify the file name" << std::endl;
+    exit(EXIT_FAILURE);
+  }
+
+  Page page1(argv[1]);
   page1.read();
-  page1.printNav();
+  page1.printPage();
+  //page1.printText();
   //int num = str_to_posint(std::string("0"));
   //std::cout << num << std::endl;
 }
