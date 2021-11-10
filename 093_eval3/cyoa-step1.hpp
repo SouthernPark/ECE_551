@@ -53,7 +53,7 @@ class Page {
       std::getline(ifs, line);
     }
     else if (cat == 2) {
-      win_or_lose = 2;
+      win_or_lose = 0;
       //read one more line
       std::getline(ifs, line);
     }
