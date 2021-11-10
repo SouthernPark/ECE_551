@@ -1,6 +1,6 @@
-Grading at 11/10/2021:17:27:01.144089
-For commit ID 048324de5472dcf60056ec607f5076d0305cb886
-Grading at Wed Nov 10 12:26:51 EST 2021
+Grading at 11/10/2021:17:32:51.147118
+For commit ID 524fa4efdde1c7fa9689923ff981628f4b3efeb2
+Grading at Wed Nov 10 12:32:41 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -29,20 +29,18 @@ Test case 7 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 8 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page3.txt
-Your file matched the expected output
+5d4
+< 
+Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 9 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page4.txt
-3d2
-< win_or_lose flag is not set correctly
-4a4
-> Sorry, you have lost. Better luck next time!
+5d4
+< 
 Your file did not match the expected output
 +-----------------------------------------------------------------------+
 Test case 10 (success): cyoa-step1 /usr/local/ece551/cyoa/story2/page5.txt
-6d5
-< win_or_lose flag is not set correctly
-7a7
-> Sorry, you have lost. Better luck next time!
+8d7
+< 
 Your file did not match the expected output
 Step 1: Failed test cases as above
 
