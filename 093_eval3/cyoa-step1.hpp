@@ -172,15 +172,12 @@ class Page {
       printText();
       if (win_or_lose == 1) {
         //print WIN mess
-        std::cout << std::endl
-                  << "Congratulations! You have won. Hooray!" << std::endl
-                  << std::endl;
+        std::cout << std::endl << "Congratulations! You have won. Hooray!" << std::endl;
       }
       else if (win_or_lose == 0) {
         //print LOSE mess
         std::cout << std::endl
-                  << "Sorry, you have lost. Better luck next time!" << std::endl
-                  << std::endl;
+                  << "Sorry, you have lost. Better luck next time!" << std::endl;
       }
       else {
         std::cout << "win_or_lose flag is not set correctly" << std::endl << std::endl;
