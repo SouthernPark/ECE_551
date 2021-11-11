@@ -1,4 +1,4 @@
-#include "map.h"
+#include "bstmap.h"
 
 int main(void) {
   //create a BstMap
