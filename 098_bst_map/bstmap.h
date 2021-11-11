@@ -53,6 +53,9 @@ class BstMap : public Map<K, V> {
 
   //this function will return a copied tree from _root
   static Node * copy_tree(Node * _root) {
+    if (_root == NULL) {
+      return NULL;
+    }
     //copy the root
     Node * res = new Node(_root->key, _root->val);
     //copy the left-sub tree
@@ -77,7 +80,7 @@ class BstMap : public Map<K, V> {
     if (&rhs != this) {
       Node * temp = copy_tree(rhs.root);
       //then delete the original tree
-      delete_tree(this->root);
+      deleteTree(this->root);
       root = temp;
     }
     return *this;
@@ -87,7 +90,7 @@ class BstMap : public Map<K, V> {
     if (&rhs != this) {
       Node * temp = copy_tree(rhs.root);
       //then delete the original tree
-      delete_tree(this->root);
+      deleteTree(this->root);
       root = temp;
     }
     return *this;

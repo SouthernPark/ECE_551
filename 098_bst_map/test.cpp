@@ -12,5 +12,7 @@ int main(void) {
   bmap.print_tree();
   bmap.remove(30);
   std::cout << "after remove nodes\n";
-  bmap.print_tree();
+
+  BstMap<int, int> b1 = bmap;
+  b1.print_tree();
 }
