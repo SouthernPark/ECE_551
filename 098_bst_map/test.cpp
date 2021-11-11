@@ -13,6 +13,12 @@ int main(void) {
   bmap.remove(30);
   std::cout << "after remove nodes\n";
 
+  std::cout << "test copy constructor\n";
   BstMap<int, int> b1 = bmap;
   b1.print_tree();
+
+  std::cout << "test assignment operator\n";
+  BstMap<int, int> b2;
+  b2 = bmap;
+  b2.print_tree();
 }
