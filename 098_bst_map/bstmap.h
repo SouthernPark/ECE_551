@@ -46,7 +46,7 @@ class BstMap : public Map<K, V> {
       return;
     }
     std::cout << "key:" << _root->key << std::endl;
-    std::cout << "value:" << _root->val << std::endl;
+    //std::cout << "value:" << _root->val << std::endl;
     preorder(_root->left);
     preorder(_root->right);
   }
@@ -159,11 +159,11 @@ class BstMap : public Map<K, V> {
       //sink the node down
       //go right once
       Node ** temp = cur;
-      temp = &(*temp)->right;
+      temp = &((*temp)->right);
       //we want *temp points at the node we want to swap
       while ((*temp)->left != NULL) {
         //go to the left
-        temp = &(*temp)->left;
+        temp = &((*temp)->left);
       }
       //change key val of temp with cur
       (*cur)->key = (*temp)->key;

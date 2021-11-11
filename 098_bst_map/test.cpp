@@ -7,30 +7,26 @@ int main(void) {
   bmap.add(6, 6);
   bmap.add(3, 3);
   bmap.add(2, 2);
-  bmap.add(1, 1);
+  bmap.add(5, 5);
   bmap.add(11, 11);
   bmap.add(10, 10);
   bmap.add(13, 13);
 
-  bmap.add(6, 6);
-  bmap.add(3, 3);
-  bmap.add(2, 2);
-  bmap.add(1, 1);
-  bmap.add(11, 11);
-  bmap.add(10, 10);
-  bmap.add(13, 13);
-
-  //bmap.add(2, 3);
   bmap.print_tree();
-  std::cout << "look up###########\n";
+  //std::cout << "look up###########\n";
 
   //look up a key
-  const int x = bmap.lookup(13);
+  //const int x = bmap.lookup(13);
 
-  std::cout << x << std::endl;
+  std::cout << "delete node\n";
 
-  std::cout << "delete a node\n";
-
+  bmap.remove(6);
+  bmap.remove(13);
+  bmap.remove(10);
   bmap.remove(3);
+  bmap.remove(5);
+  bmap.remove(2);
+  bmap.remove(11);
+  bmap.remove(6);
   bmap.print_tree();
 }
