@@ -51,10 +51,48 @@ class BstMap : public Map<K, V> {
     preorder(_root->right);
   }
 
+  //this function will return a copied tree from _root
+  static Node * copy_tree(Node * _root) {
+    //copy the root
+    Node * res = new Node(_root->key, _root->val);
+    //copy the left-sub tree
+    res->left = copy_tree(_root->left);
+    //copy the right-sub tree
+    res->right = copy_tree(_root->right);
+    //return the created tree
+    return res;
+  }
+
  public:
   //implement constructor
   BstMap() : root(NULL) {}
   //implement copy constructor
+  BstMap(const BstMap & rhs) : root(NULL) {
+    //create the copied tree
+    root = copy_tree(rhs.root);
+  }
+
+  //implement assignment operator
+  BstMap & operator=(const BstMap & rhs) {
+    if (&rhs != this) {
+      Node * temp = copy_tree(rhs.root);
+      //then delete the original tree
+      delete_tree(this->root);
+      root = temp;
+    }
+    return *this;
+  }
+
+  BstMap & operator=(const BstMap & rhs) const {
+    if (&rhs != this) {
+      Node * temp = copy_tree(rhs.root);
+      //then delete the original tree
+      delete_tree(this->root);
+      root = temp;
+    }
+    return *this;
+  }
+
   //implement add
   virtual void add(const K & key, const V & value) {
     //implement using Node **
@@ -158,8 +196,7 @@ class BstMap : public Map<K, V> {
     else {
       //sink the node down
       //go right once
-      Node ** temp = cur;
-      temp = &((*temp)->right);
+      Node ** temp = &((*cur)->right);
       //we want *temp points at the node we want to swap
       while ((*temp)->left != NULL) {
         //go to the left
