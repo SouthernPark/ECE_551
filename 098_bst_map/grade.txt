@@ -1,0 +1,77 @@
+Grading at 11/11/2021:18:55:49.588346
+For commit ID 304abcee07281d22a1ff9f6478711177ea60dd10
+Grading at Thu Nov 11 13:55:49 EST 2021
+-----------------------------------------------
+testcase 1 : Testing with BstMap<int,int>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstMap<int,std::string>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 4 : Testing with BstMap<std::string,int>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 5 : Testing with BstMap<std::string,std::string>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 7 : Testing with BstMap<(a custom class we wrote),int>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
+...compiling...
+89-tester.cpp:1:10: fatal error: bstmap.h: No such file or directory
+ #include "bstmap.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+
+Overall Grade: F
