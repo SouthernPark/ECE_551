@@ -1,4 +1,5 @@
-LOSE
+WIN
+1:123
 #toaster Denevieve
 After thinking about it for a bit, you decide that Denevieve is the better
 choice. You go to her house and explain your quest. 

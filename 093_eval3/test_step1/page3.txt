@@ -1,4 +1,4 @@
-8:Go to Denevieve for help.
+0:Go to Denevieve for help.
 9:Go to Grew for help.
 7:Go alone.
 #shoes

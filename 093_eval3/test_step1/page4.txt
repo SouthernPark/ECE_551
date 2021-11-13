@@ -1,5 +1,5 @@
 11:Go to Denevieve for help.
-12:Go to Grew for help.
+-2:Go to Grew for help.
 7:Go alone.
 #toaster
 As you take the magic toaster from the wizard's hand, he disappears in a

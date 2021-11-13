@@ -1,4 +1,4 @@
-LOSE
+1  :Go to 123
 #whistle, Grew
 After thinking about it for a bit, you decide that Grew is the best
 choice. You go to visit him, and explain your plan: Grew will make some

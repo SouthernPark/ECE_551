@@ -1,5 +1,4 @@
 WIN
-#toaster Grew
 After thinking about it for a bit, you decide to go to Grew for help. When
 you explain your quest, and that you have a magic toaster, Grew gets an
 idea. 
