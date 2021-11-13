@@ -1,10 +1,18 @@
-
 #include <cstdlib>
+#include <exception>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <string>
 #include <vector>
+class no_file : public std::exception {
+ public:
+  std::string what() {
+    std::string mess("File not found exception\n");
+    return mess;
+  }
+};
+
 //this function is used to classify navigation into 4 types;
 //return 1 for "WIN"
 //return 2 for "LOSE"
@@ -111,14 +119,15 @@ class Page {
   explicit Page(const char * address) : win_or_lose(-1), file(address) {}
 
   //read the page
-  void read() {
+  void read() throw(no_file) {
     //open the input file stream with address
     std::ifstream input_stream(file, std::ifstream::in);
     //check whether the file can open or not
 
     if (!input_stream.is_open()) {
-      std::cerr << "The file:" << file << " can not open" << std::endl;
-      exit(EXIT_FAILURE);
+      throw(no_file());
+      //std::cerr << "The file:" << file << " can not open" << std::endl;
+      //exit(EXIT_FAILURE);
     }
     std::ifstream & ifs = input_stream;
 
