@@ -1,6 +1,6 @@
-Grading at 11/13/2021:19:42:53.789976
-For commit ID 5f605df9d01cda87ff3eeec81f42282dae82f875
-Grading at Sat Nov 13 14:42:31 EST 2021
+Grading at 11/13/2021:19:49:33.522142
+For commit ID 9728da3738a70ef341317cd2a9751d5c01924365
+Grading at Sat Nov 13 14:49:10 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -57,49 +57,49 @@ make: 'cyoa-step1' is up to date.
 Test case 1 (error): cyoa-step1 test_step1/page1.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 2 (error): cyoa-step1 test_step1/page2.txt
-Our cyoa-step1 does not consider this an error case
-+-----------------------------------------------------------------------+
-Test case 3 (error): cyoa-step1 test_step1/page3.txt
+Test case 2 (error): cyoa-step1 test_step1/page3.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 4 (error): cyoa-step1 test_step1/page4.txt
+Test case 3 (error): cyoa-step1 test_step1/page4.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 5 (error): cyoa-step1 test_step1/page5.txt
+Test case 4 (error): cyoa-step1 test_step1/page5.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 6 (error): cyoa-step1 test_step1/page6.txt
+Test case 5 (error): cyoa-step1 test_step1/page6.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 7 (error): cyoa-step1 test_step1/page8.txt
+Test case 6 (error): cyoa-step1 test_step1/page8.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step1 test_step1/page9.txt
+Test case 7 (error): cyoa-step1 test_step1/page9.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step1 test_step1/page10.txt
+Test case 8 (error): cyoa-step1 test_step1/page10.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 10 (error): cyoa-step1 test_step1/page11.txt
+Test case 9 (error): cyoa-step1 test_step1/page11.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 11 (error): cyoa-step1 test_step1/page12.txt
+Test case 10 (error): cyoa-step1 test_step1/page12.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 12 (error): cyoa-step1 test_step1/page13.txt
+Test case 11 (error): cyoa-step1 test_step1/page13.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 13 (error): cyoa-step1 test_step1/page14.txt
+Test case 12 (error): cyoa-step1 test_step1/page14.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 14 (error): cyoa-step1 test_step1/page15.txt
+Test case 13 (error): cyoa-step1 test_step1/page15.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 test_step1/page7.txt
+Test case 14 (success): cyoa-step1 test_step1/page7.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 15 (success): cyoa-step1 test_step1/page2.txt
 Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
