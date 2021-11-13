@@ -1,5 +1,5 @@
 #error
-./cyoa-step1 test_step1/page1.txt
+cyoa-step1 test_step1/page1.txt
 
 #success
 
