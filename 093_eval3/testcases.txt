@@ -12,6 +12,9 @@ cyoa-step1 test_step1/page12.txt
 cyoa-step1 test_step1/page13.txt
 cyoa-step1 test_step1/page14.txt
 cyoa-step1 test_step1/page15.txt
+cyoa-step1 test_step1/page16.txt
+cyoa-step1
+cyoa-step1 nosuchfile
 #success
 cyoa-step1 test_step1/page7.txt
 cyoa-step1 test_step1/page2.txt
