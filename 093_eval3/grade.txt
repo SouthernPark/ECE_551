@@ -1,6 +1,6 @@
-Grading at 11/13/2021:19:49:33.522142
-For commit ID 9728da3738a70ef341317cd2a9751d5c01924365
-Grading at Sat Nov 13 14:49:10 EST 2021
+Grading at 11/13/2021:19:51:20.210158
+For commit ID 54770c21e01caac635cfaba888557fe6e9c54ac7
+Grading at Sat Nov 13 14:50:54 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -93,10 +93,19 @@ Your program successfully indicated a failure case
 Test case 13 (error): cyoa-step1 test_step1/page15.txt
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step1 test_step1/page7.txt
+Test case 14 (error): cyoa-step1 test_step1/page16.txt
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 15 (error): cyoa-step1 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 16 (error): cyoa-step1 nosuchfile
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 17 (success): cyoa-step1 test_step1/page7.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 15 (success): cyoa-step1 test_step1/page2.txt
+Test case 18 (success): cyoa-step1 test_step1/page2.txt
 Your file matched the expected output
 
 You have PASSED all of your test cases
