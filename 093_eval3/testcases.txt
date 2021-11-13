@@ -1,6 +1,5 @@
 #error
 cyoa-step1 test_step1/page1.txt
-cyoa-step1 test_step1/page2.txt
 cyoa-step1 test_step1/page3.txt
 cyoa-step1 test_step1/page4.txt
 cyoa-step1 test_step1/page5.txt
@@ -15,5 +14,5 @@ cyoa-step1 test_step1/page14.txt
 cyoa-step1 test_step1/page15.txt
 #success
 cyoa-step1 test_step1/page7.txt
-
+cyoa-step1 test_step1/page2.txt
 

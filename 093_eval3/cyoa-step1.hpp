@@ -237,10 +237,6 @@ int str_to_posint(std::string str) {
   if (str.length() <= 0) {
     return -1;
   }
-  //then check whether the first digital is pos
-  if (!(str[0] >= '1' && str[1] <= '9')) {
-    return -1;
-  }
 
   //convert str to char
   char * c_str = new char[str.length() + 1];
