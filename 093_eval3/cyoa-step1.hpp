@@ -42,7 +42,7 @@ class Page {
   int win_or_lose;
 
   //the address of the file page
-  const char * file;
+  std::string file;
   void readNav(std::ifstream & ifs) {
     //read the first line
     std::string line;
@@ -115,15 +115,15 @@ class Page {
   }
 
  public:
-  Page() : win_or_lose(-1), file(NULL) {}
-  explicit Page(const char * address) : win_or_lose(-1), file(address) {}
+  Page() : win_or_lose(-1), file(std::string("")) {}
+  explicit Page(const char * address) : win_or_lose(-1), file(std::string(address)) {}
+  explicit Page(std::string address) : win_or_lose(-1), file(address) {}
 
   //read the page
   void read() throw(no_file) {
     //open the input file stream with address
-    std::ifstream input_stream(file, std::ifstream::in);
+    std::ifstream input_stream(file.c_str(), std::ifstream::in);
     //check whether the file can open or not
-
     if (!input_stream.is_open()) {
       throw(no_file());
       //std::cerr << "The file:" << file << " can not open" << std::endl;
@@ -142,8 +142,17 @@ class Page {
   //this function will reset the file address
   //if the page object is built using default constructor
   void open(const char * str) {
-    if (str == NULL) {
-      file = str;
+    if (file.compare("") == 0) {
+      file = std::string(str);
+    }
+    else {
+      std::cout << "The page file has already associated with an address." << std::endl;
+    }
+  }
+
+  void open(std::string str) {
+    if (file.compare("") == 0) {
+      file = std::string(str);
     }
     else {
       std::cout << "The page file has already associated with an address." << std::endl;
@@ -193,6 +202,9 @@ class Page {
       }
     }
   }
+
+  std::vector<int> & getChoiceNum() { return this->choices_num; }
+  int getWinLose() { return win_or_lose; }
 };
 
 //this function is used to classify navigation into 4 types;
