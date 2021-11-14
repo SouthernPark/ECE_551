@@ -229,7 +229,7 @@ bool validChoice(int choice, int min, int max) {
 
 //this function will continuously get and check userinput
 int getUserInput(int size) {
-  std::cout << "Hi! Please input your choice below (Press Enter when finish):\n";
+  //std::cout << "Hi! Please input your choice below (Press Enter when finish):\n";
   std::string res;
   bool valid;
   int num = -1;
@@ -240,11 +240,6 @@ int getUserInput(int size) {
 
     num = str_to_posint(res);
     valid = validChoice(num, 1, size);
-
-    if (!valid) {
-      std::cout << "Sorry, your input is invalid please input it again (Press Enter when "
-                   "finish):\n";
-    }
 
   } while (!valid);
 
