@@ -229,7 +229,6 @@ bool validChoice(int choice, int min, int max) {
 
 //this function will continuously get and check userinput
 int getUserInput(int size) {
-  //std::cout << "Hi! Please input your choice below (Press Enter when finish):\n";
   std::string res;
   bool valid;
   int num = -1;

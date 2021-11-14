@@ -41,7 +41,6 @@ int main(int argc, char ** argv) {
 
     //4. get user input and valid user input
     int userInput = getUserInput(choice_num.size());
-    std::cout << userInput << std::endl;
 
     //6. update current page
     cur = choice_num[userInput - 1] - 1;
