@@ -1,6 +1,6 @@
-Grading at 11/14/2021:15:36:53.946492
-For commit ID 22bca7317cb20e3fde11d9709dfa0bcabbad6bd5
-Grading at Sun Nov 14 10:36:24 EST 2021
+Grading at 11/14/2021:15:43:09.120438
+For commit ID 93b6ca0bf8be9eaac0c4a6130d4d4c6bd0689b4d
+Grading at Sun Nov 14 10:42:39 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -48,14 +48,11 @@ Input to story is
 
 +-----------------------------------------------------------------------+
 Test case 11 (success): cyoa-step2 /usr/local/ece551/cyoa/story1 < pregrader_input.txt
-25,26d24
-< Hi! Please input your choice below (Press Enter when finish):
+25d24
 < 1
-51,52d48
-< Hi! Please input your choice below (Press Enter when finish):
+50d48
 < 1
-73,74d68
-< Hi! Please input your choice below (Press Enter when finish):
+71d68
 < 1
 Your file did not match the expected output
 Input to story is
@@ -64,11 +61,9 @@ Input to story is
 
 +-----------------------------------------------------------------------+
 Test case 12 (success): cyoa-step2 /usr/local/ece551/cyoa/story1 < pregrader_input.txt
-25,26d24
-< Hi! Please input your choice below (Press Enter when finish):
+25d24
 < 3
-55,56d52
-< Hi! Please input your choice below (Press Enter when finish):
+54d52
 < 2
 Your file did not match the expected output
 Input to story is
@@ -79,17 +74,13 @@ Input to story is
 
 +-----------------------------------------------------------------------+
 Test case 13 (success): cyoa-step2 /usr/local/ece551/cyoa/story2 < pregrader_input.txt
-16,17d15
-< Hi! Please input your choice below (Press Enter when finish):
+16d15
 < 1
-27,28d24
-< Hi! Please input your choice below (Press Enter when finish):
+26d24
 < 2
-38,39d33
-< Hi! Please input your choice below (Press Enter when finish):
+36d33
 < 2
-50,51d43
-< Hi! Please input your choice below (Press Enter when finish):
+47d43
 < 1
 Your file did not match the expected output
 Input to story is
@@ -97,8 +88,7 @@ Input to story is
 
 +-----------------------------------------------------------------------+
 Test case 14 (success): cyoa-step2 /usr/local/ece551/cyoa/story2 < pregrader_input.txt
-16,17d15
-< Hi! Please input your choice below (Press Enter when finish):
+16d15
 < 3
 Your file did not match the expected output
 Step 2: Failed test cases as above
