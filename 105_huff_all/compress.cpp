@@ -34,7 +34,12 @@ void writeCompressedOutput(const char * inFile,
   //WRITE YOUR CODE HERE!
   //open the input file for reading
   std::ifstream input(inFile, std::ifstream::in);
-  //You need to read the input file, lookup the characters in the map,
+  //check the file exist
+  if (!input.is_open()) {
+    std::cerr << "The file does not exist\n";
+    exit(EXIT_FAILURE);
+  }
+  // //You need to read the input file, lookup the characters in the map,
   //and write the proper bit string with the BitFileWriter
   int c;
   while (true) {
