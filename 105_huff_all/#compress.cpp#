@@ -51,7 +51,7 @@ void writeCompressedOutput(const char * inFile,
 
   //dont forget to lookup 256 for the EOF marker, and write it out.
   if (input.eof()) {
-    bfw.writeBitString((*theMap.find(256)).second);
+    bfw.writeByte((*theMap.find(256))).second);
   }
 
   //BitFileWriter will close the output file in its destructor
