@@ -33,35 +33,34 @@ void writeCompressedOutput(const char * inFile,
 
   //WRITE YOUR CODE HERE!
   //open the input file for reading
-  std::ifstream input(inFile, std::ifstream::in);
+  FILE * f = fopen(inFile, "r");
   //check the file exist
-  if (!input.is_open()) {
+  if (f == NULL) {
     std::cerr << "The file does not exist\n";
     exit(EXIT_FAILURE);
   }
   // //You need to read the input file, lookup the characters in the map,
   //and write the proper bit string with the BitFileWriter
   int c;
-  while (true) {
-    //get the char
-    c = input.get();
-    if (c == -1) {
-      break;
+  while ((c = fgetc(f)) != EOF) {
+    BitString str;
+    //check if we can get the
+    if (theMap.find(c) == theMap.end()) {
+      std::cerr << "The key does not exist\n";
+      exit(EXIT_FAILURE);
     }
-    //get the proper bitstring
-    BitString str = (*theMap.find(c)).second;
+    str = theMap.find(c)->second;
     //write to file
     bfw.writeBitString(str);
   }
 
   //dont forget to lookup 256 for the EOF marker, and write it out.
-  if (input.eof()) {
-    bfw.writeBitString((*theMap.find(256)).second);
-  }
+
+  bfw.writeBitString(theMap.find(256)->second);
 
   //BitFileWriter will close the output file in its destructor
   //but you probably need to close your input file.
-  input.close();
+  fclose(f);
 }
 
 int main(int argc, char ** argv) {
