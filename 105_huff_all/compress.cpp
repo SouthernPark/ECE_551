@@ -43,15 +43,14 @@ void writeCompressedOutput(const char * inFile,
   //and write the proper bit string with the BitFileWriter
   int c;
   while ((c = fgetc(f)) != EOF) {
-    BitString str;
     //check if we can get the
     if (theMap.find(c) == theMap.end()) {
       std::cerr << "The key does not exist\n";
       exit(EXIT_FAILURE);
     }
-    str = theMap.find(c)->second;
+
     //write to file
-    bfw.writeBitString(str);
+    bfw.writeBitString(theMap.find(c)->second);
   }
 
   //dont forget to lookup 256 for the EOF marker, and write it out.
