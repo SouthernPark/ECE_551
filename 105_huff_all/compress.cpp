@@ -83,11 +83,10 @@ int main(int argc, char ** argv) {
   std::map<unsigned, BitString> theMap;
   BitString empty;
   tree->buildMap(empty, theMap);
+  delete tree;
 
   //read the file and compress it and write to output
   writeCompressedOutput(argv[1], argv[2], theMap);
-
-  delete tree;
 
   return EXIT_SUCCESS;
 }
