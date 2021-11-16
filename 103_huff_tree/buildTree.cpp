@@ -12,6 +12,11 @@ Node * buildTree(uint64_t * counts) {
       pq.push(n);
     }
   }
+
+  if (pq.size() == 0) {
+    return NULL;
+  }
+
   //3. build the tree by removing two elements from queue
   //construct tree using new Node(left, right)
   //push the tree into queue
