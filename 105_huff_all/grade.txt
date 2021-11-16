@@ -1,0 +1,32 @@
+Grading at 11/16/2021:17:14:46.432670
+For commit ID d03338d3b8c3e7f93fc92cfdc4bc7e16e1628741
+Grading at Tue Nov 16 12:13:02 EST 2021
+compiling
+g++ -ggdb3 -Wall -Werror -pedantic -std=gnu++98 -o compress  bitstring.o  buildTree.o  compress.o  node.o  readFreq.o
+Make succeed, compress created
+Testcase 1
+-----------------------
+  - Valgrind was clean (no errors, no memory leaks)
+Decompressing, and comparing to original...:
+Line_3_did_not_match
+Your file did not match the expected output
+**Testcase failed **
+Testcase 2
+-----------------------
+  - Valgrind was clean (no errors, no memory leaks)
+Decompressing, and comparing to original...:
+Line_592_did_not_match
+Your file did not match the expected output
+**Testcase failed **
+Testcase 3
+-----------------------
+  - Valgrind reported errors
+Valgrind reported errors (test failed).
+==10648== Memcheck, a memory error detector
+==10648== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10648== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==10648== Command: ./compress /usr/share/dict/words theirs.3.compressed
+==10648== Parent PID: 10647
+==10648== 
+
+Overall Grade: F
