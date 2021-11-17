@@ -23,6 +23,7 @@ int main(int argc, char ** argv) {
   }
   catch (invalid_page & e) {
     std::cerr << e.what();
+    exit(EXIT_FAILURE);
   }
 
   //4. build up the reading process
