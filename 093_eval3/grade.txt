@@ -1,6 +1,6 @@
-Grading at 11/17/2021:22:33:59.050470
-For commit ID 33f445ed1b91fa5a2cd4bb77d8b750b1e9cfbbab
-Grading at Wed Nov 17 17:33:36 EST 2021
+Grading at 11/17/2021:22:38:58.146971
+For commit ID 5cdb5ec4fdd1aa0990ef04cee1353026c41cf02e
+Grading at Wed Nov 17 17:38:34 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -100,16 +100,22 @@ Your program successfully indicated a failure case
 Test case 5 (error): cyoa-step2 test_step2/pageNoOtherPagePoint
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 6 (success): cyoa-step2 story1 < test_step2/input/input_story1.txt
+Test case 6 (error): cyoa-step2 test_step2/noWIN
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 7 (error): cyoa-step2 test_step2/noLOSE
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 8 (success): cyoa-step2 story1 < test_step2/input/input_story1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 7 (success): cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
+Test case 9 (success): cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 8 (success): cyoa-step2 story2 < test_step2/input/input_story2.txt
+Test case 10 (success): cyoa-step2 story2 < test_step2/input/input_story2.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 9 (success): cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt
+Test case 11 (success): cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt
 Your file matched the expected output
 
 You have PASSED all of your test cases
