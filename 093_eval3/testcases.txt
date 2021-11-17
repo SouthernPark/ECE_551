@@ -6,6 +6,6 @@ cyoa-step2 test_step2/noPage1
 
 
 #success
-cyoa-step2 story1
-cyoa-step2 story2
+cyoa-step2 story1 test_step2/input/input_story1.txt
+cyoa-step2 story2 test_step2/input/input_story2.txt
 
