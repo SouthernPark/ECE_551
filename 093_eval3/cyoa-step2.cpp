@@ -15,6 +15,7 @@ int main(int argc, char ** argv) {
   }
   catch (no_file & e) {
     std::cerr << e.what();
+    exit(EXIT_FAILURE);
   }
 
   //3. check if the story is valid

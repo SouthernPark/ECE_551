@@ -1,7 +1,7 @@
 #error
 cyoa-step2
 cyoa-step2 nosuchdir
-cyoa-step2 test_step2/noPage1
+cyoa-step2 test_step2/noPage1 < test_step2/input/input_story1.txt
 
 
 
