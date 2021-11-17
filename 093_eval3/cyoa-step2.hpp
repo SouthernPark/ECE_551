@@ -150,7 +150,8 @@ class Story {
         int num = choiceNum[j];
         if (!(num >= 1 && num <= size)) {
           std::stringstream ss;
-          ss << "Page reference in " << i + 1 << " is out of range\n";
+          ss << "Page reference: " << num << " in "
+             << "page " << i + 1 << " is out of range\n";
           std::cerr << ss.str();
           throw(invalid_page());
         }
