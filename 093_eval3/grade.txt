@@ -1,10 +1,10 @@
-Grading at 11/14/2021:15:47:49.099133
-For commit ID 696c4e7549589cb043abb32ff9d727d7c7e2ccd4
-Grading at Sun Nov 14 10:47:19 EST 2021
+Grading at 11/17/2021:19:54:41.975031
+For commit ID 0f79e25260b045e5a3ce0ec58082608ed4b7fbda
+Grading at Wed Nov 17 14:54:19 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
-make: 'cyoa-step1' is up to date.
+g++ -o cyoa-step1 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step1.cpp   
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
@@ -39,7 +39,7 @@ Your file matched the expected output
 Step 1: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step2
-make: 'cyoa-step2' is up to date.
+g++ -o cyoa-step2 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step2.cpp
 Compiled for step 2
 Input to story is
 1
@@ -82,64 +82,24 @@ The code did not compile!
 Did not compile for step 4
 Running your test cases
 
-Compiling cyoa-step1
-make: 'cyoa-step1' is up to date.
+Compiling cyoa-step2
+make: 'cyoa-step2' is up to date.
 +-----------------------------------------------------------------------+
-Test case 1 (error): cyoa-step1 test_step1/page1.txt
+Test case 1 (error): cyoa-step2 
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 2 (error): cyoa-step1 test_step1/page3.txt
+Test case 2 (error): cyoa-step2 nosuchdir
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 3 (error): cyoa-step1 test_step1/page4.txt
+Test case 3 (error): cyoa-step2 test_step2/noPage1
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 4 (error): cyoa-step1 test_step1/page5.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 5 (error): cyoa-step1 test_step1/page6.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 6 (error): cyoa-step1 test_step1/page8.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 7 (error): cyoa-step1 test_step1/page9.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step1 test_step1/page10.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step1 test_step1/page11.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 10 (error): cyoa-step1 test_step1/page12.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 11 (error): cyoa-step1 test_step1/page13.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 12 (error): cyoa-step1 test_step1/page14.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 13 (error): cyoa-step1 test_step1/page15.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 14 (error): cyoa-step1 test_step1/page16.txt
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 15 (error): cyoa-step1 
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 16 (error): cyoa-step1 nosuchfile
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 17 (success): cyoa-step1 test_step1/page7.txt
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 18 (success): cyoa-step1 test_step1/page2.txt
-Your file matched the expected output
+Test case 4 (success): cyoa-step2 story1
+We considered this an error case and gave the following message:
+Cannot read from stdin
+Valgrind reported memory errors
 
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
