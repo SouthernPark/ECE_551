@@ -1,6 +1,6 @@
-Grading at 11/17/2021:21:39:36.551582
-For commit ID af05577b29defcaaa78e999063eb69089c4e66ff
-Grading at Wed Nov 17 16:39:18 EST 2021
+Grading at 11/17/2021:22:33:59.050470
+For commit ID 33f445ed1b91fa5a2cd4bb77d8b750b1e9cfbbab
+Grading at Wed Nov 17 17:33:36 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -94,10 +94,22 @@ Your program successfully indicated a failure case
 Test case 3 (error): cyoa-step2 test_step2/noPage1
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 4 (success): cyoa-step2 story1 < test_step2/input/input_story1.txt
+Test case 4 (error): cyoa-step2 test_step2/notValidReference
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 5 (error): cyoa-step2 test_step2/pageNoOtherPagePoint
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 6 (success): cyoa-step2 story1 < test_step2/input/input_story1.txt
 Your file matched the expected output
 +-----------------------------------------------------------------------+
-Test case 5 (success): cyoa-step2 story2 < test_step2/input/input_story2.txt
+Test case 7 (success): cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 8 (success): cyoa-step2 story2 < test_step2/input/input_story2.txt
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 9 (success): cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt
 Your file matched the expected output
 
 You have PASSED all of your test cases
