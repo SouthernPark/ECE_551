@@ -1,10 +1,10 @@
-Grading at 11/17/2021:19:54:41.975031
-For commit ID 0f79e25260b045e5a3ce0ec58082608ed4b7fbda
-Grading at Wed Nov 17 14:54:19 EST 2021
+Grading at 11/17/2021:21:34:39.031449
+For commit ID d4bb578cc4e88f7656810b8801347e2bafa10446
+Grading at Wed Nov 17 16:34:20 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
-g++ -o cyoa-step1 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step1.cpp   
+make: 'cyoa-step1' is up to date.
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
@@ -39,7 +39,7 @@ Your file matched the expected output
 Step 1: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step2
-g++ -o cyoa-step2 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step2.cpp
+make: 'cyoa-step2' is up to date.
 Compiled for step 2
 Input to story is
 1
@@ -94,10 +94,19 @@ Your program successfully indicated a failure case
 Test case 3 (error): cyoa-step2 test_step2/noPage1
 Your program successfully indicated a failure case
 +-----------------------------------------------------------------------+
-Test case 4 (success): cyoa-step2 story1
+Test case 4 (success): cyoa-step2 story1 test_step2/input/input_story1.txt
 We considered this an error case and gave the following message:
-Cannot read from stdin
-Valgrind reported memory errors
+Usage: directory
+1d0
+< Need one argument
+Your file did not match the expected output
++-----------------------------------------------------------------------+
+Test case 5 (success): cyoa-step2 story2 test_step2/input/input_story2.txt
+We considered this an error case and gave the following message:
+Usage: directory
+1d0
+< Need one argument
+Your file did not match the expected output
 
 You have FAILED one or more of your test cases
 Keep debugging
