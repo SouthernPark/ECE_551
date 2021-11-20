@@ -6,6 +6,8 @@ cyoa-step2 test_step2/notValidReference < test_step2/input/input_story1.txt
 cyoa-step2 test_step2/pageNoOtherPagePoint < test_step2/input/input_story1.txt
 cyoa-step2 test_step2/noWIN < test_step2/input/input_story1.txt
 cyoa-step2 test_step2/noLOSE < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/noChoice < test_step2/input/input_story1.txt
+
 
 #success
 cyoa-step2 story1 < test_step2/input/input_story1.txt
