@@ -13,4 +13,3 @@ cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
 cyoa-step2 story2 < test_step2/input/input_story2.txt
 cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt
 
-
