@@ -166,13 +166,16 @@ class Story {
     for (size_t i = 0; i < size; i++) {
       refer[i] = false;
     }
-    //go through all pages
+    //go through all pages (pagei+1.txt)
     for (size_t i = 0; i < size; i++) {
       //get the choice number of the page
       std::vector<int> & choiceNum = story[i]->getChoiceNum();
       for (size_t j = 0; j < choiceNum.size(); j++) {
         //set refer[choiceNum[j]-1] to true
-        refer[choiceNum[j] - 1] = true;
+        //the choice can not be itself
+        if (choiceNum[j] != (int)(i + 1)) {
+          refer[choiceNum[j] - 1] = true;
+        }
       }
     }
 
