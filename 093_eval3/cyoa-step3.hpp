@@ -89,10 +89,9 @@ class StoryGraph {
     std::map<int, int> storyDepth;
     //clear the visited flag
     setAllUnvisited();
-    //set the page depth of page1 as 1
-    setDepth(1, 1);
-    //some assertion
-    assert(graph[1]->getDepth() == 1);
+    //set the page depth of page1 as 0
+    setDepth(1, 0);
+
     //create thr queue
     std::queue<int> q;
 
