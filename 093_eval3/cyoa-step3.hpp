@@ -125,5 +125,7 @@ class StoryGraph {
         std::cout << "Page " << i + 1 << " is not reachable" << std::endl;
       }
     }
+    //reset visited
+    setAllUnvisited();
   }
 };
