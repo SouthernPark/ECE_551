@@ -1,0 +1,70 @@
+#include "cyoa-step2.hpp"
+#define MAX 2147483647
+#include <map>
+class StoryGraph {
+  class Node {
+   private:
+    //initially the depth of the page will be MAX
+    int depth;
+    bool visited;
+    int win_or_lose;
+
+   public:
+    Node() : depth(MAX), visited(false), win_or_lose(-1) {}
+    Node(int winLose) : depth(MAX), visited(false), win_or_lose(winLose) {}
+
+    //getters and setters for the node attribute
+
+    int & getDepth() { return depth; }
+    int getWinLose() { return win_or_lose; }
+    void setDepth(int dep) { depth = dep; }
+    void setWinLose(int wl) { win_or_lose = wl; }
+    bool getVisited() { return visited; }
+    void setVisited(bool vis) { visited = vis; }
+  };
+
+  int nodes_num;
+
+  //use ajacentry matrix to implement the graph
+  std::map<int, std::vector<int> > ajaList;
+  //page number to Node pointer
+  std::map<int, Node *> graph;
+
+ public:
+  StoryGraph(Story & story) : nodes_num(story.getPageNum()) {
+    //build up the graph according to the story
+    //for each node
+    for (int i = 0; i < nodes_num; i++) {
+      //fill its ajacency list
+      ajaList[i + 1] = story.getPageChoices(i);
+      //create the node
+      graph[i + 1] = new Node(story.getWinLose(i));
+    }
+  }
+
+  //destructor
+  ~StoryGraph() {
+    for (int i = 0; i < nodes_num; i++) {
+      delete graph[i + 1];
+    }
+  }
+
+  //get ajacency
+  std::vector<int> & getChildren(int index) { return ajaList[index]; }
+
+  //isVisited
+  bool isVisited(int index) { return graph[index]->getVisited(); }
+  //get depth
+  int & depth(int index) { return graph[index]->getDepth(); }
+
+  //get win_or_lose
+  bool getWinLose(int index) { return graph[index]->getWinLose(); }
+
+  //set visited
+  void setVisited(int index, bool vis) { graph[index]->setVisited(vis); }
+  //set depth
+  void setDepth(int index, int dep) { graph[index]->setDepth(dep); };
+
+  //get how many nodes
+  int getNodeNum() { return nodes_num; }
+};

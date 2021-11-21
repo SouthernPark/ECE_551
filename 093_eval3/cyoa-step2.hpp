@@ -1,5 +1,3 @@
-
-
 #include "cyoa-step1.hpp"
 class invalid_page : public std::exception {
  public:
@@ -217,6 +215,9 @@ class Story {
   }
 
   int & getCurPage() { return this->current_page; }
+  int getPageNum() { return story.size(); };
+  std::vector<int> getPageChoices(int index) { return story[index]->getChoiceNum(); };
+  int getWinLose(int index) { return story[index]->getWinLose(); }
 };
 
 //check whether choice is within [min, max]
