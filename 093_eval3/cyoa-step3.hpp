@@ -62,7 +62,7 @@ class StoryGraph {
   int & depth(int index) { return graph[index]->getDepth(); }
 
   //get win_or_lose
-  bool getWinLose(int index) { return graph[index]->getWinLose(); }
+  int getWinLose(int index) { return graph[index]->getWinLose(); }
 
   //set visited
   void setVisited(int index, bool vis) { graph[index]->setVisited(vis); }
@@ -127,5 +127,53 @@ class StoryGraph {
     }
     //reset visited
     setAllUnvisited();
+  }
+
+  void findWinPath() {
+    //reset the visited attribute of the graph
+    this->setAllUnvisited();
+
+    //create an array to hold the path
+    std::vector<std::pair<int, int> > path;
+    backtrack(1, path);
+
+    this->setAllUnvisited();
+  }
+
+  void backtrack(int node, std::vector<std::pair<int, int> > path) {
+    //the node is win
+    if (getWinLose(node) == 1) {
+      //print out the path
+      for (size_t i = 0; i < path.size(); i++) {
+        std::cout << path[i].first << "(" << path[i].second << ")"
+                  << ",";
+      }
+      std::cout << node << "(win)" << std::endl;
+      return;
+    }
+    //the node is lose
+    else if (getWinLose(node) == 0) {
+      return;
+    }
+
+    //else node is choice node mark as visited
+    this->setVisited(node, true);
+    //find the neighbours
+    std::vector<int> & neigh = this->getAllNei(node);
+    for (size_t i = 0; i < neigh.size(); i++) {
+      //avoid visited node
+      if (this->isVisited(neigh[i])) {
+        continue;
+      }
+      //push your choice into path
+      path.push_back(std::pair<int, int>(node, i + 1));
+      //DFS to next node
+      backtrack(neigh[i], path);
+      //remove the last node for backtrack
+      path.pop_back();
+    }
+    //set as unvisted backtrack
+    this->setVisited(node, false);
+    return;
   }
 };

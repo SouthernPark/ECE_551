@@ -29,6 +29,8 @@ int main(int argc, char ** argv) {
 
   //4.construct the graph
   StoryGraph graph(story);
-  //5. print the depth of all page
-  graph.printStoryDepth();
+  //5. find and print all the win path
+  //int win = graph.getWinLose(1);
+  //std::cout << win << std::endl;
+  graph.findWinPath();
 }

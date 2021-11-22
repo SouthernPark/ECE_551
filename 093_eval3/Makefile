@@ -1,4 +1,8 @@
 flag=-ggdb3 -Wall -Werror -pedantic -std=gnu++98
+
+cyoa-step4:cyoa-step4.cpp cyoa-step3.hpp cyoa-step3 
+	g++ -o cyoa-step4 $(flag) cyoa-step4.cpp
+
 cyoa-step3:cyoa-step3.cpp cyoa-step3.hpp cyoa-step2 
 	g++ -o cyoa-step3 $(flag) cyoa-step3.cpp    
 
