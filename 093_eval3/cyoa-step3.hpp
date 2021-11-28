@@ -4,6 +4,7 @@
 
 #include <map>
 #include <queue>
+#include <set>
 
 class StoryGraph {
   class Node {
@@ -75,6 +76,25 @@ class StoryGraph {
   int getDepth(int index) { return graph[index]->getDepth(); };
 
   //get all the neighbour
+  std::vector<std::pair<int, int> > getAllUniqueNei(int index) {
+    //get all the neighbours of the node
+    std::vector<int> & neigh = ajaList[index];
+    //<page_num, choice_num>
+    std::vector<std::pair<int, int> > pageToChoice;
+    //this hash set will record whether page has been counted already
+    std::set<int> uniquePage;
+    for (size_t i = 0; i < neigh.size(); i++) {
+      //if the page is not been recorded
+      if (uniquePage.count(neigh[i]) == 0) {
+        //push it to pageToChoice
+        pageToChoice.push_back(std::pair<int, int>(neigh[i], i + 1));
+        uniquePage.insert(neigh[i]);
+      }
+      //if the page has been recorded, then we do not add it again
+    }
+
+    return pageToChoice;
+  }
   std::vector<int> & getAllNei(int index) { return ajaList[index]; }
 
   void setAllUnvisited() {
@@ -158,17 +178,17 @@ class StoryGraph {
 
     //else node is choice node mark as visited
     this->setVisited(node, true);
-    //find the neighbours
-    std::vector<int> & neigh = this->getAllNei(node);
+    //get all the neighbour (represented as <page_num, choice_num>)
+    std::vector<std::pair<int, int> > neigh = this->getAllUniqueNei(node);
     for (size_t i = 0; i < neigh.size(); i++) {
       //avoid visited node
-      if (this->isVisited(neigh[i])) {
+      if (this->isVisited(neigh[i].first)) {
         continue;
       }
       //push your choice into path
-      path.push_back(std::pair<int, int>(node, i + 1));
+      path.push_back(std::pair<int, int>(node, neigh[i].second));
       //DFS to next node
-      backtrack(neigh[i], path);
+      backtrack(neigh[i].first, path);
       //remove the last node for backtrack
       path.pop_back();
     }
