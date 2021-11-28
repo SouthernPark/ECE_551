@@ -1,6 +1,6 @@
-Grading at 11/28/2021:05:12:06.458694
-For commit ID 83f1e5db6848d9b846b4303fce3cdc655dad94fb
-Grading at Sun Nov 28 00:11:34 EST 2021
+Grading at 11/28/2021:15:33:32.714776
+For commit ID 7c120312f18f8f785ece01a5afa8a1aa9b6fd204
+Grading at Sun Nov 28 10:33:13 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -93,53 +93,13 @@ Test case 18 (success): cyoa-step4 /usr/local/ece551/cyoa/story2
 Your file matched the expected output
 Step 4: PASSED Pre-Grader Test Cases
 Running your test cases
++-----------------------------------------------------------------------+
+Test case 1 (success): cyoa-step4 test_step4/repeatChoice
+2d1
+< 1(3),3(1),8(win)
+Your file did not match the expected output
 
-Compiling cyoa-step3
-make: 'cyoa-step3' is up to date.
-+-----------------------------------------------------------------------+
-Test case 1 (error): cyoa-step3 
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 2 (error): cyoa-step3 nosuchdir
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 3 (error): cyoa-step3 test_step2/noPage1
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 4 (error): cyoa-step3 test_step2/notValidReference
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 5 (error): cyoa-step3 test_step2/pageNoOtherPagePoint
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 6 (error): cyoa-step3 test_step2/noWIN
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 7 (error): cyoa-step3 test_step2/noLOSE
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 8 (error): cyoa-step3 test_step2/noChoice
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 9 (error): cyoa-step3 test_step2/independentPageSet
-Your program successfully indicated a failure case
-+-----------------------------------------------------------------------+
-Test case 10 (success): cyoa-step3 story1
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 11 (success): cyoa-step3 test_step2/hasOtherPagesValid
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 12 (success): cyoa-step3 story2
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 13 (success): cyoa-step3 test_step2/goodIndepent
-Your file matched the expected output
-+-----------------------------------------------------------------------+
-Test case 14 (success): cyoa-step3 test_step4/repeatChoice
-Your file matched the expected output
-
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
