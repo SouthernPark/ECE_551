@@ -1,0 +1,17 @@
+#error
+cyoa-step3
+cyoa-step3 nosuchdir
+cyoa-step3 test_step2/noPage1
+cyoa-step3 test_step2/notValidReference 
+cyoa-step3 test_step2/pageNoOtherPagePoint
+cyoa-step3 test_step2/noWIN
+cyoa-step3 test_step2/noLOSE
+cyoa-step3 test_step2/noChoice
+cyoa-step3 test_step2/independentPageSet 
+
+#success
+cyoa-step3 story1
+cyoa-step3 test_step2/hasOtherPagesValid
+cyoa-step3 story2
+cyoa-step3 test_step2/goodIndepent
+cyoa-step3 test_step4/repeatChoice
