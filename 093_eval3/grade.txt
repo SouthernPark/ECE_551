@@ -1,6 +1,6 @@
-Grading at 11/28/2021:05:03:15.986654
-For commit ID 80f8b18b8b46f08dd282e44f1cc356bb923f77ae
-Grading at Sun Nov 28 00:02:45 EST 2021
+Grading at 11/28/2021:05:12:06.458694
+For commit ID 83f1e5db6848d9b846b4303fce3cdc655dad94fb
+Grading at Sun Nov 28 00:11:34 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -134,6 +134,9 @@ Test case 12 (success): cyoa-step3 story2
 Your file matched the expected output
 +-----------------------------------------------------------------------+
 Test case 13 (success): cyoa-step3 test_step2/goodIndepent
+Your file matched the expected output
++-----------------------------------------------------------------------+
+Test case 14 (success): cyoa-step3 test_step4/repeatChoice
 Your file matched the expected output
 
 You have PASSED all of your test cases
