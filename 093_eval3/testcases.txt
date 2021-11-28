@@ -14,3 +14,4 @@ cyoa-step3 story1
 cyoa-step3 test_step2/hasOtherPagesValid
 cyoa-step3 story2
 cyoa-step3 test_step2/goodIndepent
+cyoa-step3 test_step4/repeatChoice
