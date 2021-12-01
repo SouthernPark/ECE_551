@@ -1,5 +1,13 @@
 #error
-
+cyoa-step4                                 
+cyoa-step4 nosuchdir                       
+cyoa-step4 test_step2/noPage1              
+cyoa-step4 test_step2/notValidReference    
+cyoa-step4 test_step2/pageNoOtherPagePoint 
+cyoa-step4 test_step2/noWIN                
+cyoa-step4 test_step2/noLOSE               
+cyoa-step4 test_step2/noChoice             
+cyoa-step4 test_step2/independentPageSet   
 
 #success
 cyoa-step4 test_step4/repeatChoice
