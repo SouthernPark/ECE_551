@@ -27,10 +27,13 @@ int main(int argc, char ** argv) {
     exit(EXIT_FAILURE);
   }
 
-  //4. build up the reading process
+  //4. build up the page dispaly process
   while (1) {
+    //get the current page of the story
+    //at the beginning it is set to 1
+    //which is the first page
     int & cur = story.getCurPage();
-
+    //a pointer point to the current page
     Page * cur_page = story.getPage(cur);
     //1. display the current page
     cur_page->printPage();

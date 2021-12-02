@@ -6,28 +6,42 @@
 #include <queue>
 #include <set>
 
+//this class will store the story as a graph
+//node is the page, connectiong of the node is the choices
+//between pages
 class StoryGraph {
+  //inner class for node
   class Node {
    private:
     //initially the depth of the page will be MAX
+    //depth of the node
     int depth;
+    //whether the node has been visited
     bool visited;
+    //whether this node represent a win page or lose page
     int win_or_lose;
 
    public:
+    //constructors
     Node() : depth(MAX), visited(false), win_or_lose(-1) {}
     Node(int winLose) : depth(MAX), visited(false), win_or_lose(winLose) {}
 
     //getters and setters for the node attribute
-
+    //get the depth of this node in the graph
     int & getDepth() { return depth; }
+    //get win or lose of this node
     int getWinLose() { return win_or_lose; }
+    //set the depth of this node
     void setDepth(int dep) { depth = dep; }
+    //set win or lose of this node
     void setWinLose(int wl) { win_or_lose = wl; }
+    //get whether this node is visited or not
     bool getVisited() { return visited; }
+    //set the visited status of this node
     void setVisited(bool vis) { visited = vis; }
   };
 
+  //how many nodes in this graph
   int nodes_num;
 
   //use ajacentry matrix to implement the graph
@@ -95,15 +109,18 @@ class StoryGraph {
 
     return pageToChoice;
   }
+  //this function will get all the neighbours of a node
   std::vector<int> & getAllNei(int index) { return ajaList[index]; }
 
+  //this function will set all the node as un-visited
   void setAllUnvisited() {
     for (int i = 0; i < nodes_num; i++) {
       graph[i + 1]->setVisited(false);
     }
   }
 
-  //using dfs to get the story depth of all the story
+  //this fuction will using dfs to
+  //get the story depth of all the story
   void printStoryDepth() {
     //key->page num, val->story depth
     std::map<int, int> storyDepth;
@@ -155,11 +172,13 @@ class StoryGraph {
 
     //create an array to hold the path
     std::vector<std::pair<int, int> > path;
+    //find all paths to win form node 1
     backtrack(1, path);
-
+    //after that set all nodes as unvisited
     this->setAllUnvisited();
   }
-
+  //this function will use backtracking algorithm to find all
+  //all the possible paths to the win from the specified node
   void backtrack(int node, std::vector<std::pair<int, int> > path) {
     //the node is win
     if (getWinLose(node) == 1) {
