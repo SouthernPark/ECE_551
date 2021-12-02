@@ -32,8 +32,10 @@ int str_to_posint(std::string str);
 
 class Page {
  private:
-  //navigation of the page, store the line of the nav
+  //navigation of the page, store the numbers for
+  //which page to jump
   std::vector<int> choices_num;
+  //store the text after each choice number
   std::vector<std::string> choice_content;
   //text of the pages, store the lines of the txt
   std::vector<std::string> text;
@@ -41,10 +43,12 @@ class Page {
   //if win this will be set as 1, lose 0, else -1
   int win_or_lose;
 
-  //the address of the file page
+  //the address/name of the page file
   std::string file;
+  //this function will read and store the navigation part
+  //of the page
   void readNav(std::ifstream & ifs) {
-    //read the first line
+    //1. read the first line
     std::string line;
     std::getline(ifs, line);
     if (ifs.eof()) {
@@ -52,39 +56,48 @@ class Page {
       exit(EXIT_FAILURE);
     }
 
-    //check the navigation is choice or "WIN", "LOSE"
+    //2. check the navigation is choice or "WIN", "LOSE"
     int cat = nav_classify(line);
-
+    //cat == 1, then it is a page for WIN
     if (cat == 1) {
       win_or_lose = 1;
       //read one more line
       std::getline(ifs, line);
     }
+    //cat == 2, then it is a page for LOSE
     else if (cat == 2) {
       win_or_lose = 0;
       //read one more line
       std::getline(ifs, line);
     }
     else {
-      //check whether this line is choice valid
+      //otherwise, cat = 3, it is a page whose navigations
+      //are all choices
       do {
+        //check whether the choice line is valid
+        //if valid returns the choice number
+        //else return 0
         int val_bit = check_choices(line);
 
         if (val_bit == 0) {
-          //std::cout << line;
+          //if the choice line is not valid
+          //report error and exit
           std::cerr << "The choice is not valid" << std::endl;
           exit(EXIT_FAILURE);
         }
-        //else we can extract the choice num and choice content
-        int first_colon = line.find(':');
 
+        //then get the choice number and choice content
+        //add the choice number
         choices_num.push_back(val_bit);
 
+        //read the content after the ":"
+        int first_colon = line.find(':');
         choice_content.push_back(
             line.substr(first_colon + 1, line.length() - first_colon - 1));
-        //read the line continuously
+        //read the next line
         std::getline(ifs, line);
         //break if we find a line start with '#'
+        //which is the end of the navigation
         if (line.at(0) == '#') {
           break;
         }
@@ -92,15 +105,19 @@ class Page {
     }
 
     //if the next line after nav is not '#'
+    //the page is in wrong format
     if (line.length() <= 0 || line.at(0) != '#') {
       std::cerr << "We do not find a # to seperate betweeen nav and text" << std::endl;
       exit(EXIT_FAILURE);
     }
+    //if the status of ifstream is not correct after reading navigation
+    //then report error and exit
     if (ifs.bad() || ifs.fail()) {
       std::cerr << "Sorry there is some problem when reading the nav" << std::endl;
       exit(EXIT_FAILURE);
     }
-    //clear all the
+
+    //clear all the bad status
     ifs.clear();
   }
 
@@ -115,11 +132,13 @@ class Page {
   }
 
  public:
+  //constructors
   Page() : win_or_lose(-1), file(std::string("")) {}
   explicit Page(const char * address) : win_or_lose(-1), file(std::string(address)) {}
   explicit Page(std::string address) : win_or_lose(-1), file(address) {}
 
-  //read the page
+  //this function will read the whole page including the navigation part
+  //and the text part
   void read() throw(no_file) {
     //open the input file stream with address
     std::ifstream input_stream(file.c_str(), std::ifstream::in);
@@ -150,6 +169,7 @@ class Page {
     }
   }
 
+  //override the open method for differnt parameter input
   void open(std::string str) {
     if (file.compare("") == 0) {
       file = std::string(str);
@@ -159,21 +179,26 @@ class Page {
     }
   }
 
-  //print the navigation
+  //this function will print the navigation part
   void printNav() {
+    //go through the choice content
     for (size_t i = 0; i < choices_num.size(); i++) {
+      //print the selection number
       std::cout << " " << i + 1 << ". ";
+      //print the choice content
       std::cout << choice_content[i] << std::endl;
     }
   }
-  //print the text
 
+  //print the text part of the page
   void printText() {
     for (size_t i = 0; i < text.size(); i++) {
       std::cout << text[i] << std::endl;
     }
   }
 
+  //print all the content of the page
+  //including the navigation part and the choice part
   void printPage() {
     //check WIN, LOSE, or choice page
     if (win_or_lose == -1) {
@@ -203,7 +228,9 @@ class Page {
     }
   }
 
+  //getters for the choice number of this page
   std::vector<int> & getChoiceNum() { return this->choices_num; }
+  //getters for the win lose status
   int getWinLose() { return win_or_lose; }
 };
 
@@ -217,10 +244,11 @@ int nav_classify(std::string str) {
   if (str.compare("WIN") == 0) {
     return 1;
   }
+  //then check lose
   else if (str.compare("LOSE") == 0) {
     return 2;
   }
-
+  //other wise it is choice page
   return 3;
 }
 
@@ -252,7 +280,6 @@ int check_choices(std::string str) {
 //this function will convert a string to a positive number
 //return -1 if unconvertable
 //else return the number
-
 int str_to_posint(std::string str) {
   //firstly check the length of the str
   if (str.length() <= 0) {
@@ -275,7 +302,7 @@ int str_to_posint(std::string str) {
     delete[] c_str;
     return -1;
   }
-
+  //we can not have choice number <= 0
   if (num <= 0) {
     delete[] c_str;
     return -1;
