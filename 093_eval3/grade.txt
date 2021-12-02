@@ -1,10 +1,10 @@
-Grading at 12/02/2021:03:03:42.654571
-For commit ID 602f53b1cdc01c2c65f394913e9e1d660d943ffa
-Grading at Wed Dec  1 22:03:13 EST 2021
+Grading at 12/02/2021:03:14:54.846886
+For commit ID 20f1683fc9767fb2254d86fdda78d3720b145908
+Grading at Wed Dec  1 22:14:23 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
-make: 'cyoa-step1' is up to date.
+g++ -o cyoa-step1 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step1.cpp   
 Compiled for step 1
 +-----------------------------------------------------------------------+
 Test case 1 (success): cyoa-step1 /usr/local/ece551/cyoa/story1/page1.txt
@@ -39,7 +39,7 @@ Your file matched the expected output
 Step 1: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step2
-make: 'cyoa-step2' is up to date.
+g++ -o cyoa-step2 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step2.cpp
 Compiled for step 2
 Input to story is
 1
@@ -74,7 +74,7 @@ Your file matched the expected output
 Step 2: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step3
-make: 'cyoa-step3' is up to date.
+g++ -o cyoa-step3 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step3.cpp    
 +-----------------------------------------------------------------------+
 Test case 15 (success): cyoa-step3 /usr/local/ece551/cyoa/story1
 Your file matched the expected output
@@ -84,7 +84,7 @@ Your file matched the expected output
 Step 3: PASSED Pre-Grader Test Cases
 
 Compiling cyoa-step4
-make: 'cyoa-step4' is up to date.
+g++ -o cyoa-step4 -ggdb3 -Wall -Werror -pedantic -std=gnu++98 cyoa-step4.cpp
 +-----------------------------------------------------------------------+
 Test case 17 (success): cyoa-step4 /usr/local/ece551/cyoa/story1
 Your file matched the expected output
@@ -128,15 +128,9 @@ Compiling cyoa-step2
 make: 'cyoa-step2' is up to date.
 +-----------------------------------------------------------------------+
 Test case 11 (success): cyoa-step2 story1 < wrong_input.txt
-24a25,29
-> That is not a valid choice, please try again
-> That is not a valid choice, please try again
-> That is not a valid choice, please try again
-> That is not a valid choice, please try again
-> That is not a valid choice, please try again
-Your file did not match the expected output
+Your file matched the expected output
 
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
