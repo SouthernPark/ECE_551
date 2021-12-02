@@ -289,6 +289,9 @@ bool validChoice(int choice, int min, int max) {
     return true;
   }
 
+  //print some messages
+  std::cout << "That is not a valid choice, please try again\n";
+
   return false;
 }
 
@@ -307,9 +310,10 @@ int getUserInput(int size) {
     //returns -1 if the the string is not a positive number
     num = str_to_posint(res);
     //check whether the input is valid
+    //if the input is not valid
     valid = validChoice(num, 1, size);
     //if it is not valid, continuously read the input until
-    //it is valid
+
   } while (!valid);
 
   return num;
