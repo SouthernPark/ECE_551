@@ -1,6 +1,6 @@
-Grading at 11/28/2021:16:34:02.949818
-For commit ID 3c865f9a95d889b801300773170f0dbc47518433
-Grading at Sun Nov 28 11:33:44 EST 2021
+Grading at 12/01/2021:19:13:41.263554
+For commit ID cda92fd571528e82ab568b6106809fe0e635aeda
+Grading at Wed Dec  1 14:13:12 EST 2021
 Checking Step 1 test cases required for extra credit
 
 Compiling cyoa-step1
@@ -94,7 +94,34 @@ Your file matched the expected output
 Step 4: PASSED Pre-Grader Test Cases
 Running your test cases
 +-----------------------------------------------------------------------+
-Test case 1 (success): cyoa-step4 test_step4/repeatChoice
+Test case 1 (error): cyoa-step4 
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 2 (error): cyoa-step4 nosuchdir
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 3 (error): cyoa-step4 test_step2/noPage1
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 4 (error): cyoa-step4 test_step2/notValidReference
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 5 (error): cyoa-step4 test_step2/pageNoOtherPagePoint
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 6 (error): cyoa-step4 test_step2/noWIN
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 7 (error): cyoa-step4 test_step2/noLOSE
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 8 (error): cyoa-step4 test_step2/noChoice
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 9 (error): cyoa-step4 test_step2/independentPageSet
+Your program successfully indicated a failure case
++-----------------------------------------------------------------------+
+Test case 10 (success): cyoa-step4 test_step4/repeatChoice
 Your file matched the expected output
 
 You have PASSED all of your test cases
