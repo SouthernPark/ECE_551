@@ -11,3 +11,4 @@ cyoa-step4 test_step2/independentPageSet
 
 #success
 cyoa-step4 test_step4/repeatChoice
+cyoa-step2 story1 < wrong_input.txt
