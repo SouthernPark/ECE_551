@@ -1,17 +1,21 @@
 #error
-cyoa-step2
-cyoa-step2 nosuchdir
-cyoa-step2 test_step2/noPage1 < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/notValidReference < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/pageNoOtherPagePoint < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/noWIN < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/noLOSE < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/noChoice < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt 
-
+cyoa-step1 test_step1/page1.txt
+cyoa-step1 test_step1/page3.txt
+cyoa-step1 test_step1/page4.txt
+cyoa-step1 test_step1/page5.txt
+cyoa-step1 test_step1/page6.txt
+cyoa-step1 test_step1/page8.txt
+cyoa-step1 test_step1/page9.txt
+cyoa-step1 test_step1/page10.txt
+cyoa-step1 test_step1/page11.txt
+cyoa-step1 test_step1/page12.txt
+cyoa-step1 test_step1/page13.txt
+cyoa-step1 test_step1/page14.txt
+cyoa-step1 test_step1/page15.txt
+cyoa-step1 test_step1/page16.txt
+cyoa-step1
+cyoa-step1 nosuchfile
 #success
-cyoa-step2 story1 < test_step2/input/input_story1.txt
-cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
-cyoa-step2 story2 < test_step2/input/input_story2.txt
-cyoa-step2 test_step2/goodIndepent < test_step2/input/independentPageSet_input.txt
+cyoa-step1 test_step1/page7.txt
+cyoa-step1 test_step1/page2.txt
 
