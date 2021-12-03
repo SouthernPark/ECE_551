@@ -1,14 +1,17 @@
 #error
-cyoa-step4                                 
-cyoa-step4 nosuchdir                       
-cyoa-step4 test_step2/noPage1              
-cyoa-step4 test_step2/notValidReference    
-cyoa-step4 test_step2/pageNoOtherPagePoint 
-cyoa-step4 test_step2/noWIN                
-cyoa-step4 test_step2/noLOSE               
-cyoa-step4 test_step2/noChoice             
-cyoa-step4 test_step2/independentPageSet   
+cyoa-step2
+cyoa-step2 nosuchdir
+cyoa-step2 test_step2/noPage1 < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/notValidReference < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/pageNoOtherPagePoint < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/noWIN < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/noLOSE < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/noChoice < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/independentPageSet < test_step2/input/independentPageSet_input.txt 
 
 #success
-cyoa-step4 test_step4/repeatChoice
-cyoa-step2 story1 < wrong_input.txt
+cyoa-step2 story1 < test_step2/input/input_story1.txt
+cyoa-step2 test_step2/hasOtherPagesValid < test_step2/input/input_story1.txt
+cyoa-step2 story2 < test_step2/input/input_story2.txt
+cyoa-step2 test_step2/goodIndepent < test_step2/input/independentPageSet_input.txt
+
